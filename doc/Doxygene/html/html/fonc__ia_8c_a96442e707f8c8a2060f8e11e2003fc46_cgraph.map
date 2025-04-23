@@ -1,0 +1,19 @@
+<map id="minMax" name="minMax">
+<area shape="rect" id="Node000001" title="Algorithme minmax qui calcule l&#39;arbre des coups possibles." alt="" coords="5,73,73,99"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="15,74,11,65,13,55,23,49,39,47,56,49,65,56,62,60,54,54,39,52,25,54,18,58,16,64,20,72"/>
+<area shape="rect" id="Node000002" href="$fonc__jeu_8c.html#a59ca37ed9c411eeefca103541c1ca42f" title="Copie du plateau pour la simulation virtuelle." alt="" coords="553,11,650,36"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,71,84,51,120,34,176,20,233,11,348,3,454,5,538,12,538,18,453,11,348,9,234,16,177,26,122,39,86,55,58,75"/>
+<area shape="rect" id="Node000003" href="$fonc__jeu_8c.html#a0565378c0f9d2d5f88cbfc5be230c8a8" title="Vérifie si un coup est valide à une position donnée (x, y) pour une couleur donnée." alt="" coords="408,48,499,74"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="72,71,120,58,193,50,267,48,393,53,393,58,267,53,194,56,121,63,74,76"/>
+<area shape="rect" id="Node000004" href="$fonc__jeu_8c.html#a43a33e0e164278eef35f1122bd779ac0" title="Retourne les pions adverses autour de la case (x, y) après un coup valide." alt="" coords="547,85,657,111"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="51,97,80,130,100,146,122,158,180,175,241,182,303,180,363,172,421,160,473,145,556,115,558,120,475,150,422,165,364,178,303,185,241,187,179,180,120,163,97,151,76,134,47,101"/>
+<area shape="rect" id="Node000005" href="$fonc__ia_8c.html#a19518b8c868e790a646f3bd71b6c4168" title=" " alt="" coords="134,123,218,148"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="74,96,125,115,123,120,72,101"/>
+<area shape="rect" id="Node000006" href="$fonc__jeu_8c.html#a063f684dbbd2dd66b58b468afe5dacf1" title="Vérifie si la partie est finie." alt="" coords="121,73,231,99"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="73,83,105,83,105,89,73,89"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="499,47,538,37,539,42,500,52"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="500,70,534,78,533,84,499,75"/>
+<area shape="rect" id="Node000007" href="$fonc__jeu_8c.html#a01f3c3f9cb23b1c2751ef00e54d6ee46" title="Vérifie si le joueur peut jouer au moins un coup valide." alt="" coords="279,73,360,99"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="231,83,264,83,264,89,231,89"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="360,76,393,70,394,75,361,81"/>
+</map>

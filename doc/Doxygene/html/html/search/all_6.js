@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['changerjoueur_0',['changerJoueur',['../fonc__jeu_8c.html#a370fa4eaab11df407965d087315862bf',1,'changerJoueur(t_case joueurActuel):&#160;fonc_jeu.c'],['../fonc__jeu_8h.html#a370fa4eaab11df407965d087315862bf',1,'changerJoueur(t_case joueurActuel):&#160;fonc_jeu.c']]],
+  ['chargerjeu_1',['chargerJeu',['../fonc__sauv_8c.html#adf439763f3a088610143b75e2691e39b',1,'chargerJeu(t_case jeu[N][N], t_case *joueurActuel, t_niveau *modeJeu, char nomFichier[50]):&#160;fonc_sauv.c'],['../fonc__sauv_8h.html#adf439763f3a088610143b75e2691e39b',1,'chargerJeu(t_case jeu[N][N], t_case *joueurActuel, t_niveau *modeJeu, char nomFichier[50]):&#160;fonc_sauv.c']]],
+  ['checkbuttonhover_2',['checkButtonHover',['../menus_8c.html#a6176341da33c9b1c09b2b8456dfa04c0',1,'checkButtonHover(Button *button, int mouseX, int mouseY):&#160;menus.c'],['../menus_8h.html#a6176341da33c9b1c09b2b8456dfa04c0',1,'checkButtonHover(Button *button, int mouseX, int mouseY):&#160;menus.c']]],
+  ['clicbouton_3',['clicBouton',['../plateau_8c.html#a07a4d5d108e41f8c3c0f4dbd2d11d013',1,'clicBouton(bouton *btn, int mouseX, int mouseY):&#160;plateau.c'],['../plateau_8h.html#a07a4d5d108e41f8c3c0f4dbd2d11d013',1,'clicBouton(bouton *btn, int mouseX, int mouseY):&#160;plateau.c']]],
+  ['client_2ec_4',['client.c',['../client_8c.html',1,'']]],
+  ['client_5faddr_5',['client_addr',['../structcontexte__reseau__t.html#a4d41663dbf396debdfaad5608134449c',1,'contexte_reseau_t']]],
+  ['client_5fjoue_5fjeu_6',['client_joue_jeu',['../reseau_8c.html#a1a5b1c44bf12c58ef834793ab907a473',1,'client_joue_jeu(contexte_reseau_t *ctx, SDL_Window *window, SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2):&#160;reseau.c'],['../reseau_8h.html#a1a5b1c44bf12c58ef834793ab907a473',1,'client_joue_jeu(contexte_reseau_t *ctx, SDL_Window *window, SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2):&#160;reseau.c']]],
+  ['client_5fsocket_7',['client_socket',['../structcontexte__reseau__t.html#af05b1afa33e4be266a9d093b1335ef19',1,'contexte_reseau_t']]],
+  ['clientaccepte_8',['clientAccepte',['../menus_8c.html#ac03a156f4f1e565862d94ba9b2ebd86e',1,'clientAccepte:&#160;menus.c'],['../menus_8h.html#ac03a156f4f1e565862d94ba9b2ebd86e',1,'clientAccepte:&#160;menus.c']]],
+  ['color_9',['color',['../structbouton.html#a22e037a32179215186107037c81d0b59',1,'bouton']]],
+  ['communication_5fport_10',['COMMUNICATION_PORT',['../client_8c.html#a9f12623a54c73196b2a2d48972e710a8',1,'COMMUNICATION_PORT:&#160;client.c'],['../serveur_8c.html#a9f12623a54c73196b2a2d48972e710a8',1,'COMMUNICATION_PORT:&#160;serveur.c']]],
+  ['composition_11',['composition',['../menus_8c.html#ae173155b7044809ba756660be31aa706',1,'composition:&#160;menus.c'],['../menus_8h.html#ae173155b7044809ba756660be31aa706',1,'composition:&#160;menus.c']]],
+  ['connecter_5fserver_12',['connecter_server',['../reseau_8c.html#a573b27608ca3c5d97ae602939079bd82',1,'connecter_server(contexte_reseau_t *ctx):&#160;reseau.c'],['../reseau_8h.html#a573b27608ca3c5d97ae602939079bd82',1,'connecter_server(contexte_reseau_t *ctx):&#160;reseau.c']]],
+  ['contexte_5freseau_5ft_13',['contexte_reseau_t',['../structcontexte__reseau__t.html',1,'']]],
+  ['copyothellier_14',['copyOthellier',['../fonc__jeu_8c.html#a59ca37ed9c411eeefca103541c1ca42f',1,'copyOthellier(t_case jeu_src[N][N], t_case jeu_copie[N][N]):&#160;fonc_jeu.c'],['../fonc__jeu_8h.html#a59ca37ed9c411eeefca103541c1ca42f',1,'copyOthellier(t_case jeu_src[N][N], t_case jeu_copie[N][N]):&#160;fonc_jeu.c']]],
+  ['coul_15',['coul',['../plateau_8h.html#a9848a110bbd4407c976a3659a317b952',1,'plateau.h']]],
+  ['couleur1_16',['couleur1',['../menus_8c.html#abf24ef185b7e881ab4b62417b962a5f6',1,'couleur1:&#160;menus.c'],['../menus_8h.html#abf24ef185b7e881ab4b62417b962a5f6',1,'couleur1:&#160;menus.h']]],
+  ['couleur2_17',['couleur2',['../menus_8c.html#a62fc7492d47182c2ee599cf896d02a9e',1,'couleur2:&#160;menus.c'],['../menus_8h.html#a62fc7492d47182c2ee599cf896d02a9e',1,'couleur2:&#160;menus.h']]],
+  ['coulpion_18',['coulPion',['../menus_8c.html#a78a19d5671c08e59afbf90d4ed28464a',1,'menus.c']]],
+  ['coup_5fvalide_19',['coup_valide',['../fonc__jeu_8c.html#a0565378c0f9d2d5f88cbfc5be230c8a8',1,'coup_valide(t_case jeu[N][N], int x, int y, t_case couleur):&#160;fonc_jeu.c'],['../fonc__jeu_8h.html#a0565378c0f9d2d5f88cbfc5be230c8a8',1,'coup_valide(t_case jeu[N][N], int x, int y, t_case couleur):&#160;fonc_jeu.c']]],
+  ['crédits_20',['Crédits',['../index.html#autotoc_md7',1,'']]],
+  ['creermessagesauvegarde_21',['creerMessageSauvegarde',['../plateau_8c.html#a3e7c85ffca89f0e5c7533391d811d67d',1,'creerMessageSauvegarde(SDL_Renderer *renderer, TTF_Font *font, SDL_Color color, SDL_Texture **texture, SDL_Rect *rect, int largeurFenetre, int hauteurFenetre):&#160;plateau.c'],['../plateau_8h.html#a3e7c85ffca89f0e5c7533391d811d67d',1,'creerMessageSauvegarde(SDL_Renderer *renderer, TTF_Font *font, SDL_Color color, SDL_Texture **texture, SDL_Rect *rect, int largeurFenetre, int hauteurFenetre):&#160;plateau.c']]],
+  ['ctx_22',['ctx',['../menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06',1,'ctx:&#160;menus.c'],['../menus_8h.html#a7f7909f8865e37df29984dc9a63c3e06',1,'ctx:&#160;menus.c']]],
+  ['currentmenu_23',['currentMenu',['../menus_8c.html#a769032f0823a4b3622685d9450817cea',1,'currentMenu:&#160;menus.c'],['../menus_8h.html#a769032f0823a4b3622685d9450817cea',1,'currentMenu:&#160;menus.c']]],
+  ['cursor_24',['cursor',['../menus_8c.html#aa4e7e5f0f03c51c08d78f0d703797997',1,'cursor:&#160;menus.c'],['../menus_8h.html#aa4e7e5f0f03c51c08d78f0d703797997',1,'cursor:&#160;menus.c']]]
+];

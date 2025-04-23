@@ -1,0 +1,9 @@
+<map id="afficher_coups_possibles" name="afficher_coups_possibles">
+<area shape="rect" id="Node000001" title="Affiche les coups possibles avec des cerlces non pleins." alt="" coords="5,31,174,56"/>
+<area shape="rect" id="Node000002" href="$fonc__jeu_8c.html#a0565378c0f9d2d5f88cbfc5be230c8a8" title="Vérifie si un coup est valide à une position donnée (x, y) pour une couleur donnée." alt="" coords="222,31,312,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,41,206,41,206,46,174,46"/>
+<area shape="rect" id="Node000003" href="$fonc__jeu_8c.html#a59ca37ed9c411eeefca103541c1ca42f" title="Copie du plateau pour la simulation virtuelle." alt="" coords="366,5,464,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="312,33,351,26,352,32,313,38"/>
+<area shape="rect" id="Node000004" href="$fonc__jeu_8c.html#a43a33e0e164278eef35f1122bd779ac0" title="Retourne les pions adverses autour de la case (x, y) après un coup valide." alt="" coords="360,55,470,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="313,48,345,53,344,59,312,53"/>
+</map>

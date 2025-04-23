@@ -1,0 +1,7 @@
+<map id="handleMainMenuEvents" name="handleMainMenuEvents">
+<area shape="rect" id="Node000001" title="Gère les événements dans le menu principal." alt="" coords="5,31,166,56"/>
+<area shape="rect" id="Node000002" href="$menus_8c.html#a6176341da33c9b1c09b2b8456dfa04c0" title="Vérifie si la souris survole un bouton." alt="" coords="214,5,343,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,30,198,26,199,31,166,36"/>
+<area shape="rect" id="Node000003" href="$menus_8c.html#a8e7f515798860ab87f2a643b32fa4462" title="Initialise le menu des parties sauvegardées." alt="" coords="228,55,328,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,51,213,57,212,62,165,56"/>
+</map>

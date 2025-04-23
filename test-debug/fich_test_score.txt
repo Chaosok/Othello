@@ -1,0 +1,17 @@
+Jeu de test pour la fonction score (scr/jeu/fonc_jeu.c) :
+
+- N x N est la dimension du plateau (usuellement N = 8)
+
+1. Plateau de jeu plein :
+   - de pions blancs (résultat attendu : score(blanc) = N*N, score(noir) = 0, score(vide) = 0),
+   - de pions noirs (résultat attendu : score(noir) = N*N, score(blanc) = 0, score(vide) = 0) ;
+
+2. Plateau de jeu vide (résultat attendu : score(noir) = score(blanc) = 0, score(vide) = N*N) ;
+
+3. Plateau de jeu avec seulement bords pleins :
+   - bords blancs (résultat attendu : score(blanc) = N*N - (N-2) * (N-2), score(noir) = 0, score(vide) = (N-2) * (N-2)),
+   - bords noirs (résultat attendu : score(noir) = N*N - (N-2) * (N-2), score(blanc) = 0, score(vide) = (N-2) * (N-2)) ;
+
+4. Plateau de jeu avec seulement coins pleins :
+   - coins blancs (résultat attendu : score(blanc) = 4, score(noir) = 0, score(vide) = N*N - 4),
+   - coins noirs (résultat attendu : score(noir) = 4, score(blanc) = 0, score(vide) = N*N - 4) ;

@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello: Référence du fichier src/jeu/serveur.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="othelloLogo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Othello
+   </div>
+   <div id="projectbrief">Version numérique du jeu Othello, un jeu de plateau conçu pour être joué à deux</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e7a19e970db27507ea7fd9f14268b402.html">jeu</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier serveur.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;arpa/inet.h&gt;</code><br />
+<code>#include &lt;sys/ioctl.h&gt;</code><br />
+<code>#include &lt;net/if.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="fonc__jeu_8h_source.html">fonc_jeu.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de serveur.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="serveur_8c__incl.png" border="0" usemap="#asrc_2jeu_2serveur_8c" alt=""/></div>
+<map name="asrc_2jeu_2serveur_8c" id="asrc_2jeu_2serveur_8c">
+<area shape="rect" title=" " alt="" coords="289,5,406,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,66,105"/>
+<area shape="poly" title=" " alt="" coords="289,34,81,81,80,76,288,29"/>
+<area shape="rect" title=" " alt="" coords="89,79,152,105"/>
+<area shape="poly" title=" " alt="" coords="310,34,168,78,167,73,308,29"/>
+<area shape="rect" title=" " alt="" coords="177,79,241,105"/>
+<area shape="poly" title=" " alt="" coords="325,34,247,74,245,69,323,29"/>
+<area shape="rect" title=" " alt="" coords="264,79,332,105"/>
+<area shape="poly" title=" " alt="" coords="342,33,317,68,313,65,337,30"/>
+<area shape="rect" title=" " alt="" coords="356,79,438,105"/>
+<area shape="poly" title=" " alt="" coords="358,30,382,65,378,68,353,33"/>
+<area shape="rect" title=" " alt="" coords="462,79,543,105"/>
+<area shape="poly" title=" " alt="" coords="375,29,463,70,461,75,373,34"/>
+<area shape="rect" title=" " alt="" coords="568,79,629,105"/>
+<area shape="poly" title=" " alt="" coords="391,29,553,75,552,80,389,34"/>
+<area shape="rect" href="fonc__jeu_8h.html" title="Fonctions et structures de données nécessaires à la logique de jeu." alt="" coords="654,79,735,105"/>
+<area shape="poly" title=" " alt="" coords="407,29,639,76,638,81,406,34"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9f12623a54c73196b2a2d48972e710a8" id="r_a9f12623a54c73196b2a2d48972e710a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f12623a54c73196b2a2d48972e710a8">COMMUNICATION_PORT</a>&#160;&#160;&#160;8889</td></tr>
+<tr class="separator:a9f12623a54c73196b2a2d48972e710a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b20d41d6252e9871430c242cb1a56e7" id="r_a6b20d41d6252e9871430c242cb1a56e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b20d41d6252e9871430c242cb1a56e7">BUFFER_SIZE</a>&#160;&#160;&#160;1024</td></tr>
+<tr class="separator:a6b20d41d6252e9871430c242cb1a56e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:acc1209966adf9033f6cc197aaca37cad" id="r_acc1209966adf9033f6cc197aaca37cad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc1209966adf9033f6cc197aaca37cad">afficherAdressesIP</a> ()</td></tr>
+<tr class="separator:acc1209966adf9033f6cc197aaca37cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a id="a6b20d41d6252e9871430c242cb1a56e7" name="a6b20d41d6252e9871430c242cb1a56e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b20d41d6252e9871430c242cb1a56e7">&#9670;&#160;</a></span>BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUFFER_SIZE&#160;&#160;&#160;1024</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f12623a54c73196b2a2d48972e710a8" name="a9f12623a54c73196b2a2d48972e710a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f12623a54c73196b2a2d48972e710a8">&#9670;&#160;</a></span>COMMUNICATION_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMMUNICATION_PORT&#160;&#160;&#160;8889</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="acc1209966adf9033f6cc197aaca37cad" name="acc1209966adf9033f6cc197aaca37cad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc1209966adf9033f6cc197aaca37cad">&#9670;&#160;</a></span>afficherAdressesIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficherAdressesIP </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="serveur_8c_acc1209966adf9033f6cc197aaca37cad_icgraph.png" border="0" usemap="#aserveur_8c_acc1209966adf9033f6cc197aaca37cad_icgraph" alt=""/></div>
+<map name="aserveur_8c_acc1209966adf9033f6cc197aaca37cad_icgraph" id="aserveur_8c_acc1209966adf9033f6cc197aaca37cad_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,235,31"/>
+<area shape="rect" href="serveur_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="serveur_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#aserveur_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="aserveur_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="aserveur_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,104,55,130"/>
+<area shape="rect" href="fonc__jeu_8c.html#ad91663b0b2543ee541307f4aea289ec0" title="Affiche l&#39;état actuel du plateau de jeu dans la console." alt="" coords="125,5,213,31"/>
+<area shape="poly" title=" " alt="" coords="39,102,65,71,101,40,109,35,112,40,104,44,69,75,43,105"/>
+<area shape="rect" href="serveur_8c.html#acc1209966adf9033f6cc197aaca37cad" title=" " alt="" coords="103,55,235,80"/>
+<area shape="poly" title=" " alt="" coords="54,106,116,83,118,88,56,111"/>
+<area shape="rect" href="fonc__jeu_8c.html#a6c7825b947ceeaa9933d130eacf8fbee" title="Initialise le plateau de jeu." alt="" coords="138,104,200,130"/>
+<area shape="poly" title=" " alt="" coords="55,114,123,114,123,120,55,120"/>
+<area shape="rect" href="fonc__jeu_8c.html#a063f684dbbd2dd66b58b468afe5dacf1" title="Vérifie si la partie est finie." alt="" coords="114,153,224,179"/>
+<area shape="poly" title=" " alt="" coords="56,123,118,145,116,150,54,128"/>
+<area shape="rect" href="fonc__jeu_8c.html#a01f3c3f9cb23b1c2751ef00e54d6ee46" title="Vérifie si le joueur peut jouer au moins un coup valide." alt="" coords="283,179,364,204"/>
+<area shape="poly" title=" " alt="" coords="41,128,66,161,84,177,104,189,145,201,188,206,230,205,267,200,268,206,230,210,188,211,144,206,102,194,80,181,62,164,37,132"/>
+<area shape="poly" title=" " alt="" coords="225,173,268,180,267,185,224,178"/>
+<area shape="rect" href="fonc__jeu_8c.html#a0565378c0f9d2d5f88cbfc5be230c8a8" title="Vérifie si un coup est valide à une position donnée (x, y) pour une couleur donnée." alt="" coords="412,179,503,204"/>
+<area shape="poly" title=" " alt="" coords="365,189,397,189,397,194,365,194"/>
+<area shape="rect" href="fonc__jeu_8c.html#a59ca37ed9c411eeefca103541c1ca42f" title="Copie du plateau pour la simulation virtuelle." alt="" coords="557,153,654,179"/>
+<area shape="poly" title=" " alt="" coords="503,181,541,174,542,180,504,186"/>
+<area shape="rect" href="fonc__jeu_8c.html#a43a33e0e164278eef35f1122bd779ac0" title="Retourne les pions adverses autour de la case (x, y) après un coup valide." alt="" coords="551,203,661,228"/>
+<area shape="poly" title=" " alt="" coords="504,196,535,201,535,207,503,201"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

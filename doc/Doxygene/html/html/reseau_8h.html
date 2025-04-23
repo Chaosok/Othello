@@ -1,0 +1,822 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello: Référence du fichier src/jeu/reseau.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="othelloLogo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Othello
+   </div>
+   <div id="projectbrief">Version numérique du jeu Othello, un jeu de plateau conçu pour être joué à deux</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e7a19e970db27507ea7fd9f14268b402.html">jeu</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier reseau.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Fonctions et structures de données nécessaires à la partie du reséau.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;strings.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+<code>#include &lt;netinet/in.h&gt;</code><br />
+<code>#include &lt;arpa/inet.h&gt;</code><br />
+<code>#include &lt;netdb.h&gt;</code><br />
+<code>#include &lt;signal.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de reseau.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="reseau_8h__incl.png" border="0" usemap="#asrc_2jeu_2reseau_8h" alt=""/></div>
+<map name="asrc_2jeu_2reseau_8h" id="asrc_2jeu_2reseau_8h">
+<area shape="rect" title="Fonctions et structures de données nécessaires à la partie du reséau." alt="" coords="434,5,549,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,66,105"/>
+<area shape="poly" title=" " alt="" coords="434,28,278,48,81,81,81,76,278,42,433,23"/>
+<area shape="rect" title=" " alt="" coords="89,79,152,105"/>
+<area shape="poly" title=" " alt="" coords="434,31,316,52,168,81,167,76,315,47,434,26"/>
+<area shape="rect" title=" " alt="" coords="177,79,248,105"/>
+<area shape="poly" title=" " alt="" coords="445,34,264,80,263,75,444,29"/>
+<area shape="rect" title=" " alt="" coords="272,79,362,105"/>
+<area shape="poly" title=" " alt="" coords="463,34,362,75,360,70,461,29"/>
+<area shape="rect" title=" " alt="" coords="386,79,482,105"/>
+<area shape="poly" title=" " alt="" coords="484,33,455,68,451,65,480,30"/>
+<area shape="rect" title=" " alt="" coords="506,79,592,105"/>
+<area shape="poly" title=" " alt="" coords="503,30,532,65,528,68,499,33"/>
+<area shape="rect" title=" " alt="" coords="616,79,698,105"/>
+<area shape="poly" title=" " alt="" coords="521,29,616,70,614,75,518,34"/>
+<area shape="rect" title=" " alt="" coords="722,79,786,105"/>
+<area shape="poly" title=" " alt="" coords="537,29,707,75,706,80,535,34"/>
+<area shape="rect" title=" " alt="" coords="810,79,877,105"/>
+<area shape="poly" title=" " alt="" coords="549,27,796,76,795,81,548,32"/>
+<area shape="rect" title=" " alt="" coords="900,79,968,105"/>
+<area shape="poly" title=" " alt="" coords="549,24,698,44,885,76,885,81,697,49,549,29"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="reseau_8h__dep__incl.png" border="0" usemap="#asrc_2jeu_2reseau_8hdep" alt=""/></div>
+<map name="asrc_2jeu_2reseau_8hdep" id="asrc_2jeu_2reseau_8hdep">
+<area shape="rect" title="Fonctions et structures de données nécessaires à la partie du reséau." alt="" coords="341,5,455,31"/>
+<area shape="rect" href="menus_8c.html" title="Définition des fonctions pour l&#39;affichage des menus." alt="" coords="5,226,159,252"/>
+<area shape="poly" title=" " alt="" coords="367,41,194,155,98,228,95,224,191,150,364,37"/>
+<area shape="rect" href="menus_8h.html" title=" " alt="" coords="321,79,475,105"/>
+<area shape="poly" title=" " alt="" coords="401,46,401,79,395,79,395,46"/>
+<area shape="rect" href="reseau_8c.html" title="Définition des fonctions pour mettre en place le jeu en ligne." alt="" coords="574,226,688,252"/>
+<area shape="poly" title=" " alt="" coords="434,37,489,77,531,117,570,158,624,224,620,227,566,162,527,120,486,81,431,42"/>
+<area shape="poly" title=" " alt="" coords="353,113,251,155,105,228,103,224,249,150,351,108"/>
+<area shape="rect" href="othello_graph_8c.html" title="Fonction main." alt="" coords="363,226,550,252"/>
+<area shape="poly" title=" " alt="" coords="416,117,434,152,448,192,457,225,451,227,443,193,429,154,411,119"/>
+<area shape="rect" href="plateau_8h.html" title="Fonctions et structures de données pour l&#39;affichage du plateau de jeu." alt="" coords="262,153,419,178"/>
+<area shape="poly" title=" " alt="" coords="381,118,352,154,348,151,377,115"/>
+<area shape="poly" title=" " alt="" coords="432,111,613,224,611,228,429,115"/>
+<area shape="poly" title=" " alt="" coords="283,185,127,228,125,223,281,180"/>
+<area shape="poly" title=" " alt="" coords="374,184,438,223,436,228,372,189"/>
+<area shape="rect" href="plateau_8c.html" title="Définition des fonctions pour l&#39;affichage du plateau." alt="" coords="182,226,339,252"/>
+<area shape="poly" title=" " alt="" coords="318,191,276,228,272,224,314,187"/>
+<area shape="poly" title=" " alt="" coords="405,180,582,223,581,228,404,185"/>
+</map>
+</div>
+</div>
+<p><a href="reseau_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpaquet__jeu.html">paquet_jeu</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a752f5b785b69372034ac87e1a1598ce3" id="r_a752f5b785b69372034ac87e1a1598ce3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a752f5b785b69372034ac87e1a1598ce3">PORT_SERVEUR</a>&#160;&#160;&#160;30000</td></tr>
+<tr class="separator:a752f5b785b69372034ac87e1a1598ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa7b7638d0ac972327d9fadc93db9802" id="r_afa7b7638d0ac972327d9fadc93db9802"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa7b7638d0ac972327d9fadc93db9802">TAILLE_BUFFER</a>&#160;&#160;&#160;512</td></tr>
+<tr class="separator:afa7b7638d0ac972327d9fadc93db9802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb924f3da4013624784dbc36644083f" id="r_a7cb924f3da4013624784dbc36644083f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cb924f3da4013624784dbc36644083f">ARRET</a>&#160;&#160;&#160;&quot;quit&quot;</td></tr>
+<tr class="separator:a7cb924f3da4013624784dbc36644083f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a2296463919585136453f88a241af608f" id="r_a2296463919585136453f88a241af608f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2296463919585136453f88a241af608f">fermer_serveur_socket</a> (<a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *<a class="el" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>)</td></tr>
+<tr class="memdesc:a2296463919585136453f88a241af608f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fermer la socket du côté de serveur.  <br /></td></tr>
+<tr class="separator:a2296463919585136453f88a241af608f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf86c3801dd294506d3fbc1983c7c643" id="r_aaf86c3801dd294506d3fbc1983c7c643"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf86c3801dd294506d3fbc1983c7c643">gererClics_reseau</a> (SDL_Event *e, <a class="el" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="el" href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a>[<a class="el" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <a class="el" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> *joueurActuel, int tailleCase, int positionPlateauX, int positionPlateauY, int *<a class="el" href="reseau_8c.html#a1a7237dd3e4702f7866da49efc69b8a9">temps_noir</a>, int *<a class="el" href="reseau_8c.html#adb6fb5cb909122d28cacba2d1c369dd8">temps_blanc</a>, time_t *dernier_tour)</td></tr>
+<tr class="memdesc:aaf86c3801dd294506d3fbc1983c7c643"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gère les clics sur le plateau.  <br /></td></tr>
+<tr class="separator:aaf86c3801dd294506d3fbc1983c7c643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842184aa59f837ba7bf1e29eaf831605" id="r_a842184aa59f837ba7bf1e29eaf831605"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a842184aa59f837ba7bf1e29eaf831605">fermer_client_socket</a> (<a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *<a class="el" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>)</td></tr>
+<tr class="memdesc:a842184aa59f837ba7bf1e29eaf831605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fermer la socket du côté de client.  <br /></td></tr>
+<tr class="separator:a842184aa59f837ba7bf1e29eaf831605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aeb5815afed75848f267867f2498cd4" id="r_a5aeb5815afed75848f267867f2498cd4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5aeb5815afed75848f267867f2498cd4">installer_serveur</a> (<a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *<a class="el" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>)</td></tr>
+<tr class="memdesc:a5aeb5815afed75848f267867f2498cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installer le serveur, en créeant la socket, en associant à une IP et un port de machine locale et mettre en écoute.  <br /></td></tr>
+<tr class="separator:a5aeb5815afed75848f267867f2498cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b37192f8c4558b96ca670a8cc63217c" id="r_a8b37192f8c4558b96ca670a8cc63217c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b37192f8c4558b96ca670a8cc63217c">accepter_client</a> (<a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *<a class="el" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>)</td></tr>
+<tr class="memdesc:a8b37192f8c4558b96ca670a8cc63217c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepter la demande de connexion de la socket du client.  <br /></td></tr>
+<tr class="separator:a8b37192f8c4558b96ca670a8cc63217c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad43befb0dc1780dd5ddf20da8656e289" id="r_ad43befb0dc1780dd5ddf20da8656e289"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad43befb0dc1780dd5ddf20da8656e289">serveur_joue_jeu</a> (<a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *<a class="el" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>, SDL_Window *<a class="el" href="plateau_8c.html#aaa8e409e04dcf575ef63fd5fb3db06f9">window</a>, SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2)</td></tr>
+<tr class="memdesc:ad43befb0dc1780dd5ddf20da8656e289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le joueur du côté serveur joue la partie en suivant la logique du jeu.  <br /></td></tr>
+<tr class="separator:ad43befb0dc1780dd5ddf20da8656e289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a573b27608ca3c5d97ae602939079bd82" id="r_a573b27608ca3c5d97ae602939079bd82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a573b27608ca3c5d97ae602939079bd82">connecter_server</a> (<a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *<a class="el" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>)</td></tr>
+<tr class="memdesc:a573b27608ca3c5d97ae602939079bd82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connecter la socket de client à celle de serveur.  <br /></td></tr>
+<tr class="separator:a573b27608ca3c5d97ae602939079bd82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a5b1c44bf12c58ef834793ab907a473" id="r_a1a5b1c44bf12c58ef834793ab907a473"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a5b1c44bf12c58ef834793ab907a473">client_joue_jeu</a> (<a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *<a class="el" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>, SDL_Window *<a class="el" href="plateau_8c.html#aaa8e409e04dcf575ef63fd5fb3db06f9">window</a>, SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2)</td></tr>
+<tr class="memdesc:a1a5b1c44bf12c58ef834793ab907a473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le joueur du côté client joue la partie en suivant la logique du jeu.  <br /></td></tr>
+<tr class="separator:a1a5b1c44bf12c58ef834793ab907a473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Fonctions et structures de données nécessaires à la partie du reséau. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Chaosok Kong(responsable), Nasreddine Biya, Aly Rida Mahjoub </dd></dl>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a id="a7cb924f3da4013624784dbc36644083f" name="a7cb924f3da4013624784dbc36644083f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cb924f3da4013624784dbc36644083f">&#9670;&#160;</a></span>ARRET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARRET&#160;&#160;&#160;&quot;quit&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a752f5b785b69372034ac87e1a1598ce3" name="a752f5b785b69372034ac87e1a1598ce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a752f5b785b69372034ac87e1a1598ce3">&#9670;&#160;</a></span>PORT_SERVEUR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PORT_SERVEUR&#160;&#160;&#160;30000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa7b7638d0ac972327d9fadc93db9802" name="afa7b7638d0ac972327d9fadc93db9802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa7b7638d0ac972327d9fadc93db9802">&#9670;&#160;</a></span>TAILLE_BUFFER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TAILLE_BUFFER&#160;&#160;&#160;512</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a8b37192f8c4558b96ca670a8cc63217c" name="a8b37192f8c4558b96ca670a8cc63217c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b37192f8c4558b96ca670a8cc63217c">&#9670;&#160;</a></span>accepter_client()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int accepter_client </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Accepter la demande de connexion de la socket du client. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>contexte de réseau contient les informations nécessaires pour la communication. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si l'acceptation de connexion réussit, -1 sinon </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="reseau_8h_a8b37192f8c4558b96ca670a8cc63217c_icgraph.png" border="0" usemap="#areseau_8h_a8b37192f8c4558b96ca670a8cc63217c_icgraph" alt=""/></div>
+<map name="areseau_8h_a8b37192f8c4558b96ca670a8cc63217c_icgraph" id="areseau_8h_a8b37192f8c4558b96ca670a8cc63217c_icgraph">
+<area shape="rect" title="Accepter la demande de connexion de la socket du client." alt="" coords="517,5,627,31"/>
+<area shape="rect" href="menus_8c.html#a21b06c5428e025a59adaa0e7c7c1afe3" title="Fonction de thread chargée d&#39;accepter une connexion client." alt="" coords="317,5,469,31"/>
+<area shape="poly" title=" " alt="" coords="502,21,469,21,469,16,502,16"/>
+<area shape="rect" href="menus_8c.html#a5cc4d94bfe627e003efca105a8816a23" title=" " alt="" coords="103,5,269,31"/>
+<area shape="poly" title=" " alt="" coords="302,21,269,21,269,16,302,16"/>
+<area shape="rect" href="othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,5,55,31"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1a5b1c44bf12c58ef834793ab907a473" name="a1a5b1c44bf12c58ef834793ab907a473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a5b1c44bf12c58ef834793ab907a473">&#9670;&#160;</a></span>client_joue_jeu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void client_joue_jeu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Window *</td>          <td class="paramname"><span class="paramname"><em>window</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Renderer *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *</td>          <td class="paramname"><span class="paramname"><em>font1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *</td>          <td class="paramname"><span class="paramname"><em>font2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le joueur du côté client joue la partie en suivant la logique du jeu. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>contexte de réseau contient les informations nécessaires pour la communication. </td></tr>
+    <tr><td class="paramname">window</td><td>la fenêtre principale SDL de l'application. </td></tr>
+    <tr><td class="paramname">renderer</td><td>Pointeur vers le renderer SDL utilisé pour dessiner. </td></tr>
+    <tr><td class="paramname">font1</td><td>Police utilisée pour l'affichage du tour du joueur. </td></tr>
+    <tr><td class="paramname">font2</td><td>Police utilisée pour l'affichage des scores. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="reseau_8h_a1a5b1c44bf12c58ef834793ab907a473_cgraph.png" border="0" usemap="#areseau_8h_a1a5b1c44bf12c58ef834793ab907a473_cgraph" alt=""/></div>
+<map name="areseau_8h_a1a5b1c44bf12c58ef834793ab907a473_cgraph" id="areseau_8h_a1a5b1c44bf12c58ef834793ab907a473_cgraph">
+<area shape="rect" title="Le joueur du côté client joue la partie en suivant la logique du jeu." alt="" coords="5,353,113,379"/>
+<area shape="rect" href="plateau_8c.html#a016f8343610176c802c6627a88ded142" title="Affiche la fenêtre de fin de partie pour le jeu en ligne." alt="" coords="161,29,362,55"/>
+<area shape="poly" title=" " alt="" coords="58,353,62,299,76,222,88,179,106,137,129,98,159,64,162,62,165,66,163,68,133,101,111,140,93,181,81,223,67,300,63,353"/>
+<area shape="rect" href="fonc__jeu_8c.html#a370fa4eaab11df407965d087315862bf" title="Alterne entre le joueur blanc et le joueur noir." alt="" coords="208,79,314,104"/>
+<area shape="poly" title=" " alt="" coords="59,352,66,307,82,242,95,207,112,173,133,141,159,113,175,103,192,96,194,101,177,108,162,118,137,144,116,176,100,209,87,244,71,308,64,353"/>
+<area shape="rect" href="reseau_8c.html#af0219e0163e72930c305d9448bca7621" title="Envoyer le paquet de données au socket destinataire." alt="" coords="201,128,322,154"/>
+<area shape="poly" title=" " alt="" coords="60,352,70,315,88,263,117,209,137,184,159,163,186,148,188,153,162,167,141,188,122,212,93,265,75,316,65,354"/>
+<area shape="rect" href="reseau_8c.html#a842184aa59f837ba7bf1e29eaf831605" title="Fermer la socket du côté de client." alt="" coords="190,177,332,203"/>
+<area shape="poly" title=" " alt="" coords="63,352,75,322,96,284,124,245,159,212,174,203,177,208,162,216,128,249,100,287,80,325,68,354"/>
+<area shape="rect" href="reseau_8c.html#a2296463919585136453f88a241af608f" title="Fermer la socket du côté de serveur." alt="" coords="184,227,338,252"/>
+<area shape="poly" title=" " alt="" coords="69,351,106,311,131,289,159,269,188,256,190,260,162,274,135,293,110,315,73,355"/>
+<area shape="rect" href="reseau_8c.html#aaf86c3801dd294506d3fbc1983c7c643" title="Gère les clics sur le plateau." alt="" coords="431,376,557,402"/>
+<area shape="poly" title=" " alt="" coords="79,350,115,330,160,313,216,301,261,297,307,300,363,313,419,336,465,364,462,369,416,340,361,318,306,306,262,302,217,306,161,318,118,335,81,355"/>
+<area shape="rect" href="fonc__jeu_8c.html#a6c7825b947ceeaa9933d130eacf8fbee" title="Initialise le plateau de jeu." alt="" coords="230,328,292,354"/>
+<area shape="poly" title=" " alt="" coords="113,357,214,344,215,349,114,362"/>
+<area shape="rect" href="plateau_8c.html#a52a39d140dab56120e28f7c4c004f632" title="Initialise les dimensions du jeu." alt="" coords="191,377,332,403"/>
+<area shape="poly" title=" " alt="" coords="114,370,175,377,175,383,113,375"/>
+<area shape="rect" href="fonc__jeu_8c.html#a063f684dbbd2dd66b58b468afe5dacf1" title="Vérifie si la partie est finie." alt="" coords="206,427,316,452"/>
+<area shape="poly" title=" " alt="" coords="85,377,162,413,192,422,190,427,160,418,83,382"/>
+<area shape="rect" href="fonc__jeu_8c.html#a01f3c3f9cb23b1c2751ef00e54d6ee46" title="Vérifie si le joueur peut jouer au moins un coup valide." alt="" coords="454,427,535,452"/>
+<area shape="poly" title=" " alt="" coords="71,378,106,422,132,445,162,462,215,478,259,478,362,462,438,450,439,455,362,467,259,483,214,483,160,467,129,449,102,426,66,381"/>
+<area shape="rect" href="reseau_8c.html#a757a843afa814e3d5d3b2fed87004c5e" title=" " alt="" coords="201,528,322,554"/>
+<area shape="poly" title=" " alt="" coords="68,378,102,440,129,476,162,507,188,521,186,526,159,511,125,479,98,443,64,381"/>
+<area shape="rect" href="reseau_8c.html#ad8e83f768e489c3abbe6355b4490e50a" title="Affiche l&#39;ensemble de l&#39;interface graphique du plateau de jeu." alt="" coords="208,577,314,603"/>
+<area shape="poly" title=" " alt="" coords="66,379,75,416,93,466,122,519,141,543,162,564,194,580,192,585,159,568,137,547,118,522,89,468,70,417,60,380"/>
+<area shape="rect" href="fonc__jeu_8c.html#afdf8b1fed70777eda6a73d1426337cbb" title="Calcule le score du joueur actuel." alt="" coords="468,673,521,699"/>
+<area shape="poly" title=" " alt="" coords="64,379,71,425,87,488,99,523,116,556,137,587,162,613,205,629,284,647,453,677,452,682,283,652,203,634,159,618,133,590,111,559,94,525,82,490,65,426,59,380"/>
+<area shape="rect" href="reseau_8c.html#aa90218e27e0352de97dbac2fb7644297" title="Vérifie si des données sont disponibles en lecture sur une socket." alt="" coords="196,679,327,704"/>
+<area shape="poly" title=" " alt="" coords="63,379,68,431,83,505,96,546,113,587,135,624,162,658,183,672,180,676,159,661,130,627,108,589,91,548,78,507,63,431,58,380"/>
+<area shape="rect" href="plateau_8c.html#a6cef6a7a30c94e53e7bdb4fbd7414cab" title="Affiche un bouton." alt="" coords="439,5,549,31"/>
+<area shape="poly" title=" " alt="" coords="362,29,424,23,424,28,363,34"/>
+<area shape="rect" href="plateau_8c.html#a07a4d5d108e41f8c3c0f4dbd2d11d013" title="Vérifie si un clic est dans un bouton." alt="" coords="453,55,535,80"/>
+<area shape="poly" title=" " alt="" coords="363,51,438,59,438,64,362,56"/>
+<area shape="rect" href="fonc__jeu_8c.html#a0565378c0f9d2d5f88cbfc5be230c8a8" title="Vérifie si un coup est valide à une position donnée (x, y) pour une couleur donnée." alt="" coords="629,427,720,452"/>
+<area shape="poly" title=" " alt="" coords="543,400,615,420,613,425,542,405"/>
+<area shape="rect" href="fonc__jeu_8c.html#a43a33e0e164278eef35f1122bd779ac0" title="Retourne les pions adverses autour de la case (x, y) après un coup valide." alt="" coords="771,377,881,403"/>
+<area shape="poly" title=" " alt="" coords="558,386,755,387,755,393,558,392"/>
+<area shape="rect" href="fonc__jeu_8c.html#a59ca37ed9c411eeefca103541c1ca42f" title="Copie du plateau pour la simulation virtuelle." alt="" coords="777,427,874,452"/>
+<area shape="poly" title=" " alt="" coords="720,437,761,437,761,442,720,442"/>
+<area shape="poly" title=" " alt="" coords="716,423,769,406,770,411,717,429"/>
+<area shape="poly" title=" " alt="" coords="317,437,438,437,438,442,317,442"/>
+<area shape="poly" title=" " alt="" coords="535,437,614,437,614,442,535,442"/>
+<area shape="rect" href="plateau_8c.html#a7a39122402c9a581f5dc06241a8c72cf" title="Affiche le tour du joueur actuel." alt="" coords="425,476,563,502"/>
+<area shape="poly" title=" " alt="" coords="314,581,338,574,361,564,375,552,384,538,393,524,408,511,417,506,419,511,412,515,397,528,388,541,379,555,363,568,340,579,316,586"/>
+<area shape="rect" href="plateau_8c.html#a63481e3e1fc947b5e88b453c3a8003ca" title="Affiche les coups possibles avec des cerlces non pleins." alt="" coords="410,525,578,551"/>
+<area shape="poly" title=" " alt="" coords="314,576,418,552,419,558,315,581"/>
+<area shape="rect" href="plateau_8c.html#adec0102bc39b50a00862c5573feaff3b" title="Affiche le plateau de jeu." alt="" coords="440,575,548,600"/>
+<area shape="poly" title=" " alt="" coords="315,587,425,586,425,591,315,592"/>
+<area shape="rect" href="plateau_8c.html#af47c4eb653843de1a027dcee74cf8499" title="Affiche les scores des joueurs." alt="" coords="445,624,543,650"/>
+<area shape="poly" title=" " alt="" coords="315,598,430,621,429,627,314,603"/>
+<area shape="poly" title=" " alt="" coords="316,600,363,620,378,630,388,640,397,650,411,660,453,675,451,680,409,665,394,654,384,644,375,634,361,625,314,605"/>
+<area shape="poly" title=" " alt="" coords="552,522,577,512,615,487,647,461,651,465,618,492,580,517,554,527"/>
+<area shape="rect" href="plateau_8c.html#a13ee1aedd4f772c7030c6aa30f2f4d83" title="Dessine un pion sur le plateau." alt="" coords="626,599,723,624"/>
+<area shape="poly" title=" " alt="" coords="549,592,611,600,611,606,548,597"/>
+<area shape="poly" title=" " alt="" coords="543,627,611,618,612,623,544,633"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="reseau_8h_a1a5b1c44bf12c58ef834793ab907a473_icgraph.png" border="0" usemap="#areseau_8h_a1a5b1c44bf12c58ef834793ab907a473_icgraph" alt=""/></div>
+<map name="areseau_8h_a1a5b1c44bf12c58ef834793ab907a473_icgraph" id="areseau_8h_a1a5b1c44bf12c58ef834793ab907a473_icgraph">
+<area shape="rect" title="Le joueur du côté client joue la partie en suivant la logique du jeu." alt="" coords="340,5,447,31"/>
+<area shape="rect" href="menus_8c.html#ad5104a2af57be4bc6989407cb27d882d" title="Gère les événements SDL pour le menu &quot;Rejoindre une partie réseau&quot;." alt="" coords="103,5,292,31"/>
+<area shape="poly" title=" " alt="" coords="324,21,292,21,292,16,324,16"/>
+<area shape="rect" href="othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,5,55,31"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a573b27608ca3c5d97ae602939079bd82" name="a573b27608ca3c5d97ae602939079bd82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a573b27608ca3c5d97ae602939079bd82">&#9670;&#160;</a></span>connecter_server()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int connecter_server </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Connecter la socket de client à celle de serveur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>contexte de réseau contient les informations nécessaires pour la communication. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si connexion réussit, -1 sinon </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="reseau_8h_a573b27608ca3c5d97ae602939079bd82_icgraph.png" border="0" usemap="#areseau_8h_a573b27608ca3c5d97ae602939079bd82_icgraph" alt=""/></div>
+<map name="areseau_8h_a573b27608ca3c5d97ae602939079bd82_icgraph" id="areseau_8h_a573b27608ca3c5d97ae602939079bd82_icgraph">
+<area shape="rect" title="Connecter la socket de client à celle de serveur." alt="" coords="340,5,461,31"/>
+<area shape="rect" href="menus_8c.html#ad5104a2af57be4bc6989407cb27d882d" title="Gère les événements SDL pour le menu &quot;Rejoindre une partie réseau&quot;." alt="" coords="103,5,292,31"/>
+<area shape="poly" title=" " alt="" coords="325,21,292,21,292,16,325,16"/>
+<area shape="rect" href="othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,5,55,31"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a842184aa59f837ba7bf1e29eaf831605" name="a842184aa59f837ba7bf1e29eaf831605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842184aa59f837ba7bf1e29eaf831605">&#9670;&#160;</a></span>fermer_client_socket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fermer_client_socket </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fermer la socket du côté de client. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>contexte de réseau contient les informations nécessaires pour la communication. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="reseau_8h_a842184aa59f837ba7bf1e29eaf831605_icgraph.png" border="0" usemap="#areseau_8h_a842184aa59f837ba7bf1e29eaf831605_icgraph" alt=""/></div>
+<map name="areseau_8h_a842184aa59f837ba7bf1e29eaf831605_icgraph" id="areseau_8h_a842184aa59f837ba7bf1e29eaf831605_icgraph">
+<area shape="rect" title="Fermer la socket du côté de client." alt="" coords="507,31,650,56"/>
+<area shape="rect" href="reseau_8c.html#a1a5b1c44bf12c58ef834793ab907a473" title="Le joueur du côté client joue la partie en suivant la logique du jeu." alt="" coords="346,5,453,31"/>
+<area shape="poly" title=" " alt="" coords="492,34,453,28,454,23,493,29"/>
+<area shape="rect" href="reseau_8c.html#ad43befb0dc1780dd5ddf20da8656e289" title="Le joueur du côté serveur joue la partie en suivant la logique du jeu." alt="" coords="340,55,459,80"/>
+<area shape="poly" title=" " alt="" coords="492,58,460,62,459,57,492,52"/>
+<area shape="rect" href="menus_8c.html#ad5104a2af57be4bc6989407cb27d882d" title="Gère les événements SDL pour le menu &quot;Rejoindre une partie réseau&quot;." alt="" coords="103,5,292,31"/>
+<area shape="poly" title=" " alt="" coords="330,21,292,21,292,16,330,16"/>
+<area shape="rect" href="othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,31,55,56"/>
+<area shape="poly" title=" " alt="" coords="94,37,56,42,55,37,93,31"/>
+<area shape="rect" href="menus_8c.html#a5cc4d94bfe627e003efca105a8816a23" title=" " alt="" coords="114,55,280,80"/>
+<area shape="poly" title=" " alt="" coords="325,70,281,70,281,65,325,65"/>
+<area shape="poly" title=" " alt="" coords="98,56,55,50,56,44,99,51"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2296463919585136453f88a241af608f" name="a2296463919585136453f88a241af608f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2296463919585136453f88a241af608f">&#9670;&#160;</a></span>fermer_serveur_socket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fermer_serveur_socket </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fermer la socket du côté de serveur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>contexte de réseau contient les informations nécessaires pour la communication. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="reseau_8h_a2296463919585136453f88a241af608f_icgraph.png" border="0" usemap="#areseau_8h_a2296463919585136453f88a241af608f_icgraph" alt=""/></div>
+<map name="areseau_8h_a2296463919585136453f88a241af608f_icgraph" id="areseau_8h_a2296463919585136453f88a241af608f_icgraph">
+<area shape="rect" title="Fermer la socket du côté de serveur." alt="" coords="507,56,662,82"/>
+<area shape="rect" href="reseau_8c.html#a1a5b1c44bf12c58ef834793ab907a473" title="Le joueur du côté client joue la partie en suivant la logique du jeu." alt="" coords="346,5,453,31"/>
+<area shape="poly" title=" " alt="" coords="520,54,448,34,450,29,521,49"/>
+<area shape="rect" href="menus_8c.html#a5cc4d94bfe627e003efca105a8816a23" title=" " alt="" coords="114,56,280,82"/>
+<area shape="poly" title=" " alt="" coords="492,72,281,72,281,66,492,66"/>
+<area shape="rect" href="reseau_8c.html#ad43befb0dc1780dd5ddf20da8656e289" title="Le joueur du côté serveur joue la partie en suivant la logique du jeu." alt="" coords="340,107,459,132"/>
+<area shape="poly" title=" " alt="" coords="521,89,450,109,448,104,520,84"/>
+<area shape="rect" href="menus_8c.html#ad5104a2af57be4bc6989407cb27d882d" title="Gère les événements SDL pour le menu &quot;Rejoindre une partie réseau&quot;." alt="" coords="103,7,292,32"/>
+<area shape="poly" title=" " alt="" coords="330,21,292,22,292,16,330,16"/>
+<area shape="rect" href="othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,32,55,58"/>
+<area shape="poly" title=" " alt="" coords="94,38,56,44,55,39,93,33"/>
+<area shape="poly" title=" " alt="" coords="98,57,55,51,56,46,99,52"/>
+<area shape="poly" title=" " alt="" coords="330,105,251,85,252,80,331,100"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaf86c3801dd294506d3fbc1983c7c643" name="aaf86c3801dd294506d3fbc1983c7c643"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf86c3801dd294506d3fbc1983c7c643">&#9670;&#160;</a></span>gererClics_reseau()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gererClics_reseau </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Event *</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a></td>          <td class="paramname"><span class="paramname"><em>jeu</em></span>[N][N], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> *</td>          <td class="paramname"><span class="paramname"><em>joueurActuel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tailleCase</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>positionPlateauX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>positionPlateauY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>temps_noir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>temps_blanc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">time_t *</td>          <td class="paramname"><span class="paramname"><em>dernier_tour</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gère les clics sur le plateau. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>Événement SDL </td></tr>
+    <tr><td class="paramname">jeu</td><td>Matrice du jeu </td></tr>
+    <tr><td class="paramname">joueurActuel</td><td>Pointeur vers le joueur actuel </td></tr>
+    <tr><td class="paramname">tailleCase</td><td>Taille d'une case </td></tr>
+    <tr><td class="paramname">positionPlateauX</td><td>Position X du plateau </td></tr>
+    <tr><td class="paramname">positionPlateauY</td><td>Position Y du plateau </td></tr>
+    <tr><td class="paramname">temps_noir</td><td>Pointeur vers le temps restant du joueur noir </td></tr>
+    <tr><td class="paramname">temps_blanc</td><td>Pointeur vers le temps restant du joueur blanc </td></tr>
+    <tr><td class="paramname">dernier_tour</td><td>Pointeur vers le timestamp du dernier tour </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="reseau_8h_aaf86c3801dd294506d3fbc1983c7c643_cgraph.png" border="0" usemap="#areseau_8h_aaf86c3801dd294506d3fbc1983c7c643_cgraph" alt=""/></div>
+<map name="areseau_8h_aaf86c3801dd294506d3fbc1983c7c643_cgraph" id="areseau_8h_aaf86c3801dd294506d3fbc1983c7c643_cgraph">
+<area shape="rect" title="Gère les clics sur le plateau." alt="" coords="5,31,132,56"/>
+<area shape="rect" href="fonc__jeu_8c.html#a0565378c0f9d2d5f88cbfc5be230c8a8" title="Vérifie si un coup est valide à une position donnée (x, y) pour une couleur donnée." alt="" coords="180,5,270,31"/>
+<area shape="poly" title=" " alt="" coords="131,31,164,25,165,31,132,36"/>
+<area shape="rect" href="fonc__jeu_8c.html#a43a33e0e164278eef35f1122bd779ac0" title="Retourne les pions adverses autour de la case (x, y) après un coup valide." alt="" coords="318,55,428,80"/>
+<area shape="poly" title=" " alt="" coords="132,46,303,59,303,65,132,51"/>
+<area shape="rect" href="fonc__jeu_8c.html#a59ca37ed9c411eeefca103541c1ca42f" title="Copie du plateau pour la simulation virtuelle." alt="" coords="324,5,422,31"/>
+<area shape="poly" title=" " alt="" coords="271,16,309,16,309,21,271,21"/>
+<area shape="poly" title=" " alt="" coords="267,29,319,47,317,52,265,34"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="reseau_8h_aaf86c3801dd294506d3fbc1983c7c643_icgraph.png" border="0" usemap="#areseau_8h_aaf86c3801dd294506d3fbc1983c7c643_icgraph" alt=""/></div>
+<map name="areseau_8h_aaf86c3801dd294506d3fbc1983c7c643_icgraph" id="areseau_8h_aaf86c3801dd294506d3fbc1983c7c643_icgraph">
+<area shape="rect" title="Gère les clics sur le plateau." alt="" coords="507,31,634,56"/>
+<area shape="rect" href="reseau_8c.html#a1a5b1c44bf12c58ef834793ab907a473" title="Le joueur du côté client joue la partie en suivant la logique du jeu." alt="" coords="346,5,453,31"/>
+<area shape="poly" title=" " alt="" coords="492,35,453,29,454,23,492,29"/>
+<area shape="rect" href="reseau_8c.html#ad43befb0dc1780dd5ddf20da8656e289" title="Le joueur du côté serveur joue la partie en suivant la logique du jeu." alt="" coords="340,55,459,80"/>
+<area shape="poly" title=" " alt="" coords="492,57,460,62,459,57,491,52"/>
+<area shape="rect" href="menus_8c.html#ad5104a2af57be4bc6989407cb27d882d" title="Gère les événements SDL pour le menu &quot;Rejoindre une partie réseau&quot;." alt="" coords="103,5,292,31"/>
+<area shape="poly" title=" " alt="" coords="330,21,292,21,292,16,330,16"/>
+<area shape="rect" href="othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,31,55,56"/>
+<area shape="poly" title=" " alt="" coords="94,37,56,42,55,37,93,31"/>
+<area shape="rect" href="menus_8c.html#a5cc4d94bfe627e003efca105a8816a23" title=" " alt="" coords="114,55,280,80"/>
+<area shape="poly" title=" " alt="" coords="325,70,281,70,281,65,325,65"/>
+<area shape="poly" title=" " alt="" coords="98,56,55,50,56,44,99,51"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5aeb5815afed75848f267867f2498cd4" name="a5aeb5815afed75848f267867f2498cd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aeb5815afed75848f267867f2498cd4">&#9670;&#160;</a></span>installer_serveur()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int installer_serveur </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Installer le serveur, en créeant la socket, en associant à une IP et un port de machine locale et mettre en écoute. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>contexte de réseau contient les informations nécessaires pour la communication. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 est bien installé le serveur, ou -1 exite une erreur en cours d'installation du serveur </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="reseau_8h_a5aeb5815afed75848f267867f2498cd4_icgraph.png" border="0" usemap="#areseau_8h_a5aeb5815afed75848f267867f2498cd4_icgraph" alt=""/></div>
+<map name="areseau_8h_a5aeb5815afed75848f267867f2498cd4_icgraph" id="areseau_8h_a5aeb5815afed75848f267867f2498cd4_icgraph">
+<area shape="rect" title="Installer le serveur, en créeant la socket, en associant à une IP et un port de machine locale et met..." alt="" coords="328,5,444,31"/>
+<area shape="rect" href="menus_8c.html#a9c8010ecab7da48159cb6f9522cc725a" title="Gère les événements SDL pour le menu réseau." alt="" coords="103,5,280,31"/>
+<area shape="poly" title=" " alt="" coords="313,21,281,21,281,16,313,16"/>
+<area shape="rect" href="othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,5,55,31"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad43befb0dc1780dd5ddf20da8656e289" name="ad43befb0dc1780dd5ddf20da8656e289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad43befb0dc1780dd5ddf20da8656e289">&#9670;&#160;</a></span>serveur_joue_jeu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void serveur_joue_jeu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcontexte__reseau__t.html">contexte_reseau_t</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Window *</td>          <td class="paramname"><span class="paramname"><em>window</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Renderer *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *</td>          <td class="paramname"><span class="paramname"><em>font1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *</td>          <td class="paramname"><span class="paramname"><em>font2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le joueur du côté serveur joue la partie en suivant la logique du jeu. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>contexte de réseau contient les informations nécessaires pour la communication. </td></tr>
+    <tr><td class="paramname">window</td><td>la fenêtre principale SDL de l'application. </td></tr>
+    <tr><td class="paramname">renderer</td><td>Pointeur vers le renderer SDL utilisé pour dessiner. </td></tr>
+    <tr><td class="paramname">font1</td><td>Police utilisée pour l'affichage du tour du joueur. </td></tr>
+    <tr><td class="paramname">font2</td><td>Police utilisée pour l'affichage des scores. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="reseau_8h_ad43befb0dc1780dd5ddf20da8656e289_cgraph.png" border="0" usemap="#areseau_8h_ad43befb0dc1780dd5ddf20da8656e289_cgraph" alt=""/></div>
+<map name="areseau_8h_ad43befb0dc1780dd5ddf20da8656e289_cgraph" id="areseau_8h_ad43befb0dc1780dd5ddf20da8656e289_cgraph">
+<area shape="rect" title="Le joueur du côté serveur joue la partie en suivant la logique du jeu." alt="" coords="5,353,125,379"/>
+<area shape="rect" href="plateau_8c.html#a016f8343610176c802c6627a88ded142" title="Affiche la fenêtre de fin de partie pour le jeu en ligne." alt="" coords="173,29,374,55"/>
+<area shape="poly" title=" " alt="" coords="64,353,69,299,85,221,98,179,117,137,141,98,171,64,174,62,177,66,175,68,145,101,121,140,103,181,90,223,74,300,69,353"/>
+<area shape="rect" href="fonc__jeu_8c.html#a370fa4eaab11df407965d087315862bf" title="Alterne entre le joueur blanc et le joueur noir." alt="" coords="220,79,326,104"/>
+<area shape="poly" title=" " alt="" coords="65,352,73,307,91,242,105,207,122,173,144,141,171,113,187,103,204,96,206,101,189,108,174,118,148,144,127,176,110,209,96,244,78,308,70,353"/>
+<area shape="rect" href="reseau_8c.html#af0219e0163e72930c305d9448bca7621" title="Envoyer le paquet de données au socket destinataire." alt="" coords="213,128,334,154"/>
+<area shape="poly" title=" " alt="" coords="67,352,78,314,98,263,128,209,148,184,171,163,197,149,199,153,174,167,152,188,133,212,102,265,83,316,72,354"/>
+<area shape="rect" href="reseau_8c.html#a842184aa59f837ba7bf1e29eaf831605" title="Fermer la socket du côté de client." alt="" coords="202,177,344,203"/>
+<area shape="poly" title=" " alt="" coords="69,352,83,322,105,284,134,245,171,212,186,203,189,208,174,216,138,249,109,287,88,325,74,354"/>
+<area shape="rect" href="reseau_8c.html#a2296463919585136453f88a241af608f" title="Fermer la socket du côté de serveur." alt="" coords="196,227,350,252"/>
+<area shape="poly" title=" " alt="" coords="76,351,116,311,142,289,171,269,201,255,203,260,174,274,145,293,119,315,80,355"/>
+<area shape="rect" href="reseau_8c.html#aaf86c3801dd294506d3fbc1983c7c643" title="Gère les clics sur le plateau." alt="" coords="443,376,569,402"/>
+<area shape="poly" title=" " alt="" coords="86,350,125,330,172,313,228,301,274,297,319,301,375,313,431,336,477,364,474,369,428,340,373,318,318,306,274,302,229,307,173,318,127,335,89,355"/>
+<area shape="rect" href="fonc__jeu_8c.html#a6c7825b947ceeaa9933d130eacf8fbee" title="Initialise le plateau de jeu." alt="" coords="242,328,304,354"/>
+<area shape="poly" title=" " alt="" coords="125,356,226,344,227,349,126,362"/>
+<area shape="rect" href="plateau_8c.html#a52a39d140dab56120e28f7c4c004f632" title="Initialise les dimensions du jeu." alt="" coords="203,377,344,403"/>
+<area shape="poly" title=" " alt="" coords="126,370,188,378,187,383,125,376"/>
+<area shape="rect" href="fonc__jeu_8c.html#a063f684dbbd2dd66b58b468afe5dacf1" title="Vérifie si la partie est finie." alt="" coords="218,427,328,452"/>
+<area shape="poly" title=" " alt="" coords="93,377,174,413,204,422,202,427,172,418,90,382"/>
+<area shape="rect" href="fonc__jeu_8c.html#a01f3c3f9cb23b1c2751ef00e54d6ee46" title="Vérifie si le joueur peut jouer au moins un coup valide." alt="" coords="466,427,547,452"/>
+<area shape="poly" title=" " alt="" coords="77,378,115,422,143,445,174,462,227,477,271,478,374,462,450,450,451,455,374,467,271,483,226,482,172,467,140,450,112,426,73,381"/>
+<area shape="rect" href="reseau_8c.html#a757a843afa814e3d5d3b2fed87004c5e" title=" " alt="" coords="213,528,334,554"/>
+<area shape="poly" title=" " alt="" coords="75,378,111,440,140,476,174,507,200,521,198,526,171,511,136,479,107,443,70,381"/>
+<area shape="rect" href="reseau_8c.html#ad8e83f768e489c3abbe6355b4490e50a" title="Affiche l&#39;ensemble de l&#39;interface graphique du plateau de jeu." alt="" coords="220,577,326,603"/>
+<area shape="poly" title=" " alt="" coords="72,379,83,416,103,466,133,519,152,543,174,564,206,580,204,585,171,568,148,547,128,522,98,469,78,418,67,380"/>
+<area shape="rect" href="fonc__jeu_8c.html#afdf8b1fed70777eda6a73d1426337cbb" title="Calcule le score du joueur actuel." alt="" coords="480,673,533,699"/>
+<area shape="poly" title=" " alt="" coords="70,379,78,425,96,489,109,523,127,556,148,587,174,613,217,629,296,647,465,677,464,682,295,652,215,634,171,618,144,591,122,559,104,525,91,490,73,426,65,380"/>
+<area shape="rect" href="reseau_8c.html#aa90218e27e0352de97dbac2fb7644297" title="Vérifie si des données sont disponibles en lecture sur une socket." alt="" coords="208,679,339,704"/>
+<area shape="poly" title=" " alt="" coords="70,379,76,431,92,506,106,546,124,587,146,624,174,658,195,672,192,676,171,661,142,628,119,589,101,548,87,507,71,432,64,380"/>
+<area shape="rect" href="plateau_8c.html#a6cef6a7a30c94e53e7bdb4fbd7414cab" title="Affiche un bouton." alt="" coords="451,5,561,31"/>
+<area shape="poly" title=" " alt="" coords="374,29,436,23,436,28,375,34"/>
+<area shape="rect" href="plateau_8c.html#a07a4d5d108e41f8c3c0f4dbd2d11d013" title="Vérifie si un clic est dans un bouton." alt="" coords="465,55,547,80"/>
+<area shape="poly" title=" " alt="" coords="375,51,450,59,450,64,374,56"/>
+<area shape="rect" href="fonc__jeu_8c.html#a0565378c0f9d2d5f88cbfc5be230c8a8" title="Vérifie si un coup est valide à une position donnée (x, y) pour une couleur donnée." alt="" coords="641,427,732,452"/>
+<area shape="poly" title=" " alt="" coords="555,400,627,420,625,425,554,405"/>
+<area shape="rect" href="fonc__jeu_8c.html#a43a33e0e164278eef35f1122bd779ac0" title="Retourne les pions adverses autour de la case (x, y) après un coup valide." alt="" coords="783,377,893,403"/>
+<area shape="poly" title=" " alt="" coords="570,386,767,387,767,393,570,392"/>
+<area shape="rect" href="fonc__jeu_8c.html#a59ca37ed9c411eeefca103541c1ca42f" title="Copie du plateau pour la simulation virtuelle." alt="" coords="789,427,886,452"/>
+<area shape="poly" title=" " alt="" coords="732,437,773,437,773,442,732,442"/>
+<area shape="poly" title=" " alt="" coords="728,423,781,406,782,411,729,429"/>
+<area shape="poly" title=" " alt="" coords="329,437,450,437,450,442,329,442"/>
+<area shape="poly" title=" " alt="" coords="547,437,626,437,626,442,547,442"/>
+<area shape="rect" href="plateau_8c.html#a7a39122402c9a581f5dc06241a8c72cf" title="Affiche le tour du joueur actuel." alt="" coords="437,476,575,502"/>
+<area shape="poly" title=" " alt="" coords="326,581,350,574,373,564,387,552,396,538,405,524,420,511,429,506,431,511,424,515,409,528,400,541,391,555,375,568,352,579,328,586"/>
+<area shape="rect" href="plateau_8c.html#a63481e3e1fc947b5e88b453c3a8003ca" title="Affiche les coups possibles avec des cerlces non pleins." alt="" coords="422,525,590,551"/>
+<area shape="poly" title=" " alt="" coords="326,576,430,552,431,558,327,581"/>
+<area shape="rect" href="plateau_8c.html#adec0102bc39b50a00862c5573feaff3b" title="Affiche le plateau de jeu." alt="" coords="452,575,560,600"/>
+<area shape="poly" title=" " alt="" coords="327,587,437,586,437,591,327,592"/>
+<area shape="rect" href="plateau_8c.html#af47c4eb653843de1a027dcee74cf8499" title="Affiche les scores des joueurs." alt="" coords="457,624,555,650"/>
+<area shape="poly" title=" " alt="" coords="327,598,442,621,441,627,326,603"/>
+<area shape="poly" title=" " alt="" coords="328,600,375,620,390,630,400,640,409,650,423,660,465,675,463,680,421,665,406,654,396,644,387,634,373,625,326,605"/>
+<area shape="poly" title=" " alt="" coords="564,522,589,512,627,487,659,461,663,465,630,492,592,517,566,527"/>
+<area shape="rect" href="plateau_8c.html#a13ee1aedd4f772c7030c6aa30f2f4d83" title="Dessine un pion sur le plateau." alt="" coords="638,599,735,624"/>
+<area shape="poly" title=" " alt="" coords="561,592,623,600,623,606,560,597"/>
+<area shape="poly" title=" " alt="" coords="555,627,623,618,624,623,556,633"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="reseau_8h_ad43befb0dc1780dd5ddf20da8656e289_icgraph.png" border="0" usemap="#areseau_8h_ad43befb0dc1780dd5ddf20da8656e289_icgraph" alt=""/></div>
+<map name="areseau_8h_ad43befb0dc1780dd5ddf20da8656e289_icgraph" id="areseau_8h_ad43befb0dc1780dd5ddf20da8656e289_icgraph">
+<area shape="rect" title="Le joueur du côté serveur joue la partie en suivant la logique du jeu." alt="" coords="317,5,436,31"/>
+<area shape="rect" href="menus_8c.html#a5cc4d94bfe627e003efca105a8816a23" title=" " alt="" coords="103,5,269,31"/>
+<area shape="poly" title=" " alt="" coords="302,21,269,21,269,16,302,16"/>
+<area shape="rect" href="othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,5,55,31"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

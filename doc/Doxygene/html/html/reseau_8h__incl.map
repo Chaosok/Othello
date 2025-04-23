@@ -1,0 +1,23 @@
+<map id="src/jeu/reseau.h" name="src/jeu/reseau.h">
+<area shape="rect" id="Node000001" title="Fonctions et structures de données nécessaires à la partie du reséau." alt="" coords="434,5,549,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,66,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="434,28,278,48,81,81,81,76,278,42,433,23"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,79,152,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="434,31,316,52,168,81,167,76,315,47,434,26"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="177,79,248,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="445,34,264,80,263,75,444,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="272,79,362,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="463,34,362,75,360,70,461,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="386,79,482,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="484,33,455,68,451,65,480,30"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="506,79,592,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="503,30,532,65,528,68,499,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="616,79,698,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="521,29,616,70,614,75,518,34"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="722,79,786,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="537,29,707,75,706,80,535,34"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="810,79,877,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="549,27,796,76,795,81,548,32"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="900,79,968,105"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="549,24,698,44,885,76,885,81,697,49,549,29"/>
+</map>

@@ -1,0 +1,101 @@
+<map id="JoueurVsJoueurSauv" name="JoueurVsJoueurSauv">
+<area shape="rect" id="Node000001" title="Mode Joueur vs Joueur (partie sauvegardée)" alt="" coords="5,864,151,890"/>
+<area shape="rect" id="Node000002" href="$plateau_8c.html#a6d0ce91a0e8a18a365a92d567d94a4da" title="Lance une partie." alt="" coords="199,864,282,890"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,874,183,874,183,880,151,880"/>
+<area shape="rect" id="Node000003" href="$plateau_8c.html#a7a39122402c9a581f5dc06241a8c72cf" title="Affiche le tour du joueur actuel." alt="" coords="350,5,488,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="240,864,248,703,265,444,278,310,292,191,309,100,318,68,328,49,339,38,343,41,332,52,323,70,314,101,297,192,283,311,271,445,253,704,245,864"/>
+<area shape="rect" id="Node000004" href="$plateau_8c.html#a6cef6a7a30c94e53e7bdb4fbd7414cab" title="Affiche un bouton." alt="" coords="571,83,681,108"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="239,863,246,709,262,462,274,335,289,223,307,138,317,109,328,92,356,73,387,61,420,55,453,53,519,60,576,75,575,80,519,66,453,58,420,60,388,66,358,78,332,96,322,112,312,139,294,224,279,336,268,462,252,710,245,864"/>
+<area shape="rect" id="Node000005" href="$plateau_8c.html#a63481e3e1fc947b5e88b453c3a8003ca" title="Affiche les coups possibles avec des cerlces non pleins." alt="" coords="903,988,1071,1014"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="283,881,891,982,890,988,282,886"/>
+<area shape="rect" id="Node000008" href="$fonc__jeu_8c.html#a43a33e0e164278eef35f1122bd779ac0" title="Retourne les pions adverses autour de la case (x, y) après un coup valide." alt="" coords="1258,461,1368,487"/>
+<area shape="poly" id="edge62_Node000002_Node000008" title=" " alt="" coords="239,863,240,748,250,566,261,471,277,383,299,312,312,284,328,263,363,234,396,216,429,207,463,205,536,212,625,218,989,218,1043,225,1093,245,1140,273,1183,308,1221,346,1253,384,1298,446,1293,450,1248,387,1217,349,1179,312,1137,278,1091,250,1041,231,988,223,625,223,536,217,463,210,430,212,398,221,366,238,332,267,317,287,303,313,282,385,266,472,255,567,245,748,244,864"/>
+<area shape="rect" id="Node000009" href="$fonc__jeu_8c.html#ad91663b0b2543ee541307f4aea289ec0" title="Affiche l&#39;état actuel du plateau de jeu dans la console." alt="" coords="374,940,463,966"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="268,888,331,918,365,932,363,937,329,923,266,893"/>
+<area shape="rect" id="Node000010" href="$plateau_8c.html#acf4a37ec0bb8626daaa18a3d99ab2942" title="Affiche un chronomètre." alt="" coords="366,989,472,1015"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="252,889,283,932,306,956,331,976,352,986,350,991,329,980,302,960,279,935,247,892"/>
+<area shape="rect" id="Node000011" href="$plateau_8c.html#acf06cbb502cb8ba4c6cc15124e5df6af" title="Affiche la fenêtre de fin de partie." alt="" coords="330,107,507,132"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="239,864,239,731,248,518,259,404,275,299,297,211,311,176,328,150,340,139,343,142,332,153,316,179,302,213,280,300,264,405,253,518,245,732,244,864"/>
+<area shape="rect" id="Node000012" href="$plateau_8c.html#a07a4d5d108e41f8c3c0f4dbd2d11d013" title="Vérifie si un clic est dans un bouton." alt="" coords="585,132,667,158"/>
+<area shape="poly" id="edge19_Node000002_Node000012" title=" " alt="" coords="239,863,239,738,247,538,258,432,274,335,297,255,311,224,328,200,345,188,369,178,433,162,504,151,569,145,570,151,505,157,434,167,371,183,348,193,332,204,316,226,302,257,279,336,263,433,253,538,244,738,244,863"/>
+<area shape="rect" id="Node000013" href="$plateau_8c.html#adec0102bc39b50a00862c5573feaff3b" title="Affiche le plateau de jeu." alt="" coords="364,1039,473,1064"/>
+<area shape="poly" id="edge13_Node000002_Node000013" title=" " alt="" coords="248,889,258,918,276,955,300,993,332,1025,351,1037,349,1041,328,1030,296,996,271,957,254,920,243,891"/>
+<area shape="rect" id="Node000015" href="$plateau_8c.html#af47c4eb653843de1a027dcee74cf8499" title="Affiche les scores des joueurs." alt="" coords="370,1088,468,1114"/>
+<area shape="poly" id="edge15_Node000002_Node000015" title=" " alt="" coords="246,889,254,926,269,976,294,1030,311,1054,332,1075,356,1089,354,1093,328,1079,307,1057,290,1032,264,978,248,928,241,890"/>
+<area shape="rect" id="Node000016" href="$fonc__jeu_8c.html#a370fa4eaab11df407965d087315862bf" title="Alterne entre le joueur blanc et le joueur noir." alt="" coords="934,761,1040,787"/>
+<area shape="poly" id="edge17_Node000002_Node000016" title=" " alt="" coords="240,864,245,812,258,736,285,651,304,609,328,570,377,511,425,472,481,445,554,417,639,383,676,370,711,360,745,356,780,360,817,373,857,396,896,432,926,476,950,524,966,575,977,625,984,672,989,746,983,746,979,673,972,626,961,576,945,526,922,478,892,436,853,400,815,377,779,365,745,361,712,365,677,375,641,388,556,422,483,450,428,477,381,514,332,573,309,611,290,652,264,738,250,813,245,864"/>
+<area shape="rect" id="Node000017" href="$fonc__sauv_8c.html#adf439763f3a088610143b75e2691e39b" title=" " alt="" coords="376,1137,461,1163"/>
+<area shape="poly" id="edge18_Node000002_Node000017" title=" " alt="" coords="245,890,250,934,263,998,274,1032,289,1066,308,1097,332,1124,346,1134,362,1141,360,1146,343,1139,328,1128,304,1100,284,1068,269,1034,258,999,244,935,240,890"/>
+<area shape="rect" id="Node000018" href="$plateau_8c.html#a3e7c85ffca89f0e5c7533391d811d67d" title="Créer un message indiquant que la liste de sauvegarde est pleine." alt="" coords="332,1187,505,1212"/>
+<area shape="poly" id="edge20_Node000002_Node000018" title=" " alt="" coords="244,890,246,942,257,1019,268,1060,283,1102,304,1140,332,1174,334,1175,330,1179,328,1177,300,1143,278,1104,263,1062,252,1020,241,943,239,890"/>
+<area shape="rect" id="Node000019" href="$plateau_8c.html#a2fc31f24af4aafce38886c450c464227" title="Gère les clics sur le plateau." alt="" coords="760,259,840,284"/>
+<area shape="poly" id="edge21_Node000002_Node000019" title=" " alt="" coords="239,864,241,754,251,584,262,494,277,413,299,346,313,320,328,301,359,284,404,271,458,263,518,259,641,259,744,264,744,270,641,265,518,265,458,269,405,276,361,289,332,306,317,323,304,348,283,414,267,495,256,584,246,754,244,864"/>
+<area shape="rect" id="Node000020" href="$fonc__jeu_8c.html#a01f3c3f9cb23b1c2751ef00e54d6ee46" title="Vérifie si le joueur peut jouer au moins un coup valide." alt="" coords="946,385,1028,411"/>
+<area shape="poly" id="edge61_Node000002_Node000020" title=" " alt="" coords="240,863,250,787,268,675,294,562,310,516,328,485,384,423,440,378,498,349,559,333,624,328,695,331,771,342,856,357,880,365,904,376,932,384,931,389,902,381,878,370,854,362,770,347,694,337,624,333,560,338,500,354,443,383,387,427,332,488,315,519,300,563,274,676,255,788,246,864"/>
+<area shape="rect" id="Node000021" href="$fonc__jeu_8c.html#a6c7825b947ceeaa9933d130eacf8fbee" title="Initialise le plateau de jeu." alt="" coords="388,1236,450,1262"/>
+<area shape="poly" id="edge26_Node000002_Node000021" title=" " alt="" coords="246,890,256,959,274,1060,299,1159,315,1197,332,1223,351,1236,373,1243,372,1248,348,1241,328,1227,310,1200,294,1161,268,1061,250,960,241,891"/>
+<area shape="rect" id="Node000022" href="$plateau_8c.html#a52a39d140dab56120e28f7c4c004f632" title="Initialise les dimensions du jeu." alt="" coords="555,1312,697,1338"/>
+<area shape="poly" id="edge27_Node000002_Node000022" title=" " alt="" coords="245,890,253,968,269,1085,281,1144,295,1199,312,1243,332,1272,346,1282,365,1290,418,1303,540,1318,539,1323,417,1308,364,1295,343,1286,328,1276,308,1246,290,1201,276,1146,264,1085,248,969,240,890"/>
+<area shape="rect" id="Node000023" href="$plateau_8c.html#ab62e1460c8d820f8968f86dc64e638a9" title="Met à jour les dimensions après redimensionnement de la fenêtre." alt="" coords="338,1337,499,1363"/>
+<area shape="poly" id="edge28_Node000002_Node000023" title=" " alt="" coords="245,890,253,975,269,1103,281,1170,295,1231,312,1282,332,1316,344,1327,341,1331,328,1320,307,1284,290,1233,276,1171,264,1104,248,975,240,890"/>
+<area shape="rect" id="Node000024" href="$fonc__ia_8c.html#a5a1da4493d2dc3321b35f289211121cb" title="Choix du meilleur coup avec minmax." alt="" coords="368,739,469,764"/>
+<area shape="poly" id="edge30_Node000002_Node000024" title=" " alt="" coords="259,861,385,771,388,776,262,866"/>
+<area shape="rect" id="Node000029" href="$fonc__jeu_8c.html#afdf8b1fed70777eda6a73d1426337cbb" title="Calcule le score du joueur actuel." alt="" coords="960,811,1014,836"/>
+<area shape="poly" id="edge64_Node000002_Node000029" title=" " alt="" coords="283,875,508,881,606,892,684,907,720,911,759,912,803,908,854,897,883,887,910,874,956,844,959,848,912,878,885,892,856,902,804,913,759,918,720,917,683,912,605,897,507,886,283,880"/>
+<area shape="rect" id="Node000034" href="$fonc__jeu_8c.html#a063f684dbbd2dd66b58b468afe5dacf1" title="Vérifie si la partie est finie." alt="" coords="745,411,855,436"/>
+<area shape="poly" id="edge60_Node000002_Node000034" title=" " alt="" coords="244,862,277,787,305,732,341,672,383,610,433,550,490,497,554,453,597,435,643,424,688,418,729,417,729,422,688,424,643,429,599,440,557,458,493,501,437,554,387,614,345,675,310,735,282,789,249,864"/>
+<area shape="rect" id="Node000035" href="$fonc__sauv_8c.html#acf0e31808cc9809de353de7ca44d240c" title=" " alt="" coords="362,1387,475,1412"/>
+<area shape="poly" id="edge63_Node000002_Node000035" title=" " alt="" coords="245,890,250,986,264,1132,276,1208,291,1278,309,1335,332,1374,349,1386,346,1391,328,1377,304,1337,286,1279,271,1209,259,1132,245,986,240,890"/>
+<area shape="rect" id="Node000006" href="$fonc__jeu_8c.html#a0565378c0f9d2d5f88cbfc5be230c8a8" title="Vérifie si un coup est valide à une position donnée (x, y) pour une couleur donnée." alt="" coords="1119,613,1210,639"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1016,985,1044,967,1069,942,1092,906,1110,867,1136,786,1152,711,1159,654,1164,655,1157,712,1142,788,1115,869,1096,909,1073,945,1048,971,1019,990"/>
+<area shape="rect" id="Node000007" href="$fonc__jeu_8c.html#a59ca37ed9c411eeefca103541c1ca42f" title="Copie du plateau pour la simulation virtuelle." alt="" coords="1264,613,1362,639"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1210,624,1248,624,1248,629,1210,629"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="1177,611,1287,496,1290,500,1181,615"/>
+<area shape="poly" id="edge11_Node000011_Node000004" title=" " alt="" coords="508,107,555,101,556,106,508,112"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="508,128,570,135,569,141,508,133"/>
+<area shape="rect" id="Node000014" href="$plateau_8c.html#a13ee1aedd4f772c7030c6aa30f2f4d83" title="Dessine un pion sur le plateau." alt="" coords="578,1115,674,1140"/>
+<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="474,1062,508,1073,583,1105,581,1110,506,1078,472,1067"/>
+<area shape="poly" id="edge16_Node000015_Node000014" title=" " alt="" coords="468,1104,563,1117,562,1122,468,1110"/>
+<area shape="poly" id="edge22_Node000019_Node000006" title=" " alt="" coords="841,279,969,319,1032,345,1073,371,1095,397,1113,426,1140,489,1156,550,1163,598,1158,598,1150,551,1135,491,1109,429,1091,400,1070,375,1029,349,967,324,839,284"/>
+<area shape="poly" id="edge25_Node000019_Node000008" title=" " alt="" coords="841,271,947,283,1011,296,1072,316,1135,346,1195,382,1286,449,1283,453,1192,386,1133,350,1070,321,1009,301,946,288,840,276"/>
+<area shape="poly" id="edge23_Node000019_Node000020" title=" " alt="" coords="828,283,857,301,881,327,905,352,943,376,940,380,901,356,877,331,853,306,825,287"/>
+<area shape="poly" id="edge24_Node000020_Node000006" title=" " alt="" coords="1001,410,1146,599,1142,602,997,413"/>
+<area shape="poly" id="edge29_Node000023_Node000022" title=" " alt="" coords="499,1338,540,1333,540,1338,500,1343"/>
+<area shape="poly" id="edge32_Node000024_Node000006" title=" " alt="" coords="440,763,544,829,621,869,708,906,801,933,849,941,896,944,942,942,987,932,1029,916,1070,892,1095,868,1116,839,1132,807,1143,773,1156,707,1161,654,1166,654,1162,708,1148,775,1137,809,1121,842,1100,872,1073,896,1032,921,988,938,943,947,896,950,848,947,800,939,706,911,618,874,541,834,437,767"/>
+<area shape="poly" id="edge31_Node000024_Node000007" title=" " alt="" coords="429,763,473,838,509,889,554,942,605,992,664,1034,696,1051,729,1063,763,1071,799,1074,988,1074,1026,1071,1060,1060,1092,1044,1121,1023,1148,997,1173,968,1215,901,1249,830,1274,761,1303,654,1308,655,1279,763,1253,833,1220,904,1177,971,1152,1001,1125,1027,1095,1049,1062,1065,1027,1076,989,1079,798,1079,762,1077,727,1068,693,1056,661,1039,602,996,550,945,505,892,469,841,424,766"/>
+<area shape="poly" id="edge59_Node000024_Node000008" title=" " alt="" coords="452,736,480,719,505,696,517,677,523,659,526,623,531,587,539,568,553,550,583,523,610,503,637,489,664,480,724,472,798,472,988,472,1242,472,1242,477,988,477,799,477,724,478,665,485,639,494,613,508,586,527,557,553,543,571,536,588,532,623,529,660,522,680,509,700,483,724,454,741"/>
+<area shape="rect" id="Node000025" href="$fonc__ia_8c.html#a19518b8c868e790a646f3bd71b6c4168" title=" " alt="" coords="758,664,842,690"/>
+<area shape="poly" id="edge33_Node000024_Node000025" title=" " alt="" coords="449,736,498,717,555,700,653,683,742,676,742,681,654,689,556,705,500,722,451,741"/>
+<area shape="rect" id="Node000026" href="$fonc__ia_8c.html#ae6c902eb242d459364493e219e85b23a" title="Version &quot;avancée&quot; de l&#39;I.A.: appelle des fonctions calculant le score, la mobilité,..." alt="" coords="556,764,696,790"/>
+<area shape="poly" id="edge34_Node000024_Node000026" title=" " alt="" coords="470,755,541,764,540,769,469,760"/>
+<area shape="rect" id="Node000032" href="$fonc__ia_8c.html#a1ef87e7f8f2091e45f855150d9bdfd32" title="Version &quot;facile&quot; de l&#39;I.A.: appelle une fonction calculant le score seulement." alt="" coords="565,715,687,740"/>
+<area shape="poly" id="edge48_Node000024_Node000032" title=" " alt="" coords="469,743,549,734,550,739,470,748"/>
+<area shape="rect" id="Node000033" href="$fonc__ia_8c.html#a96442e707f8c8a2060f8e11e2003fc46" title="Algorithme minmax qui calcule l&#39;arbre des coups possibles." alt="" coords="592,588,660,614"/>
+<area shape="poly" id="edge51_Node000024_Node000033" title=" " alt="" coords="437,736,593,621,596,625,440,740"/>
+<area shape="poly" id="edge47_Node000026_Node000025" title=" " alt="" coords="675,761,695,751,710,738,719,726,728,713,743,699,749,695,752,699,746,703,732,716,723,729,714,742,698,755,677,766"/>
+<area shape="rect" id="Node000027" href="$fonc__ia_8c.html#a725fd81748f081b3f47f6e870b1eb09b" title=" " alt="" coords="758,713,842,739"/>
+<area shape="poly" id="edge35_Node000026_Node000027" title=" " alt="" coords="672,761,742,740,744,745,674,766"/>
+<area shape="rect" id="Node000028" href="$fonc__ia_8c.html#aa4aa600e7cda0257b8873e018def1bab" title=" " alt="" coords="751,861,848,887"/>
+<area shape="poly" id="edge37_Node000026_Node000028" title=" " alt="" coords="648,788,746,848,754,852,751,857,743,852,645,792"/>
+<area shape="rect" id="Node000030" href="$fonc__ia_8c.html#aad80c1b64b2f75c6cd2f219a0ee84b21" title=" " alt="" coords="758,812,842,838"/>
+<area shape="poly" id="edge41_Node000026_Node000030" title=" " alt="" coords="676,788,743,807,742,812,675,793"/>
+<area shape="rect" id="Node000031" href="$fonc__ia_8c.html#a13863afbe6ebdb99ca2b6ae8cf91c9b2" title=" " alt="" coords="758,763,842,788"/>
+<area shape="poly" id="edge44_Node000026_Node000031" title=" " alt="" coords="696,774,742,773,742,779,696,779"/>
+<area shape="poly" id="edge36_Node000027_Node000016" title=" " alt="" coords="843,734,920,754,919,759,841,739"/>
+<area shape="poly" id="edge39_Node000028_Node000006" title=" " alt="" coords="849,881,899,886,957,885,1017,873,1044,862,1070,847,1091,827,1109,804,1135,751,1150,698,1158,654,1163,655,1156,699,1140,753,1113,807,1095,831,1073,851,1047,867,1018,878,958,890,899,891,849,886"/>
+<area shape="poly" id="edge38_Node000028_Node000016" title=" " alt="" coords="835,859,853,848,867,835,876,822,886,809,902,796,918,788,920,792,904,800,890,813,881,825,872,838,857,852,838,863"/>
+<area shape="poly" id="edge40_Node000028_Node000029" title=" " alt="" coords="848,859,945,832,946,837,849,864"/>
+<area shape="poly" id="edge42_Node000030_Node000016" title=" " alt="" coords="842,811,921,789,923,794,843,816"/>
+<area shape="poly" id="edge43_Node000030_Node000029" title=" " alt="" coords="843,822,945,821,945,826,843,827"/>
+<area shape="poly" id="edge45_Node000031_Node000016" title=" " alt="" coords="843,773,919,772,919,777,843,778"/>
+<area shape="poly" id="edge46_Node000031_Node000029" title=" " alt="" coords="843,784,946,810,944,815,842,789"/>
+<area shape="poly" id="edge50_Node000032_Node000025" title=" " alt="" coords="672,711,742,691,744,696,674,717"/>
+<area shape="poly" id="edge49_Node000032_Node000031" title=" " alt="" coords="676,738,743,757,742,762,675,744"/>
+<area shape="poly" id="edge53_Node000033_Node000006" title=" " alt="" coords="660,600,1104,621,1104,626,660,605"/>
+<area shape="poly" id="edge52_Node000033_Node000007" title=" " alt="" coords="660,596,745,592,1021,592,1210,598,1253,606,1252,612,1209,603,1021,598,745,597,660,601"/>
+<area shape="poly" id="edge58_Node000033_Node000008" title=" " alt="" coords="660,591,744,573,976,530,1209,490,1242,484,1242,490,1210,495,977,536,745,578,661,596"/>
+<area shape="poly" id="edge54_Node000033_Node000025" title=" " alt="" coords="659,612,756,655,754,660,656,617"/>
+<area shape="poly" id="edge55_Node000033_Node000033" title=" " alt="" coords="597,589,591,579,594,570,606,564,626,561,647,564,658,571,655,575,645,569,626,567,608,569,598,573,596,579,601,586"/>
+<area shape="poly" id="edge56_Node000033_Node000034" title=" " alt="" coords="638,586,773,446,777,449,642,589"/>
+<area shape="poly" id="edge57_Node000034_Node000020" title=" " alt="" coords="855,413,931,403,931,408,856,419"/>
+</map>

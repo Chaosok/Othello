@@ -1,0 +1,16 @@
+<map id="src" name="src">
+<area shape="rect" id="node2" href="dir_59017ea81999418f37aea2feab706bf3.html" title="graphique" alt="" coords="91,27,168,52"/>
+<area shape="rect" id="node3" href="dir_2be32138fab38d875808a6f63933b04c.html" title="IA" alt="" coords="66,100,105,126"/>
+<area shape="poly" id="edge1" href="dir_000000_000001.html" alt="" coords="124,54,103,88,99,85,120,51"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000000_000001.html" title="3" alt="" coords="106,81,113,96"/>
+<area shape="rect" id="node4" href="dir_e7a19e970db27507ea7fd9f14268b402.html" title="jeu" alt="" coords="87,174,126,200"/>
+<area shape="poly" id="edge2" href="dir_000000_000002.html" alt="" coords="122,54,113,86,107,126,102,159,97,158,101,126,108,85,117,52"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000000_000002.html" title="9" alt="" coords="105,148,112,163"/>
+<area shape="poly" id="edge3" href="dir_000001_000002.html" alt="" coords="85,126,93,159,88,160,79,127"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000001_000002.html" title="1" alt="" coords="93,146,100,161"/>
+<area shape="poly" id="edge5" href="dir_000002_000000.html" alt="" coords="115,173,125,126,133,68,138,69,131,126,120,174"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000002_000000.html" title="2" alt="" coords="123,64,130,79"/>
+<area shape="poly" id="edge4" href="dir_000002_000001.html" alt="" coords="107,174,99,141,104,140,113,173"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000002_000001.html" title="3" alt="" coords="92,139,99,154"/>
+<area shape="rect" id="clust1" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html" alt="" coords="16,16,179,210"/>
+</map>

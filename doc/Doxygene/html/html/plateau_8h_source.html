@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello:  Fichier source de src/graphique/plateau.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="othelloLogo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Othello
+   </div>
+   <div id="projectbrief">Version numérique du jeu Othello, un jeu de plateau conçu pour être joué à deux</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_59017ea81999418f37aea2feab706bf3.html">graphique</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">plateau.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="plateau_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PLATEAU_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PLATEAU_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;SDL2/SDL_ttf.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;SDL2/SDL_mixer.h&gt;</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="fonc__jeu_8h.html">../jeu/fonc_jeu.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="fonc__sauv_8h.html">../jeu/fonc_sauv.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="fonc__ia_8h.html">../IA/fonc_ia.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="menus_8h.html">menus.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="plateau_8h.html#abaa01570a2452b709b1e074ada114d2f">   18</a></span><span class="preprocessor">#define TEMPS_LIMITE 150 </span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="plateau_8h.html#ae9f43a93bf789809e518b992024acd39">   19</a></span><span class="preprocessor">#define LARGEUR_MIN_FENETRE 1040 </span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="plateau_8h.html#ab982d2091e0b7af800066db6f58b5226">   20</a></span><span class="preprocessor">#define HAUTEUR_MIN_FENETRE 580 </span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="plateau_8h.html#a0bd9d9d79cf6ba69787a76cf3f9bc853">   21</a></span><span class="preprocessor">#define HAUTEUR_DEBLOCAGE 780 </span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="plateau_8h.html#aa440f5494f1f5e2f371669610bc57d25">   22</a></span><span class="preprocessor">#define LARGEUR_MAX_FENETRE 1500 </span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">extern</span> SDL_Window* <a class="code hl_variable" href="plateau_8c.html#aaa8e409e04dcf575ef63fd5fb3db06f9">window</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">extern</span> Mix_Chunk *<a class="code hl_variable" href="menus_8c.html#a1ed3dc92e0cc2109dcdd0424617a3208">sonPion</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// Structure qui regroupe les dimensions et positions</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html">   29</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html#aedad4597965d90517e950d3f283551b6">   30</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dimensions_jeu.html#aedad4597965d90517e950d3f283551b6">largeurFenetre</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html#a917b2b81b0d2447b15bf8aa82edbb140">   31</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dimensions_jeu.html#a917b2b81b0d2447b15bf8aa82edbb140">hauteurFenetre</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html#a8e237cedc7d966a0177e4a11e1de8a7a">   32</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dimensions_jeu.html#a8e237cedc7d966a0177e4a11e1de8a7a">tailleCase</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html#a9976706a313f489cfc67e3005dc4f1da">   33</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dimensions_jeu.html#a9976706a313f489cfc67e3005dc4f1da">taillePolice</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html#a0d28dc76182297305ddc8ce21e0461ad">   34</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dimensions_jeu.html#a0d28dc76182297305ddc8ce21e0461ad">largeurPlateau</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html#a0796b9d0cc37ca0e443f7675a8786d21">   35</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dimensions_jeu.html#a0796b9d0cc37ca0e443f7675a8786d21">hauteurPlateau</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html#afb8f6c115bea4365eac83b969378aa35">   36</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dimensions_jeu.html#afb8f6c115bea4365eac83b969378aa35">posXPlateau</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html#acef31b65a311167cc899e7d66dc13bad">   37</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dimensions_jeu.html#acef31b65a311167cc899e7d66dc13bad">posYPlateau</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html#aedc8c74965ba5de8ffef8e1e61fbb17a">   38</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dimensions_jeu.html#aedc8c74965ba5de8ffef8e1e61fbb17a">rayonPionScoreJ</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html#ab9bb7d01e7028eff0292a415e73fc9bc">   39</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dimensions_jeu.html#ab9bb7d01e7028eff0292a415e73fc9bc">largeurBouton</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html#a8474443553f178f3104072a5d6b50f7f">   40</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dimensions_jeu.html#a8474443553f178f3104072a5d6b50f7f">hauteurBouton</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html#a370aa7fb3d899c0cfab885861c5a3dd8">   41</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dimensions_jeu.html#a370aa7fb3d899c0cfab885861c5a3dd8">boutonX</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct_dimensions_jeu.html#a1457c2da2e8d33d8ced3a15c762afac9">   42</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dimensions_jeu.html#a1457c2da2e8d33d8ced3a15c762afac9">boutonY</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>} <a class="code hl_struct" href="struct_dimensions_jeu.html">DimensionsJeu</a>;</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// Structure pour un bouton</span></div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="};">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structbouton.html">   46</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structbouton.html#a53410df7558236b7d51e02df4aebf8f2">   47</a></span>    SDL_Rect <a class="code hl_variable" href="structbouton.html#a53410df7558236b7d51e02df4aebf8f2">rect</a>; <span class="comment">// zone bouton</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structbouton.html#a22e037a32179215186107037c81d0b59">   48</a></span>    SDL_Color <a class="code hl_variable" href="structbouton.html#a22e037a32179215186107037c81d0b59">color</a>;  <span class="comment">// couleur du bouton</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structbouton.html#a098d5c2f6a744ee7b5d46b9aa41d1da1">   49</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structbouton.html#a098d5c2f6a744ee7b5d46b9aa41d1da1">text</a>[20];  <span class="comment">// texte dans le bouton</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>} <a class="code hl_struct" href="structbouton.html">bouton</a>;</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">extern</span> <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="plateau_8h.html#a9848a110bbd4407c976a3659a317b952">coul</a>; </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">/* Fonctions d&#39;affichage */</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="plateau_8h.html#a13ee1aedd4f772c7030c6aa30f2f4d83">dessinerPion</a>(SDL_Renderer *renderer, <span class="keywordtype">int</span> centreX, <span class="keywordtype">int</span> centreY, <span class="keywordtype">int</span> rayon, SDL_Color couleur);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="plateau_8h.html#adec0102bc39b50a00862c5573feaff3b">afficherPlateau</a>(SDL_Renderer *renderer, <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a>[<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <span class="keywordtype">int</span> tailleCase, <span class="keywordtype">int</span> posX, <span class="keywordtype">int</span> posY);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">void</span> <a class="code hl_function" href="plateau_8h.html#af47c4eb653843de1a027dcee74cf8499">afficherScore</a>(SDL_Renderer* renderer, TTF_Font* font1,TTF_Font* font2, </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">int</span> scoreNoir, <span class="keywordtype">int</span> scoreBlanc, <span class="keywordtype">int</span> hauteurFenetre, <span class="keywordtype">int</span> largeurFenetre, <span class="keywordtype">int</span> rayonPion);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> <a class="code hl_function" href="plateau_8h.html#a7a39122402c9a581f5dc06241a8c72cf">affichageTourJoueur</a>(SDL_Renderer* renderer, TTF_Font* font, <span class="keywordtype">int</span> largeurFenetre, <span class="keywordtype">int</span> posYPlateau, <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> joueurActuel);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> <a class="code hl_function" href="plateau_8h.html#a63481e3e1fc947b5e88b453c3a8003ca">afficher_coups_possibles</a>(SDL_Renderer *renderer, <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a>[<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> couleur, <span class="keywordtype">int</span> tailleCase, <span class="keywordtype">int</span> posX, <span class="keywordtype">int</span> posY);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span> <a class="code hl_function" href="plateau_8h.html#a6cef6a7a30c94e53e7bdb4fbd7414cab">afficher_bouton</a>(SDL_Renderer *renderer, TTF_Font *font, <a class="code hl_struct" href="structbouton.html">bouton</a> *btn);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">int</span> <a class="code hl_function" href="plateau_8h.html#acf06cbb502cb8ba4c6cc15124e5df6af">afficherFenetreFinDePartie</a>(SDL_Renderer* renderer, <span class="keywordtype">int</span> scoreNoir, <span class="keywordtype">int</span> scoreBlanc, </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">int</span> largeurFenetre, <span class="keywordtype">int</span> hauteurFenetre, <span class="keywordtype">int</span> *<a class="code hl_variable" href="reseau_8c.html#a1a7237dd3e4702f7866da49efc69b8a9">temps_noir</a>, <span class="keywordtype">int</span> *<a class="code hl_variable" href="reseau_8c.html#adb6fb5cb909122d28cacba2d1c369dd8">temps_blanc</a>, <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> joueurActuel);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">void</span> <a class="code hl_function" href="plateau_8h.html#acf4a37ec0bb8626daaa18a3d99ab2942">afficherChrono</a>(SDL_Renderer *renderer, TTF_Font *font, <span class="keywordtype">int</span> temps_rest, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">int</span> posImgX, <span class="keywordtype">int</span> posImgY, <span class="keywordtype">int</span> largeurFenetre);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> <a class="code hl_function" href="plateau_8h.html#a3e7c85ffca89f0e5c7533391d811d67d">creerMessageSauvegarde</a>(SDL_Renderer* renderer, TTF_Font* font, SDL_Color color, </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        SDL_Texture** texture, SDL_Rect* rect, <span class="keywordtype">int</span> largeurFenetre, <span class="keywordtype">int</span> hauteurFenetre);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">/* Fonctions de gestion des clics de l&#39;utilisateur*/</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keywordtype">void</span> <a class="code hl_function" href="plateau_8h.html#a2fc31f24af4aafce38886c450c464227">gererClics</a>(SDL_Event *e, <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a>[<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> *joueurActuel, <span class="keywordtype">int</span> tailleCase, </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">int</span> positionPlateauX, <span class="keywordtype">int</span> positionPlateauY, </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">int</span> *<a class="code hl_variable" href="reseau_8c.html#a1a7237dd3e4702f7866da49efc69b8a9">temps_noir</a>, <span class="keywordtype">int</span> *<a class="code hl_variable" href="reseau_8c.html#adb6fb5cb909122d28cacba2d1c369dd8">temps_blanc</a>, time_t *dernier_tour);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keywordtype">int</span> <a class="code hl_function" href="plateau_8h.html#a07a4d5d108e41f8c3c0f4dbd2d11d013">clicBouton</a>(<a class="code hl_struct" href="structbouton.html">bouton</a> *btn, <span class="keywordtype">int</span> mouseX, <span class="keywordtype">int</span> mouseY);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">/* Fonctions de gestion des dimensions de chaque objet */</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keywordtype">void</span> <a class="code hl_function" href="plateau_8h.html#a52a39d140dab56120e28f7c4c004f632">initialiserDimensions</a>(<a class="code hl_struct" href="struct_dimensions_jeu.html">DimensionsJeu</a>* <a class="code hl_variable" href="menus_8c.html#a54c0a5106a2d278f2a154c9bc2c383d1">dims</a>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keywordtype">void</span> <a class="code hl_function" href="plateau_8h.html#ab62e1460c8d820f8968f86dc64e638a9">mettreAJourDimensions</a>(<a class="code hl_struct" href="struct_dimensions_jeu.html">DimensionsJeu</a>* <a class="code hl_variable" href="menus_8c.html#a54c0a5106a2d278f2a154c9bc2c383d1">dims</a>, <a class="code hl_struct" href="structbouton.html">bouton</a>* btnSauvegarde, TTF_Font** font1, TTF_Font** font2);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">/* Fonctions de gestion des ressources */</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keywordtype">int</span> <a class="code hl_function" href="plateau_8h.html#ad206286eff005762e9ca28d102f9c208">initialiserSDL</a>(SDL_Window** <a class="code hl_variable" href="plateau_8c.html#aaa8e409e04dcf575ef63fd5fb3db06f9">window</a>, SDL_Renderer** renderer, TTF_Font** font1, TTF_Font** font2, <a class="code hl_struct" href="struct_dimensions_jeu.html">DimensionsJeu</a>* <a class="code hl_variable" href="menus_8c.html#a54c0a5106a2d278f2a154c9bc2c383d1">dims</a>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keywordtype">void</span> <a class="code hl_function" href="plateau_8h.html#a7afd741385e1d4ab5ccc5ed73af1911a">nettoyerRessources</a>(SDL_Window* <a class="code hl_variable" href="plateau_8c.html#aaa8e409e04dcf575ef63fd5fb3db06f9">window</a>, SDL_Renderer* renderer, TTF_Font* font1, TTF_Font* font2);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">/* Fonctions de jeu */</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">int</span> <a class="code hl_function" href="plateau_8h.html#a6d0ce91a0e8a18a365a92d567d94a4da">jouerPartie</a>(<span class="keywordtype">int</span> modeOrdi, <span class="keywordtype">int</span> partieChargee, SDL_Renderer* renderer, TTF_Font* font1, TTF_Font* font2, <a class="code hl_enumeration" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cd">t_niveau</a> * difficulteIA, <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="plateau_8h.html#a9848a110bbd4407c976a3659a317b952">coul</a>, <span class="keywordtype">char</span> * fichier);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keywordtype">int</span> <a class="code hl_function" href="plateau_8h.html#acc91cef2053d3dfb7c3dfcdc902195b6">JoueurVsOrdi</a>(SDL_Renderer* renderer, TTF_Font* font1, TTF_Font* font2, <a class="code hl_enumeration" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cd">t_niveau</a> * difficulteIA, <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="plateau_8h.html#a9848a110bbd4407c976a3659a317b952">coul</a>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keywordtype">int</span> <a class="code hl_function" href="plateau_8h.html#ac7d011b48cc200213d569c4f2a091b1c">JoueurVsJoueur</a>(SDL_Renderer* renderer, TTF_Font* font1, TTF_Font* font2);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keywordtype">int</span> <a class="code hl_function" href="plateau_8h.html#afc138990b2bd39043fc82d3ec13f92e0">JoueurVsOrdiSauv</a>(SDL_Renderer* renderer, TTF_Font* font1, TTF_Font* font2, <a class="code hl_enumeration" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cd">t_niveau</a> * difficulteIA, <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="plateau_8h.html#a9848a110bbd4407c976a3659a317b952">coul</a>, <span class="keywordtype">char</span> * fichier);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keywordtype">int</span> <a class="code hl_function" href="plateau_8h.html#a9c6fe7cfadaf84f59a0ce99e7167e8cf">JoueurVsJoueurSauv</a>(SDL_Renderer* renderer, TTF_Font* font1, TTF_Font* font2, <span class="keywordtype">char</span> * fichier);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keywordtype">int</span> <a class="code hl_function" href="plateau_8h.html#a016f8343610176c802c6627a88ded142">afficherFenetreFinDePartie_bis</a>(SDL_Renderer* renderer, <span class="keywordtype">int</span> scoreNoir, <span class="keywordtype">int</span> scoreBlanc, <span class="keywordtype">int</span> largeurFenetre, <span class="keywordtype">int</span> hauteurFenetre, <span class="keywordtype">int</span> *<a class="code hl_variable" href="reseau_8c.html#a1a7237dd3e4702f7866da49efc69b8a9">temps_noir</a>, <span class="keywordtype">int</span> *<a class="code hl_variable" href="reseau_8c.html#adb6fb5cb909122d28cacba2d1c369dd8">temps_blanc</a>, <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> joueurActuel);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="afonc__ia_8h_html"><div class="ttname"><a href="fonc__ia_8h.html">fonc_ia.h</a></div><div class="ttdoc">Fonctions et structures de données pour l&#39;I.A.</div></div>
+<div class="ttc" id="afonc__ia_8h_html_a63752acc32796a1add05ef71208565cd"><div class="ttname"><a href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cd">t_niveau</a></div><div class="ttdeci">t_niveau</div><div class="ttdef"><b>Definition</b> fonc_ia.h:16</div></div>
+<div class="ttc" id="afonc__jeu_8h_html"><div class="ttname"><a href="fonc__jeu_8h.html">fonc_jeu.h</a></div><div class="ttdoc">Fonctions et structures de données nécessaires à la logique de jeu.</div></div>
+<div class="ttc" id="afonc__jeu_8h_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdoc">Taille du plateau.</div><div class="ttdef"><b>Definition</b> fonc_jeu.h:3</div></div>
+<div class="ttc" id="afonc__jeu_8h_html_ab21a60e1517c8d253cc83c12f6e027f3"><div class="ttname"><a href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a></div><div class="ttdeci">t_case</div><div class="ttdef"><b>Definition</b> fonc_jeu.h:12</div></div>
+<div class="ttc" id="afonc__sauv_8h_html"><div class="ttname"><a href="fonc__sauv_8h.html">fonc_sauv.h</a></div><div class="ttdoc">Fonctions pour la sauvegarde d&#39;une partie othello.</div></div>
+<div class="ttc" id="amenus_8c_html_a1ed3dc92e0cc2109dcdd0424617a3208"><div class="ttname"><a href="menus_8c.html#a1ed3dc92e0cc2109dcdd0424617a3208">sonPion</a></div><div class="ttdeci">Mix_Chunk * sonPion</div><div class="ttdef"><b>Definition</b> menus.c:63</div></div>
+<div class="ttc" id="amenus_8c_html_a54c0a5106a2d278f2a154c9bc2c383d1"><div class="ttname"><a href="menus_8c.html#a54c0a5106a2d278f2a154c9bc2c383d1">dims</a></div><div class="ttdeci">DimensionsJeu dims</div><div class="ttdef"><b>Definition</b> menus.c:52</div></div>
+<div class="ttc" id="amenus_8h_html"><div class="ttname"><a href="menus_8h.html">menus.h</a></div></div>
+<div class="ttc" id="aplateau_8c_html_aaa8e409e04dcf575ef63fd5fb3db06f9"><div class="ttname"><a href="plateau_8c.html#aaa8e409e04dcf575ef63fd5fb3db06f9">window</a></div><div class="ttdeci">SDL_Window * window</div><div class="ttdef"><b>Definition</b> plateau.c:21</div></div>
+<div class="ttc" id="aplateau_8h_html_a016f8343610176c802c6627a88ded142"><div class="ttname"><a href="plateau_8h.html#a016f8343610176c802c6627a88ded142">afficherFenetreFinDePartie_bis</a></div><div class="ttdeci">int afficherFenetreFinDePartie_bis(SDL_Renderer *renderer, int scoreNoir, int scoreBlanc, int largeurFenetre, int hauteurFenetre, int *temps_noir, int *temps_blanc, t_case joueurActuel)</div><div class="ttdoc">Affiche la fenêtre de fin de partie pour le jeu en ligne.</div><div class="ttdef"><b>Definition</b> plateau.c:1205</div></div>
+<div class="ttc" id="aplateau_8h_html_a07a4d5d108e41f8c3c0f4dbd2d11d013"><div class="ttname"><a href="plateau_8h.html#a07a4d5d108e41f8c3c0f4dbd2d11d013">clicBouton</a></div><div class="ttdeci">int clicBouton(bouton *btn, int mouseX, int mouseY)</div><div class="ttdoc">Vérifie si un clic est dans un bouton.</div><div class="ttdef"><b>Definition</b> plateau.c:378</div></div>
+<div class="ttc" id="aplateau_8h_html_a13ee1aedd4f772c7030c6aa30f2f4d83"><div class="ttname"><a href="plateau_8h.html#a13ee1aedd4f772c7030c6aa30f2f4d83">dessinerPion</a></div><div class="ttdeci">void dessinerPion(SDL_Renderer *renderer, int centreX, int centreY, int rayon, SDL_Color couleur)</div><div class="ttdoc">Dessine un pion sur le plateau.</div><div class="ttdef"><b>Definition</b> plateau.c:32</div></div>
+<div class="ttc" id="aplateau_8h_html_a2fc31f24af4aafce38886c450c464227"><div class="ttname"><a href="plateau_8h.html#a2fc31f24af4aafce38886c450c464227">gererClics</a></div><div class="ttdeci">void gererClics(SDL_Event *e, t_case jeu[N][N], t_case *joueurActuel, int tailleCase, int positionPlateauX, int positionPlateauY, int *temps_noir, int *temps_blanc, time_t *dernier_tour)</div><div class="ttdoc">Gère les clics sur le plateau.</div><div class="ttdef"><b>Definition</b> plateau.c:100</div></div>
+<div class="ttc" id="aplateau_8h_html_a3e7c85ffca89f0e5c7533391d811d67d"><div class="ttname"><a href="plateau_8h.html#a3e7c85ffca89f0e5c7533391d811d67d">creerMessageSauvegarde</a></div><div class="ttdeci">void creerMessageSauvegarde(SDL_Renderer *renderer, TTF_Font *font, SDL_Color color, SDL_Texture **texture, SDL_Rect *rect, int largeurFenetre, int hauteurFenetre)</div><div class="ttdoc">Créer un message indiquant que la liste de sauvegarde est pleine.</div><div class="ttdef"><b>Definition</b> plateau.c:831</div></div>
+<div class="ttc" id="aplateau_8h_html_a52a39d140dab56120e28f7c4c004f632"><div class="ttname"><a href="plateau_8h.html#a52a39d140dab56120e28f7c4c004f632">initialiserDimensions</a></div><div class="ttdeci">void initialiserDimensions(DimensionsJeu *dims)</div><div class="ttdoc">Initialise les dimensions du jeu.</div><div class="ttdef"><b>Definition</b> plateau.c:657</div></div>
+<div class="ttc" id="aplateau_8h_html_a63481e3e1fc947b5e88b453c3a8003ca"><div class="ttname"><a href="plateau_8h.html#a63481e3e1fc947b5e88b453c3a8003ca">afficher_coups_possibles</a></div><div class="ttdeci">void afficher_coups_possibles(SDL_Renderer *renderer, t_case jeu[N][N], t_case couleur, int tailleCase, int posX, int posY)</div><div class="ttdoc">Affiche les coups possibles avec des cerlces non pleins.</div><div class="ttdef"><b>Definition</b> plateau.c:310</div></div>
+<div class="ttc" id="aplateau_8h_html_a6cef6a7a30c94e53e7bdb4fbd7414cab"><div class="ttname"><a href="plateau_8h.html#a6cef6a7a30c94e53e7bdb4fbd7414cab">afficher_bouton</a></div><div class="ttdeci">void afficher_bouton(SDL_Renderer *renderer, TTF_Font *font, bouton *btn)</div><div class="ttdoc">Affiche un bouton.</div><div class="ttdef"><b>Definition</b> plateau.c:344</div></div>
+<div class="ttc" id="aplateau_8h_html_a6d0ce91a0e8a18a365a92d567d94a4da"><div class="ttname"><a href="plateau_8h.html#a6d0ce91a0e8a18a365a92d567d94a4da">jouerPartie</a></div><div class="ttdeci">int jouerPartie(int modeOrdi, int partieChargee, SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2, t_niveau *difficulteIA, t_case coul, char *fichier)</div><div class="ttdoc">Lance une partie.</div><div class="ttdef"><b>Definition</b> plateau.c:859</div></div>
+<div class="ttc" id="aplateau_8h_html_a7a39122402c9a581f5dc06241a8c72cf"><div class="ttname"><a href="plateau_8h.html#a7a39122402c9a581f5dc06241a8c72cf">affichageTourJoueur</a></div><div class="ttdeci">void affichageTourJoueur(SDL_Renderer *renderer, TTF_Font *font, int largeurFenetre, int posYPlateau, t_case joueurActuel)</div><div class="ttdoc">Affiche le tour du joueur actuel.</div><div class="ttdef"><b>Definition</b> plateau.c:248</div></div>
+<div class="ttc" id="aplateau_8h_html_a7afd741385e1d4ab5ccc5ed73af1911a"><div class="ttname"><a href="plateau_8h.html#a7afd741385e1d4ab5ccc5ed73af1911a">nettoyerRessources</a></div><div class="ttdeci">void nettoyerRessources(SDL_Window *window, SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2)</div><div class="ttdoc">Nettoie les ressources SDL.</div><div class="ttdef"><b>Definition</b> plateau.c:751</div></div>
+<div class="ttc" id="aplateau_8h_html_a9848a110bbd4407c976a3659a317b952"><div class="ttname"><a href="plateau_8h.html#a9848a110bbd4407c976a3659a317b952">coul</a></div><div class="ttdeci">t_case coul</div><div class="ttdoc">Couleur des pions du joueur.</div></div>
+<div class="ttc" id="aplateau_8h_html_a9c6fe7cfadaf84f59a0ce99e7167e8cf"><div class="ttname"><a href="plateau_8h.html#a9c6fe7cfadaf84f59a0ce99e7167e8cf">JoueurVsJoueurSauv</a></div><div class="ttdeci">int JoueurVsJoueurSauv(SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2, char *fichier)</div><div class="ttdoc">Mode Joueur vs Joueur (partie sauvegardée)</div><div class="ttdef"><b>Definition</b> plateau.c:1183</div></div>
+<div class="ttc" id="aplateau_8h_html_ab62e1460c8d820f8968f86dc64e638a9"><div class="ttname"><a href="plateau_8h.html#ab62e1460c8d820f8968f86dc64e638a9">mettreAJourDimensions</a></div><div class="ttdeci">void mettreAJourDimensions(DimensionsJeu *dims, bouton *btnSauvegarde, TTF_Font **font1, TTF_Font **font2)</div><div class="ttdoc">Met à jour les dimensions après redimensionnement de la fenêtre.</div><div class="ttdef"><b>Definition</b> plateau.c:805</div></div>
+<div class="ttc" id="aplateau_8h_html_ac7d011b48cc200213d569c4f2a091b1c"><div class="ttname"><a href="plateau_8h.html#ac7d011b48cc200213d569c4f2a091b1c">JoueurVsJoueur</a></div><div class="ttdeci">int JoueurVsJoueur(SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2)</div><div class="ttdoc">Mode Joueur vs Joueur (nouvelle partie)</div><div class="ttdef"><b>Definition</b> plateau.c:1145</div></div>
+<div class="ttc" id="aplateau_8h_html_acc91cef2053d3dfb7c3dfcdc902195b6"><div class="ttname"><a href="plateau_8h.html#acc91cef2053d3dfb7c3dfcdc902195b6">JoueurVsOrdi</a></div><div class="ttdeci">int JoueurVsOrdi(SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2, t_niveau *difficulteIA, t_case coul)</div><div class="ttdoc">Mode Joueur vs Ordinateur (nouvelle partie)</div><div class="ttdef"><b>Definition</b> plateau.c:1129</div></div>
+<div class="ttc" id="aplateau_8h_html_acf06cbb502cb8ba4c6cc15124e5df6af"><div class="ttname"><a href="plateau_8h.html#acf06cbb502cb8ba4c6cc15124e5df6af">afficherFenetreFinDePartie</a></div><div class="ttdeci">int afficherFenetreFinDePartie(SDL_Renderer *renderer, int scoreNoir, int scoreBlanc, int largeurFenetre, int hauteurFenetre, int *temps_noir, int *temps_blanc, t_case joueurActuel)</div><div class="ttdoc">Affiche la fenêtre de fin de partie.</div><div class="ttdef"><b>Definition</b> plateau.c:396</div></div>
+<div class="ttc" id="aplateau_8h_html_acf4a37ec0bb8626daaa18a3d99ab2942"><div class="ttname"><a href="plateau_8h.html#acf4a37ec0bb8626daaa18a3d99ab2942">afficherChrono</a></div><div class="ttdeci">void afficherChrono(SDL_Renderer *renderer, TTF_Font *font, int temps_rest, int x, int y, int posImgX, int posImgY, int largeurFenetre)</div><div class="ttdoc">Affiche un chronomètre.</div><div class="ttdef"><b>Definition</b> plateau.c:609</div></div>
+<div class="ttc" id="aplateau_8h_html_ad206286eff005762e9ca28d102f9c208"><div class="ttname"><a href="plateau_8h.html#ad206286eff005762e9ca28d102f9c208">initialiserSDL</a></div><div class="ttdeci">int initialiserSDL(SDL_Window **window, SDL_Renderer **renderer, TTF_Font **font1, TTF_Font **font2, DimensionsJeu *dims)</div><div class="ttdoc">Initialise SDL et les ressources.</div><div class="ttdef"><b>Definition</b> plateau.c:685</div></div>
+<div class="ttc" id="aplateau_8h_html_adec0102bc39b50a00862c5573feaff3b"><div class="ttname"><a href="plateau_8h.html#adec0102bc39b50a00862c5573feaff3b">afficherPlateau</a></div><div class="ttdeci">void afficherPlateau(SDL_Renderer *renderer, t_case jeu[N][N], int tailleCase, int posX, int posY)</div><div class="ttdoc">Affiche le plateau de jeu.</div><div class="ttdef"><b>Definition</b> plateau.c:54</div></div>
+<div class="ttc" id="aplateau_8h_html_af47c4eb653843de1a027dcee74cf8499"><div class="ttname"><a href="plateau_8h.html#af47c4eb653843de1a027dcee74cf8499">afficherScore</a></div><div class="ttdeci">void afficherScore(SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2, int scoreNoir, int scoreBlanc, int hauteurFenetre, int largeurFenetre, int rayonPion)</div><div class="ttdoc">Affiche les scores des joueurs.</div><div class="ttdef"><b>Definition</b> plateau.c:153</div></div>
+<div class="ttc" id="aplateau_8h_html_afc138990b2bd39043fc82d3ec13f92e0"><div class="ttname"><a href="plateau_8h.html#afc138990b2bd39043fc82d3ec13f92e0">JoueurVsOrdiSauv</a></div><div class="ttdeci">int JoueurVsOrdiSauv(SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2, t_niveau *difficulteIA, t_case coul, char *fichier)</div><div class="ttdoc">Mode Joueur vs Ordinateur (partie sauvegardée)</div><div class="ttdef"><b>Definition</b> plateau.c:1166</div></div>
+<div class="ttc" id="areseau_8c_html_a1a7237dd3e4702f7866da49efc69b8a9"><div class="ttname"><a href="reseau_8c.html#a1a7237dd3e4702f7866da49efc69b8a9">temps_noir</a></div><div class="ttdeci">int temps_noir</div><div class="ttdef"><b>Definition</b> reseau.c:41</div></div>
+<div class="ttc" id="areseau_8c_html_adb6fb5cb909122d28cacba2d1c369dd8"><div class="ttname"><a href="reseau_8c.html#adb6fb5cb909122d28cacba2d1c369dd8">temps_blanc</a></div><div class="ttdeci">int temps_blanc</div><div class="ttdef"><b>Definition</b> reseau.c:41</div></div>
+<div class="ttc" id="areseau_8c_html_af8c78786122306a4ca4cee1a4e768535"><div class="ttname"><a href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a></div><div class="ttdeci">t_case jeu[N][N]</div><div class="ttdef"><b>Definition</b> reseau.c:38</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html"><div class="ttname"><a href="struct_dimensions_jeu.html">DimensionsJeu</a></div><div class="ttdef"><b>Definition</b> plateau.h:29</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html_a0796b9d0cc37ca0e443f7675a8786d21"><div class="ttname"><a href="struct_dimensions_jeu.html#a0796b9d0cc37ca0e443f7675a8786d21">DimensionsJeu::hauteurPlateau</a></div><div class="ttdeci">int hauteurPlateau</div><div class="ttdef"><b>Definition</b> plateau.h:35</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html_a0d28dc76182297305ddc8ce21e0461ad"><div class="ttname"><a href="struct_dimensions_jeu.html#a0d28dc76182297305ddc8ce21e0461ad">DimensionsJeu::largeurPlateau</a></div><div class="ttdeci">int largeurPlateau</div><div class="ttdef"><b>Definition</b> plateau.h:34</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html_a1457c2da2e8d33d8ced3a15c762afac9"><div class="ttname"><a href="struct_dimensions_jeu.html#a1457c2da2e8d33d8ced3a15c762afac9">DimensionsJeu::boutonY</a></div><div class="ttdeci">int boutonY</div><div class="ttdef"><b>Definition</b> plateau.h:42</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html_a370aa7fb3d899c0cfab885861c5a3dd8"><div class="ttname"><a href="struct_dimensions_jeu.html#a370aa7fb3d899c0cfab885861c5a3dd8">DimensionsJeu::boutonX</a></div><div class="ttdeci">int boutonX</div><div class="ttdef"><b>Definition</b> plateau.h:41</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html_a8474443553f178f3104072a5d6b50f7f"><div class="ttname"><a href="struct_dimensions_jeu.html#a8474443553f178f3104072a5d6b50f7f">DimensionsJeu::hauteurBouton</a></div><div class="ttdeci">int hauteurBouton</div><div class="ttdef"><b>Definition</b> plateau.h:40</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html_a8e237cedc7d966a0177e4a11e1de8a7a"><div class="ttname"><a href="struct_dimensions_jeu.html#a8e237cedc7d966a0177e4a11e1de8a7a">DimensionsJeu::tailleCase</a></div><div class="ttdeci">int tailleCase</div><div class="ttdef"><b>Definition</b> plateau.h:32</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html_a917b2b81b0d2447b15bf8aa82edbb140"><div class="ttname"><a href="struct_dimensions_jeu.html#a917b2b81b0d2447b15bf8aa82edbb140">DimensionsJeu::hauteurFenetre</a></div><div class="ttdeci">int hauteurFenetre</div><div class="ttdef"><b>Definition</b> plateau.h:31</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html_a9976706a313f489cfc67e3005dc4f1da"><div class="ttname"><a href="struct_dimensions_jeu.html#a9976706a313f489cfc67e3005dc4f1da">DimensionsJeu::taillePolice</a></div><div class="ttdeci">int taillePolice</div><div class="ttdef"><b>Definition</b> plateau.h:33</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html_ab9bb7d01e7028eff0292a415e73fc9bc"><div class="ttname"><a href="struct_dimensions_jeu.html#ab9bb7d01e7028eff0292a415e73fc9bc">DimensionsJeu::largeurBouton</a></div><div class="ttdeci">int largeurBouton</div><div class="ttdef"><b>Definition</b> plateau.h:39</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html_acef31b65a311167cc899e7d66dc13bad"><div class="ttname"><a href="struct_dimensions_jeu.html#acef31b65a311167cc899e7d66dc13bad">DimensionsJeu::posYPlateau</a></div><div class="ttdeci">int posYPlateau</div><div class="ttdef"><b>Definition</b> plateau.h:37</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html_aedad4597965d90517e950d3f283551b6"><div class="ttname"><a href="struct_dimensions_jeu.html#aedad4597965d90517e950d3f283551b6">DimensionsJeu::largeurFenetre</a></div><div class="ttdeci">int largeurFenetre</div><div class="ttdef"><b>Definition</b> plateau.h:30</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html_aedc8c74965ba5de8ffef8e1e61fbb17a"><div class="ttname"><a href="struct_dimensions_jeu.html#aedc8c74965ba5de8ffef8e1e61fbb17a">DimensionsJeu::rayonPionScoreJ</a></div><div class="ttdeci">int rayonPionScoreJ</div><div class="ttdef"><b>Definition</b> plateau.h:38</div></div>
+<div class="ttc" id="astruct_dimensions_jeu_html_afb8f6c115bea4365eac83b969378aa35"><div class="ttname"><a href="struct_dimensions_jeu.html#afb8f6c115bea4365eac83b969378aa35">DimensionsJeu::posXPlateau</a></div><div class="ttdeci">int posXPlateau</div><div class="ttdef"><b>Definition</b> plateau.h:36</div></div>
+<div class="ttc" id="astructbouton_html"><div class="ttname"><a href="structbouton.html">bouton</a></div><div class="ttdef"><b>Definition</b> plateau.h:46</div></div>
+<div class="ttc" id="astructbouton_html_a098d5c2f6a744ee7b5d46b9aa41d1da1"><div class="ttname"><a href="structbouton.html#a098d5c2f6a744ee7b5d46b9aa41d1da1">bouton::text</a></div><div class="ttdeci">char text[20]</div><div class="ttdef"><b>Definition</b> plateau.h:49</div></div>
+<div class="ttc" id="astructbouton_html_a22e037a32179215186107037c81d0b59"><div class="ttname"><a href="structbouton.html#a22e037a32179215186107037c81d0b59">bouton::color</a></div><div class="ttdeci">SDL_Color color</div><div class="ttdef"><b>Definition</b> plateau.h:48</div></div>
+<div class="ttc" id="astructbouton_html_a53410df7558236b7d51e02df4aebf8f2"><div class="ttname"><a href="structbouton.html#a53410df7558236b7d51e02df4aebf8f2">bouton::rect</a></div><div class="ttdeci">SDL_Rect rect</div><div class="ttdef"><b>Definition</b> plateau.h:47</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

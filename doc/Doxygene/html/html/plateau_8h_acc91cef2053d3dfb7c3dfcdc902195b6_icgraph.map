@@ -1,0 +1,7 @@
+<map id="JoueurVsOrdi" name="JoueurVsOrdi">
+<area shape="rect" id="Node000001" title="Mode Joueur vs Ordinateur (nouvelle partie)" alt="" coords="310,5,410,31"/>
+<area shape="rect" id="Node000002" href="$menus_8c.html#aafadf462558277d1e6359c88c5b94598" title="Gère les événements du menu de sélection de couleur des pions." alt="" coords="103,5,262,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="295,21,262,21,262,16,295,16"/>
+<area shape="rect" id="Node000003" href="$othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,5,55,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

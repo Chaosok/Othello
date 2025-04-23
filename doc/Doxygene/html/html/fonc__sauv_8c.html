@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello: Référence du fichier src/jeu/fonc_sauv.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="othelloLogo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Othello
+   </div>
+   <div id="projectbrief">Version numérique du jeu Othello, un jeu de plateau conçu pour être joué à deux</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e7a19e970db27507ea7fd9f14268b402.html">jeu</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier fonc_sauv.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Définition des fonctions pour la sauvegarde.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="fonc__jeu_8h_source.html">fonc_jeu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fonc__sauv_8h_source.html">fonc_sauv.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fonc__ia_8h_source.html">../IA/fonc_ia.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de fonc_sauv.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="fonc__sauv_8c__incl.png" border="0" usemap="#asrc_2jeu_2fonc__sauv_8c" alt=""/></div>
+<map name="asrc_2jeu_2fonc__sauv_8c" id="asrc_2jeu_2fonc__sauv_8c">
+<area shape="rect" title="Définition des fonctions pour la sauvegarde." alt="" coords="177,5,310,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,66,105"/>
+<area shape="poly" title=" " alt="" coords="209,34,81,78,80,73,207,29"/>
+<area shape="rect" title=" " alt="" coords="89,79,152,105"/>
+<area shape="poly" title=" " alt="" coords="224,34,156,73,153,69,221,29"/>
+<area shape="rect" title=" " alt="" coords="177,79,241,105"/>
+<area shape="poly" title=" " alt="" coords="240,32,224,66,219,64,235,30"/>
+<area shape="rect" href="fonc__jeu_8h.html" title="Fonctions et structures de données nécessaires à la logique de jeu." alt="" coords="262,153,343,178"/>
+<area shape="poly" title=" " alt="" coords="251,30,294,137,289,139,246,32"/>
+<area shape="rect" href="fonc__sauv_8h.html" title="Fonctions pour la sauvegarde d&#39;une partie othello." alt="" coords="316,79,406,105"/>
+<area shape="poly" title=" " alt="" coords="265,29,329,68,327,73,262,34"/>
+<area shape="rect" href="fonc__ia_8h.html" title="Fonctions et structures de données pour l&#39;I.A." alt="" coords="378,153,482,178"/>
+<area shape="poly" title=" " alt="" coords="311,23,340,30,370,41,397,56,420,77,429,91,434,107,436,137,431,137,428,108,424,93,416,81,394,60,367,45,339,35,310,28"/>
+<area shape="poly" title=" " alt="" coords="353,107,324,142,320,139,349,103"/>
+<area shape="poly" title=" " alt="" coords="374,103,410,140,406,143,370,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:acf0e31808cc9809de353de7ca44d240c" id="r_acf0e31808cc9809de353de7ca44d240c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf0e31808cc9809de353de7ca44d240c">sauvegarderJeu</a> (<a class="el" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="el" href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a>[<a class="el" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <a class="el" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> joueurActuel, <a class="el" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cd">t_niveau</a> modeJeu, char nomFichier[50])</td></tr>
+<tr class="separator:acf0e31808cc9809de353de7ca44d240c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf439763f3a088610143b75e2691e39b" id="r_adf439763f3a088610143b75e2691e39b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf439763f3a088610143b75e2691e39b">chargerJeu</a> (<a class="el" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="el" href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a>[<a class="el" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <a class="el" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> *joueurActuel, <a class="el" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cd">t_niveau</a> *modeJeu, char nomFichier[50])</td></tr>
+<tr class="separator:adf439763f3a088610143b75e2691e39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8f735d238f737bf47a3b60a516f294" id="r_aca8f735d238f737bf47a3b60a516f294"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca8f735d238f737bf47a3b60a516f294">afficher_liste</a> ()</td></tr>
+<tr class="memdesc:aca8f735d238f737bf47a3b60a516f294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la liste des sauvegardes disponibles.  <br /></td></tr>
+<tr class="separator:aca8f735d238f737bf47a3b60a516f294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd2aa94a7032cd89d411d23ae47b2d7" id="r_abcd2aa94a7032cd89d411d23ae47b2d7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcd2aa94a7032cd89d411d23ae47b2d7">mystrdup</a> (const char *src)</td></tr>
+<tr class="memdesc:abcd2aa94a7032cd89d411d23ae47b2d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redéfition de strdup.  <br /></td></tr>
+<tr class="separator:abcd2aa94a7032cd89d411d23ae47b2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bc8e1734be55875f4f5ed9f748c3064" id="r_a5bc8e1734be55875f4f5ed9f748c3064"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bc8e1734be55875f4f5ed9f748c3064">supprimer_sauvegarde</a> (const char fichierASupprimer[<a class="el" href="fonc__sauv_8h.html#a60bee6ec1422e3521b7d506a49a325d4">MAX_NOM_FICHIER</a>])</td></tr>
+<tr class="memdesc:a5bc8e1734be55875f4f5ed9f748c3064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprimer une sauvegarde dont le nom est passé en paramètre.  <br /></td></tr>
+<tr class="separator:a5bc8e1734be55875f4f5ed9f748c3064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Définition des fonctions pour la sauvegarde. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Chaosok Kong, Meriem Taieb Kherafa (supprimer_partie) </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="aca8f735d238f737bf47a3b60a516f294" name="aca8f735d238f737bf47a3b60a516f294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca8f735d238f737bf47a3b60a516f294">&#9670;&#160;</a></span>afficher_liste()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficher_liste </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche la liste des sauvegardes disponibles. </p>
+
+</div>
+</div>
+<a id="adf439763f3a088610143b75e2691e39b" name="adf439763f3a088610143b75e2691e39b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf439763f3a088610143b75e2691e39b">&#9670;&#160;</a></span>chargerJeu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chargerJeu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a></td>          <td class="paramname"><span class="paramname"><em>jeu</em></span>[N][N], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> *</td>          <td class="paramname"><span class="paramname"><em>joueurActuel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cd">t_niveau</a> *</td>          <td class="paramname"><span class="paramname"><em>modeJeu</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>nomFichier</em></span>[50]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fonc__sauv_8c_adf439763f3a088610143b75e2691e39b_icgraph.png" border="0" usemap="#afonc__sauv_8c_adf439763f3a088610143b75e2691e39b_icgraph" alt=""/></div>
+<map name="afonc__sauv_8c_adf439763f3a088610143b75e2691e39b_icgraph" id="afonc__sauv_8c_adf439763f3a088610143b75e2691e39b_icgraph">
+<area shape="rect" title=" " alt="" coords="638,21,723,47"/>
+<area shape="rect" href="menus_8c.html#a897e5f9550b16b841043e00df2cc2246" title="Gère les événements du menu des parties sauvegardées." alt="" coords="103,20,265,46"/>
+<area shape="poly" title=" " alt="" coords="622,27,481,11,397,8,313,11,244,22,244,17,313,6,397,3,482,6,623,22"/>
+<area shape="rect" href="plateau_8c.html#a6d0ce91a0e8a18a365a92d567d94a4da" title="Lance une partie." alt="" coords="506,71,590,96"/>
+<area shape="poly" title=" " alt="" coords="630,56,586,73,584,68,628,51"/>
+<area shape="rect" href="othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,96,55,122"/>
+<area shape="poly" title=" " alt="" coords="132,54,104,67,52,98,49,93,101,62,130,49"/>
+<area shape="rect" href="plateau_8c.html#ac7d011b48cc200213d569c4f2a091b1c" title="Mode Joueur vs Joueur (nouvelle partie)" alt="" coords="328,120,443,146"/>
+<area shape="poly" title=" " alt="" coords="493,103,431,122,430,117,491,98"/>
+<area shape="rect" href="plateau_8c.html#a9c6fe7cfadaf84f59a0ce99e7167e8cf" title="Mode Joueur vs Joueur (partie sauvegardée)" alt="" coords="313,21,458,47"/>
+<area shape="poly" title=" " alt="" coords="491,69,430,50,431,45,493,64"/>
+<area shape="rect" href="plateau_8c.html#acc91cef2053d3dfb7c3dfcdc902195b6" title="Mode Joueur vs Ordinateur (nouvelle partie)" alt="" coords="336,169,436,195"/>
+<area shape="poly" title=" " alt="" coords="525,110,495,136,460,160,436,171,434,166,457,156,492,132,521,106"/>
+<area shape="rect" href="plateau_8c.html#afc138990b2bd39043fc82d3ec13f92e0" title="Mode Joueur vs Ordinateur (partie sauvegardée)" alt="" coords="320,71,451,96"/>
+<area shape="poly" title=" " alt="" coords="491,86,451,86,451,81,491,81"/>
+<area shape="poly" title=" " alt="" coords="314,119,265,112,147,107,55,110,55,105,147,102,265,106,315,114"/>
+<area shape="rect" href="menus_8c.html#a88ee4d40370127728cf9e002de62f531" title="Gère les événements dans le sous&#45;menu." alt="" coords="106,121,262,147"/>
+<area shape="poly" title=" " alt="" coords="312,136,262,136,262,131,312,131"/>
+<area shape="poly" title=" " alt="" coords="90,121,55,115,56,110,91,116"/>
+<area shape="poly" title=" " alt="" coords="297,36,265,36,265,31,297,31"/>
+<area shape="rect" href="menus_8c.html#aafadf462558277d1e6359c88c5b94598" title="Gère les événements du menu de sélection de couleur des pions." alt="" coords="104,171,264,196"/>
+<area shape="poly" title=" " alt="" coords="320,185,264,186,264,180,320,180"/>
+<area shape="poly" title=" " alt="" coords="114,167,101,162,71,143,45,124,48,120,74,139,104,157,116,162"/>
+<area shape="poly" title=" " alt="" coords="316,69,237,49,239,44,317,64"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abcd2aa94a7032cd89d411d23ae47b2d7" name="abcd2aa94a7032cd89d411d23ae47b2d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcd2aa94a7032cd89d411d23ae47b2d7">&#9670;&#160;</a></span>mystrdup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * mystrdup </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Redéfition de strdup. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>nom du fichier source. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fonc__sauv_8c_abcd2aa94a7032cd89d411d23ae47b2d7_icgraph.png" border="0" usemap="#afonc__sauv_8c_abcd2aa94a7032cd89d411d23ae47b2d7_icgraph" alt=""/></div>
+<map name="afonc__sauv_8c_abcd2aa94a7032cd89d411d23ae47b2d7_icgraph" id="afonc__sauv_8c_abcd2aa94a7032cd89d411d23ae47b2d7_icgraph">
+<area shape="rect" title="Redéfition de strdup." alt="" coords="513,5,589,31"/>
+<area shape="rect" href="fonc__sauv_8c.html#a5bc8e1734be55875f4f5ed9f748c3064" title="Supprimer une sauvegarde dont le nom est passé en paramètre." alt="" coords="313,5,465,31"/>
+<area shape="poly" title=" " alt="" coords="498,21,465,21,465,16,498,16"/>
+<area shape="rect" href="menus_8c.html#a897e5f9550b16b841043e00df2cc2246" title="Gère les événements du menu des parties sauvegardées." alt="" coords="103,5,265,31"/>
+<area shape="poly" title=" " alt="" coords="297,21,265,21,265,16,297,16"/>
+<area shape="rect" href="othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,5,55,31"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acf0e31808cc9809de353de7ca44d240c" name="acf0e31808cc9809de353de7ca44d240c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf0e31808cc9809de353de7ca44d240c">&#9670;&#160;</a></span>sauvegarderJeu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sauvegarderJeu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a></td>          <td class="paramname"><span class="paramname"><em>jeu</em></span>[N][N], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a></td>          <td class="paramname"><span class="paramname"><em>joueurActuel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cd">t_niveau</a></td>          <td class="paramname"><span class="paramname"><em>modeJeu</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>nomFichier</em></span>[50]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fonc__sauv_8c_acf0e31808cc9809de353de7ca44d240c_icgraph.png" border="0" usemap="#afonc__sauv_8c_acf0e31808cc9809de353de7ca44d240c_icgraph" alt=""/></div>
+<map name="afonc__sauv_8c_acf0e31808cc9809de353de7ca44d240c_icgraph" id="afonc__sauv_8c_acf0e31808cc9809de353de7ca44d240c_icgraph">
+<area shape="rect" title=" " alt="" coords="638,83,751,108"/>
+<area shape="rect" href="plateau_8c.html#a6d0ce91a0e8a18a365a92d567d94a4da" title="Lance une partie." alt="" coords="506,83,590,108"/>
+<area shape="poly" title=" " alt="" coords="622,98,590,98,590,93,622,93"/>
+<area shape="rect" href="plateau_8c.html#ac7d011b48cc200213d569c4f2a091b1c" title="Mode Joueur vs Joueur (nouvelle partie)" alt="" coords="328,8,443,34"/>
+<area shape="poly" title=" " alt="" coords="512,77,457,47,430,37,432,32,459,42,515,72"/>
+<area shape="rect" href="plateau_8c.html#a9c6fe7cfadaf84f59a0ce99e7167e8cf" title="Mode Joueur vs Joueur (partie sauvegardée)" alt="" coords="313,57,458,83"/>
+<area shape="poly" title=" " alt="" coords="491,89,458,84,459,79,492,84"/>
+<area shape="rect" href="plateau_8c.html#acc91cef2053d3dfb7c3dfcdc902195b6" title="Mode Joueur vs Ordinateur (nouvelle partie)" alt="" coords="336,156,436,182"/>
+<area shape="poly" title=" " alt="" coords="514,119,459,147,432,158,430,153,457,142,511,114"/>
+<area shape="rect" href="plateau_8c.html#afc138990b2bd39043fc82d3ec13f92e0" title="Mode Joueur vs Ordinateur (partie sauvegardée)" alt="" coords="320,107,451,132"/>
+<area shape="poly" title=" " alt="" coords="491,107,452,112,451,107,490,101"/>
+<area shape="rect" href="menus_8c.html#a88ee4d40370127728cf9e002de62f531" title="Gère les événements dans le sous&#45;menu." alt="" coords="106,5,262,31"/>
+<area shape="poly" title=" " alt="" coords="312,23,262,22,262,17,312,17"/>
+<area shape="rect" href="othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,81,55,107"/>
+<area shape="poly" title=" " alt="" coords="313,38,56,92,55,87,312,33"/>
+<area shape="poly" title=" " alt="" coords="132,40,104,53,52,83,49,79,101,48,130,35"/>
+<area shape="rect" href="menus_8c.html#a897e5f9550b16b841043e00df2cc2246" title="Gère les événements du menu des parties sauvegardées." alt="" coords="103,107,265,132"/>
+<area shape="poly" title=" " alt="" coords="316,90,240,109,239,103,315,85"/>
+<area shape="poly" title=" " alt="" coords="86,106,55,101,55,96,87,101"/>
+<area shape="rect" href="menus_8c.html#aafadf462558277d1e6359c88c5b94598" title="Gère les événements du menu de sélection de couleur des pions." alt="" coords="104,156,264,182"/>
+<area shape="poly" title=" " alt="" coords="320,172,264,172,264,166,320,166"/>
+<area shape="poly" title=" " alt="" coords="114,153,101,147,71,129,45,110,48,105,74,124,104,142,116,148"/>
+<area shape="poly" title=" " alt="" coords="305,122,266,122,266,117,305,117"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5bc8e1734be55875f4f5ed9f748c3064" name="a5bc8e1734be55875f4f5ed9f748c3064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bc8e1734be55875f4f5ed9f748c3064">&#9670;&#160;</a></span>supprimer_sauvegarde()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void supprimer_sauvegarde </td>
+          <td>(</td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>fichierASupprimer</em></span>[MAX_NOM_FICHIER]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Supprimer une sauvegarde dont le nom est passé en paramètre. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fichierASupprimer</td><td>Nom du fichier de sauvegarde à supprimer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fonc__sauv_8c_a5bc8e1734be55875f4f5ed9f748c3064_cgraph.png" border="0" usemap="#afonc__sauv_8c_a5bc8e1734be55875f4f5ed9f748c3064_cgraph" alt=""/></div>
+<map name="afonc__sauv_8c_a5bc8e1734be55875f4f5ed9f748c3064_cgraph" id="afonc__sauv_8c_a5bc8e1734be55875f4f5ed9f748c3064_cgraph">
+<area shape="rect" title="Supprimer une sauvegarde dont le nom est passé en paramètre." alt="" coords="5,5,158,31"/>
+<area shape="rect" href="fonc__sauv_8c.html#abcd2aa94a7032cd89d411d23ae47b2d7" title="Redéfition de strdup." alt="" coords="206,5,281,31"/>
+<area shape="poly" title=" " alt="" coords="158,16,190,16,190,21,158,21"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fonc__sauv_8c_a5bc8e1734be55875f4f5ed9f748c3064_icgraph.png" border="0" usemap="#afonc__sauv_8c_a5bc8e1734be55875f4f5ed9f748c3064_icgraph" alt=""/></div>
+<map name="afonc__sauv_8c_a5bc8e1734be55875f4f5ed9f748c3064_icgraph" id="afonc__sauv_8c_a5bc8e1734be55875f4f5ed9f748c3064_icgraph">
+<area shape="rect" title="Supprimer une sauvegarde dont le nom est passé en paramètre." alt="" coords="313,5,465,31"/>
+<area shape="rect" href="menus_8c.html#a897e5f9550b16b841043e00df2cc2246" title="Gère les événements du menu des parties sauvegardées." alt="" coords="103,5,265,31"/>
+<area shape="poly" title=" " alt="" coords="297,21,265,21,265,16,297,16"/>
+<area shape="rect" href="othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,5,55,31"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

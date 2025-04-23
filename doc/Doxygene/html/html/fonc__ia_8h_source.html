@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello:  Fichier source de src/IA/fonc_ia.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="othelloLogo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Othello
+   </div>
+   <div id="projectbrief">Version numérique du jeu Othello, un jeu de plateau conçu pour être joué à deux</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2be32138fab38d875808a6f63933b04c.html">IA</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">fonc_ia.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="fonc__ia_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef FONC_IA_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define FONC_IA_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="fonc__ia_8h.html#a6f34daf1b14fd05f83231ed9d3c2385b">    4</a></span><span class="preprocessor">#define NEGA_INF -99999 </span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="fonc__ia_8h.html#a82ba286c114b81ada902a7a8d41956c4">    5</a></span><span class="preprocessor">#define POS_INF 99999   </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Définition des types</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cdab3ec94a39459557e25ffaf508467329b">   16</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {<a class="code hl_enumvalue" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cda822987746a55a3436f5a30502f32d7b5">UNK</a>, <a class="code hl_enumvalue" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cdaa944be7e4435f82ea4785ae3943070e9">FACILE</a>, <a class="code hl_enumvalue" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cdaee96574eabbfbe329a44b059e4652351">MOYEN</a>, <a class="code hl_enumvalue" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cdab3ec94a39459557e25ffaf508467329b">DIFFICILE</a>} <a class="code hl_enumeration" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cd">t_niveau</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// Définition des fonctions</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">int</span> <a class="code hl_function" href="fonc__ia_8h.html#a1ef87e7f8f2091e45f855150d9bdfd32">heuristique_facile</a>(<a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a>[<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> joueur);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">int</span> <a class="code hl_function" href="fonc__ia_8h.html#ae6c902eb242d459364493e219e85b23a">heuristique_avancee</a>(<a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a>[<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> joueur);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">int</span> <a class="code hl_function" href="fonc__ia_8h.html#a96442e707f8c8a2060f8e11e2003fc46">minMax</a>(<a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a>[<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> etatOrig, <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> etatActuel, <span class="keywordtype">int</span> profondeur, <span class="keywordtype">int</span> max_profondeur, <span class="keywordtype">int</span> (*<a class="code hl_function" href="fonc__ia_8c.html#a19518b8c868e790a646f3bd71b6c4168">heuristique</a>)(<a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a>[<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> joueur));</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="fonc__ia_8h.html#a5a1da4493d2dc3321b35f289211121cb">minMaxChoix</a>(<a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a>[<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> joueur, <span class="keywordtype">int</span> *x, <span class="keywordtype">int</span> *y, <a class="code hl_enumeration" href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cd">t_niveau</a> difficulte);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="afonc__ia_8c_html_a19518b8c868e790a646f3bd71b6c4168"><div class="ttname"><a href="fonc__ia_8c.html#a19518b8c868e790a646f3bd71b6c4168">heuristique</a></div><div class="ttdeci">int heuristique(t_case jeu[N][N], t_case joueur, int(*fonctions[])(t_case jeu[N][N], t_case joueur), int nb_fonc)</div><div class="ttdef"><b>Definition</b> fonc_ia.c:58</div></div>
+<div class="ttc" id="afonc__ia_8h_html_a1ef87e7f8f2091e45f855150d9bdfd32"><div class="ttname"><a href="fonc__ia_8h.html#a1ef87e7f8f2091e45f855150d9bdfd32">heuristique_facile</a></div><div class="ttdeci">int heuristique_facile(t_case jeu[N][N], t_case joueur)</div><div class="ttdoc">Version &quot;facile&quot; de l&#39;I.A.: appelle une fonction calculant le score seulement.</div><div class="ttdef"><b>Definition</b> fonc_ia.c:74</div></div>
+<div class="ttc" id="afonc__ia_8h_html_a5a1da4493d2dc3321b35f289211121cb"><div class="ttname"><a href="fonc__ia_8h.html#a5a1da4493d2dc3321b35f289211121cb">minMaxChoix</a></div><div class="ttdeci">void minMaxChoix(t_case jeu[N][N], t_case joueur, int *x, int *y, t_niveau difficulte)</div><div class="ttdoc">Choix du meilleur coup avec minmax.</div><div class="ttdef"><b>Definition</b> fonc_ia.c:154</div></div>
+<div class="ttc" id="afonc__ia_8h_html_a63752acc32796a1add05ef71208565cd"><div class="ttname"><a href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cd">t_niveau</a></div><div class="ttdeci">t_niveau</div><div class="ttdef"><b>Definition</b> fonc_ia.h:16</div></div>
+<div class="ttc" id="afonc__ia_8h_html_a63752acc32796a1add05ef71208565cda822987746a55a3436f5a30502f32d7b5"><div class="ttname"><a href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cda822987746a55a3436f5a30502f32d7b5">UNK</a></div><div class="ttdeci">@ UNK</div><div class="ttdef"><b>Definition</b> fonc_ia.h:16</div></div>
+<div class="ttc" id="afonc__ia_8h_html_a63752acc32796a1add05ef71208565cdaa944be7e4435f82ea4785ae3943070e9"><div class="ttname"><a href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cdaa944be7e4435f82ea4785ae3943070e9">FACILE</a></div><div class="ttdeci">@ FACILE</div><div class="ttdef"><b>Definition</b> fonc_ia.h:16</div></div>
+<div class="ttc" id="afonc__ia_8h_html_a63752acc32796a1add05ef71208565cdab3ec94a39459557e25ffaf508467329b"><div class="ttname"><a href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cdab3ec94a39459557e25ffaf508467329b">DIFFICILE</a></div><div class="ttdeci">@ DIFFICILE</div><div class="ttdef"><b>Definition</b> fonc_ia.h:16</div></div>
+<div class="ttc" id="afonc__ia_8h_html_a63752acc32796a1add05ef71208565cdaee96574eabbfbe329a44b059e4652351"><div class="ttname"><a href="fonc__ia_8h.html#a63752acc32796a1add05ef71208565cdaee96574eabbfbe329a44b059e4652351">MOYEN</a></div><div class="ttdeci">@ MOYEN</div><div class="ttdef"><b>Definition</b> fonc_ia.h:16</div></div>
+<div class="ttc" id="afonc__ia_8h_html_a96442e707f8c8a2060f8e11e2003fc46"><div class="ttname"><a href="fonc__ia_8h.html#a96442e707f8c8a2060f8e11e2003fc46">minMax</a></div><div class="ttdeci">int minMax(t_case jeu[N][N], t_case etatOrig, t_case etatActuel, int profondeur, int max_profondeur, int(*heuristique)(t_case jeu[N][N], t_case joueur))</div><div class="ttdoc">Algorithme minmax qui calcule l&#39;arbre des coups possibles.</div><div class="ttdef"><b>Definition</b> fonc_ia.c:102</div></div>
+<div class="ttc" id="afonc__ia_8h_html_ae6c902eb242d459364493e219e85b23a"><div class="ttname"><a href="fonc__ia_8h.html#ae6c902eb242d459364493e219e85b23a">heuristique_avancee</a></div><div class="ttdeci">int heuristique_avancee(t_case jeu[N][N], t_case joueur)</div><div class="ttdoc">Version &quot;avancée&quot; de l&#39;I.A.: appelle des fonctions calculant le score, la mobilité,...</div><div class="ttdef"><b>Definition</b> fonc_ia.c:86</div></div>
+<div class="ttc" id="afonc__jeu_8h_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdoc">Taille du plateau.</div><div class="ttdef"><b>Definition</b> fonc_jeu.h:3</div></div>
+<div class="ttc" id="afonc__jeu_8h_html_ab21a60e1517c8d253cc83c12f6e027f3"><div class="ttname"><a href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a></div><div class="ttdeci">t_case</div><div class="ttdef"><b>Definition</b> fonc_jeu.h:12</div></div>
+<div class="ttc" id="areseau_8c_html_af8c78786122306a4ca4cee1a4e768535"><div class="ttname"><a href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a></div><div class="ttdeci">t_case jeu[N][N]</div><div class="ttdef"><b>Definition</b> reseau.c:38</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

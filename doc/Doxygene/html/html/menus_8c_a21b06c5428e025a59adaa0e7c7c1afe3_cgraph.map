@@ -1,0 +1,5 @@
+<map id="thread_accepter_client" name="thread_accepter_client">
+<area shape="rect" id="Node000001" title="Fonction de thread chargée d&#39;accepter une connexion client." alt="" coords="5,5,158,31"/>
+<area shape="rect" id="Node000002" href="$reseau_8c.html#a8b37192f8c4558b96ca670a8cc63217c" title="Accepter la demande de connexion de la socket du client." alt="" coords="206,5,315,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,16,190,16,190,21,158,21"/>
+</map>

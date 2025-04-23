@@ -1,0 +1,26 @@
+<map id="src/jeu/fonc_sauv.h" name="src/jeu/fonc_sauv.h">
+<area shape="rect" id="Node000001" title="Fonctions pour la sauvegarde d&#39;une partie othello." alt="" coords="428,5,561,31"/>
+<area shape="rect" id="Node000002" href="$menus_8h.html" title=" " alt="" coords="186,79,339,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="442,38,303,81,301,76,440,33"/>
+<area shape="rect" id="Node000004" href="$othello_graph_8c.html" title="Fonction main." alt="" coords="321,226,508,252"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="498,47,492,109,484,145,472,180,453,207,432,228,428,224,449,203,467,177,479,144,487,108,492,46"/>
+<area shape="rect" id="Node000005" href="$plateau_8h.html" title="Fonctions et structures de données pour l&#39;affichage du plateau de jeu." alt="" coords="300,153,457,178"/>
+<area shape="poly" id="edge12_Node000001_Node000005" title=" " alt="" coords="478,45,390,154,386,150,473,42"/>
+<area shape="rect" id="Node000006" href="$plateau_8c.html" title="Définition des fonctions pour l&#39;affichage du plateau." alt="" coords="532,226,689,252"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="510,43,607,225,602,227,505,46"/>
+<area shape="rect" id="Node000007" href="$reseau_8c.html" title="Définition des fonctions pour mettre en place le jeu en ligne." alt="" coords="5,226,120,252"/>
+<area shape="poly" id="edge15_Node000001_Node000007" title=" " alt="" coords="412,30,278,50,217,64,176,81,137,115,106,157,83,197,70,227,65,225,79,194,101,154,133,112,173,77,216,59,277,45,412,25"/>
+<area shape="rect" id="Node000008" href="$fonc__jeu_8c.html" title="Définition des fonctions pour la logique de jeu." alt="" coords="583,79,707,105"/>
+<area shape="poly" id="edge13_Node000001_Node000008" title=" " alt="" coords="535,36,621,76,618,81,533,40"/>
+<area shape="rect" id="Node000009" href="$fonc__sauv_8c.html" title="Définition des fonctions pour la sauvegarde." alt="" coords="732,79,865,105"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="562,32,747,76,746,81,561,38"/>
+<area shape="rect" id="Node000003" href="$menus_8c.html" title="Définition des fonctions pour l&#39;affichage des menus." alt="" coords="143,226,296,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="257,120,246,153,226,226,221,225,241,152,252,119"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="267,119,275,149,290,177,307,192,326,205,367,223,365,228,323,210,303,197,286,180,270,151,262,121"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="296,111,360,150,357,154,293,115"/>
+<area shape="poly" id="edge9_Node000002_Node000007" title=" " alt="" coords="235,116,81,228,77,224,232,112"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="339,187,248,228,246,223,337,183"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="394,191,411,225,406,227,389,193"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="433,181,572,223,570,228,431,186"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="310,185,117,228,116,223,309,180"/>
+</map>

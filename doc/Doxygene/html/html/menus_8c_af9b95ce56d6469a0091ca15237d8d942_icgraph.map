@@ -1,0 +1,7 @@
+<map id="recuperer_ip" name="recuperer_ip">
+<area shape="rect" id="Node000001" title="Récupèrer l&#39;adresse IP locale de la machine locale." alt="" coords="306,5,398,31"/>
+<area shape="rect" id="Node000002" href="$menus_8c.html#ac276bf1f6cb3382f49ad22562048e962" title="Affiche le menu de création de partie réseau." alt="" coords="103,5,258,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="290,21,258,21,258,16,290,16"/>
+<area shape="rect" id="Node000003" href="$othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,5,55,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

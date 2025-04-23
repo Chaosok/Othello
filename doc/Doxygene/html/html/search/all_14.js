@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['sauvegarderjeu_0',['sauvegarderJeu',['../fonc__sauv_8c.html#acf0e31808cc9809de353de7ca44d240c',1,'sauvegarderJeu(t_case jeu[N][N], t_case joueurActuel, t_niveau modeJeu, char nomFichier[50]):&#160;fonc_sauv.c'],['../fonc__sauv_8h.html#acf0e31808cc9809de353de7ca44d240c',1,'sauvegarderJeu(t_case jeu[N][N], t_case joueurActuel, t_niveau modeJeu, char nomFichier[50]):&#160;fonc_sauv.c']]],
+  ['sauvegarderjeu_5fbis_1',['sauvegarderJeu_bis',['../fonc__sauv_8h.html#ab4ce10f27a819c7cd4eec02b5ee38bd0',1,'fonc_sauv.h']]],
+  ['savedgame_2',['SavedGame',['../struct_saved_game.html',1,'']]],
+  ['savedgames_3',['savedGames',['../menus_8c.html#a732310215e0a13986ced8eb64f9a70f3',1,'savedGames:&#160;menus.c'],['../menus_8h.html#a732310215e0a13986ced8eb64f9a70f3',1,'savedGames:&#160;menus.c']]],
+  ['score_4',['score',['../fonc__jeu_8c.html#afdf8b1fed70777eda6a73d1426337cbb',1,'score(t_case jeu[N][N], t_case couleur):&#160;fonc_jeu.c'],['../fonc__jeu_8h.html#afdf8b1fed70777eda6a73d1426337cbb',1,'score(t_case jeu[N][N], t_case couleur):&#160;fonc_jeu.c']]],
+  ['selection_5',['selection',['../menus_8c.html#ad4174319b419e07ce037d1ed891595d8',1,'selection:&#160;menus.c'],['../menus_8h.html#ad4174319b419e07ce037d1ed891595d8',1,'selection:&#160;menus.c']]],
+  ['selection_5flen_6',['selection_len',['../menus_8c.html#a961864fe7adff267ae13a8400862f833',1,'selection_len:&#160;menus.c'],['../menus_8h.html#a961864fe7adff267ae13a8400862f833',1,'selection_len:&#160;menus.c']]],
+  ['server_5faddr_7',['server_addr',['../structcontexte__reseau__t.html#a9d3efbef47ed7ca660f89ee47f7837ed',1,'contexte_reseau_t']]],
+  ['server_5fsocket_8',['server_socket',['../structcontexte__reseau__t.html#a7a1266dc1ca80d757319b187db817ae3',1,'contexte_reseau_t']]],
+  ['serveur_2ec_9',['serveur.c',['../serveur_8c.html',1,'']]],
+  ['serveur_5finfo_10',['serveur_info',['../structcontexte__reseau__t.html#a87815d6cf6f31a9bb619524579968147',1,'contexte_reseau_t']]],
+  ['serveur_5fjoue_5fjeu_11',['serveur_joue_jeu',['../reseau_8c.html#ad43befb0dc1780dd5ddf20da8656e289',1,'serveur_joue_jeu(contexte_reseau_t *ctx, SDL_Window *window, SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2):&#160;reseau.c'],['../reseau_8h.html#ad43befb0dc1780dd5ddf20da8656e289',1,'serveur_joue_jeu(contexte_reseau_t *ctx, SDL_Window *window, SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2):&#160;reseau.c']]],
+  ['serveurpret_12',['serveurPret',['../menus_8c.html#abd77d559dc2d1a7a492fd07a25e53b6c',1,'serveurPret:&#160;menus.c'],['../menus_8h.html#abd77d559dc2d1a7a492fd07a25e53b6c',1,'serveurPret:&#160;menus.c']]],
+  ['settingsrect_13',['settingsRect',['../menus_8c.html#a23e4b99a5e9928ab328bb113d0cfd894',1,'settingsRect:&#160;menus.c'],['../menus_8h.html#a23e4b99a5e9928ab328bb113d0cfd894',1,'settingsRect:&#160;menus.c']]],
+  ['settingstexture_14',['settingsTexture',['../menus_8c.html#ad2f9e3071a28b7c95ca53034ad8d292e',1,'settingsTexture:&#160;menus.c'],['../menus_8h.html#ad2f9e3071a28b7c95ca53034ad8d292e',1,'settingsTexture:&#160;menus.c']]],
+  ['slidebar_15',['slidebar',['../menus_8c.html#a4400df991163398b07945ca58e51eebe',1,'slidebar:&#160;menus.c'],['../menus_8h.html#a4400df991163398b07945ca58e51eebe',1,'slidebar:&#160;menus.c']]],
+  ['slidebar2_16',['slidebar2',['../menus_8c.html#ad7967fc5704fcb31d7ab46e18e8a1130',1,'slidebar2:&#160;menus.c'],['../menus_8h.html#ad7967fc5704fcb31d7ab46e18e8a1130',1,'slidebar2:&#160;menus.c']]],
+  ['slidehandler_17',['slidehandler',['../menus_8c.html#ade3f147d1d1f56a5906a50cf4d7e0891',1,'slidehandler:&#160;menus.c'],['../menus_8h.html#ade3f147d1d1f56a5906a50cf4d7e0891',1,'slidehandler:&#160;menus.c']]],
+  ['slidehandler2_18',['slidehandler2',['../menus_8c.html#ab391f1b32c489974d5df51961e7ed480',1,'slidehandler2:&#160;menus.c'],['../menus_8h.html#ab391f1b32c489974d5df51961e7ed480',1,'slidehandler2:&#160;menus.c']]],
+  ['socket_5fdata_5fready_19',['socket_data_ready',['../reseau_8c.html#aa90218e27e0352de97dbac2fb7644297',1,'reseau.c']]],
+  ['sonpion_20',['sonPion',['../menus_8c.html#a1ed3dc92e0cc2109dcdd0424617a3208',1,'sonPion:&#160;menus.c'],['../menus_8h.html#a1ed3dc92e0cc2109dcdd0424617a3208',1,'sonPion:&#160;menus.c'],['../plateau_8h.html#a1ed3dc92e0cc2109dcdd0424617a3208',1,'sonPion:&#160;menus.c']]],
+  ['soundvolume_21',['soundVolume',['../menus_8c.html#a44346dfa73de6666c4727594bb20f6b7',1,'soundVolume:&#160;menus.c'],['../menus_8h.html#a44346dfa73de6666c4727594bb20f6b7',1,'soundVolume:&#160;menus.c']]],
+  ['supprimer_5fsauvegarde_22',['supprimer_sauvegarde',['../fonc__sauv_8c.html#a5bc8e1734be55875f4f5ed9f748c3064',1,'supprimer_sauvegarde(const char fichierASupprimer[MAX_NOM_FICHIER]):&#160;fonc_sauv.c'],['../fonc__sauv_8h.html#a5bc8e1734be55875f4f5ed9f748c3064',1,'supprimer_sauvegarde(const char fichierASupprimer[MAX_NOM_FICHIER]):&#160;fonc_sauv.c']]]
+];

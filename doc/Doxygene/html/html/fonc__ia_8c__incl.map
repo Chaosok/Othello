@@ -1,0 +1,13 @@
+<map id="src/IA/fonc_ia.c" name="src/IA/fonc_ia.c">
+<area shape="rect" id="Node000001" title="Définition des fonctions pour l&#39;I.A." alt="" coords="152,5,266,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,66,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,34,80,75,78,70,178,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,79,152,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,34,149,71,146,67,192,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="177,79,241,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="212,31,212,63,206,63,206,31"/>
+<area shape="rect" id="Node000005" href="$fonc__jeu_8h.html" title="Fonctions et structures de données nécessaires à la logique de jeu." alt="" coords="265,79,379,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="229,29,291,68,289,73,227,34"/>
+<area shape="rect" id="Node000006" href="$fonc__ia_8h.html" title="Fonctions et structures de données pour l&#39;I.A." alt="" coords="404,79,478,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="249,29,390,72,388,77,247,34"/>
+</map>

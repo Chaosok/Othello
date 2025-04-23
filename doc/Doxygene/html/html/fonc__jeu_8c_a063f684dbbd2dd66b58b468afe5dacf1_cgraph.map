@@ -1,0 +1,11 @@
+<map id="partie_terminee" name="partie_terminee">
+<area shape="rect" id="Node000001" title="Vérifie si la partie est finie." alt="" coords="5,31,116,56"/>
+<area shape="rect" id="Node000002" href="$fonc__jeu_8c.html#a01f3c3f9cb23b1c2751ef00e54d6ee46" title="Vérifie si le joueur peut jouer au moins un coup valide." alt="" coords="164,31,245,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,41,148,41,148,46,116,46"/>
+<area shape="rect" id="Node000003" href="$fonc__jeu_8c.html#a0565378c0f9d2d5f88cbfc5be230c8a8" title="Vérifie si un coup est valide à une position donnée (x, y) pour une couleur donnée." alt="" coords="293,31,383,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="245,41,278,41,278,46,245,46"/>
+<area shape="rect" id="Node000004" href="$fonc__jeu_8c.html#a59ca37ed9c411eeefca103541c1ca42f" title="Copie du plateau pour la simulation virtuelle." alt="" coords="438,5,535,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="384,33,422,26,423,32,384,38"/>
+<area shape="rect" id="Node000005" href="$fonc__jeu_8c.html#a43a33e0e164278eef35f1122bd779ac0" title="Retourne les pions adverses autour de la case (x, y) après un coup valide." alt="" coords="431,55,542,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="384,48,416,53,415,59,384,53"/>
+</map>

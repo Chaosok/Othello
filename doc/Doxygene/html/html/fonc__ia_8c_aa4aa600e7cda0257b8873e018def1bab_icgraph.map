@@ -1,0 +1,29 @@
+<map id="eval_mobilite" name="eval_mobilite">
+<area shape="rect" id="Node000001" title=" " alt="" coords="975,83,1073,108"/>
+<area shape="rect" id="Node000002" href="$fonc__ia_8c.html#ae6c902eb242d459364493e219e85b23a" title="Version &quot;avancée&quot; de l&#39;I.A.: appelle des fonctions calculant le score, la mobilité,..." alt="" coords="787,83,927,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="960,98,928,98,928,93,960,93"/>
+<area shape="rect" id="Node000003" href="$fonc__ia_8c.html#a5a1da4493d2dc3321b35f289211121cb" title="Choix du meilleur coup avec minmax." alt="" coords="638,83,739,108"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="772,98,739,98,739,93,772,93"/>
+<area shape="rect" id="Node000004" href="$plateau_8c.html#a6d0ce91a0e8a18a365a92d567d94a4da" title="Lance une partie." alt="" coords="506,83,590,108"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="622,98,590,98,590,93,622,93"/>
+<area shape="rect" id="Node000005" href="$plateau_8c.html#ac7d011b48cc200213d569c4f2a091b1c" title="Mode Joueur vs Joueur (nouvelle partie)" alt="" coords="328,8,443,34"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="512,77,457,47,430,37,432,32,459,42,515,72"/>
+<area shape="rect" id="Node000008" href="$plateau_8c.html#a9c6fe7cfadaf84f59a0ce99e7167e8cf" title="Mode Joueur vs Joueur (partie sauvegardée)" alt="" coords="313,57,458,83"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="491,89,458,84,459,79,492,84"/>
+<area shape="rect" id="Node000010" href="$plateau_8c.html#acc91cef2053d3dfb7c3dfcdc902195b6" title="Mode Joueur vs Ordinateur (nouvelle partie)" alt="" coords="336,156,436,182"/>
+<area shape="poly" id="edge11_Node000004_Node000010" title=" " alt="" coords="514,119,459,147,432,158,430,153,457,142,511,114"/>
+<area shape="rect" id="Node000012" href="$plateau_8c.html#afc138990b2bd39043fc82d3ec13f92e0" title="Mode Joueur vs Ordinateur (partie sauvegardée)" alt="" coords="320,107,451,132"/>
+<area shape="poly" id="edge14_Node000004_Node000012" title=" " alt="" coords="491,107,452,112,451,107,490,101"/>
+<area shape="rect" id="Node000006" href="$menus_8c.html#a88ee4d40370127728cf9e002de62f531" title="Gère les événements dans le sous&#45;menu." alt="" coords="106,5,262,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="312,23,262,22,262,17,312,17"/>
+<area shape="rect" id="Node000007" href="$othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,81,55,107"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="313,38,56,92,55,87,312,33"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="132,40,104,53,52,83,49,79,101,48,130,35"/>
+<area shape="rect" id="Node000009" href="$menus_8c.html#a897e5f9550b16b841043e00df2cc2246" title="Gère les événements du menu des parties sauvegardées." alt="" coords="103,107,265,132"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="316,90,240,109,239,103,315,85"/>
+<area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="86,106,55,101,55,96,87,101"/>
+<area shape="rect" id="Node000011" href="$menus_8c.html#aafadf462558277d1e6359c88c5b94598" title="Gère les événements du menu de sélection de couleur des pions." alt="" coords="104,156,264,182"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="320,172,264,172,264,166,320,166"/>
+<area shape="poly" id="edge13_Node000011_Node000007" title=" " alt="" coords="114,153,101,147,71,129,45,110,48,105,74,124,104,142,116,148"/>
+<area shape="poly" id="edge15_Node000012_Node000009" title=" " alt="" coords="305,122,266,122,266,117,305,117"/>
+</map>

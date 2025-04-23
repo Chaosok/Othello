@@ -1,0 +1,7 @@
+<map id="connecter_server" name="connecter_server">
+<area shape="rect" id="Node000001" title="Connecter la socket de client à celle de serveur." alt="" coords="340,5,461,31"/>
+<area shape="rect" id="Node000002" href="$menus_8c.html#ad5104a2af57be4bc6989407cb27d882d" title="Gère les événements SDL pour le menu &quot;Rejoindre une partie réseau&quot;." alt="" coords="103,5,292,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="325,21,292,21,292,16,325,16"/>
+<area shape="rect" id="Node000003" href="$othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,5,55,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

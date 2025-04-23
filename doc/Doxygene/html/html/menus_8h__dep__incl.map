@@ -1,0 +1,16 @@
+<map id="src/graphique/menus.h" name="src/graphique/menus.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="257,5,411,31"/>
+<area shape="rect" id="Node000002" href="$menus_8c.html" title="Définition des fonctions pour l&#39;affichage des menus." alt="" coords="5,153,159,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="301,42,104,154,102,150,298,37"/>
+<area shape="rect" id="Node000003" href="$othello_graph_8c.html" title="Fonction main." alt="" coords="183,153,370,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="321,46,304,80,282,153,277,152,300,78,317,43"/>
+<area shape="rect" id="Node000004" href="$plateau_8h.html" title="Fonctions et structures de données pour l&#39;affichage du plateau de jeu." alt="" coords="314,79,471,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="356,41,385,77,381,80,351,45"/>
+<area shape="rect" id="Node000006" href="$reseau_8c.html" title="Définition des fonctions pour mettre en place le jeu en ligne." alt="" coords="576,153,690,178"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="384,34,484,77,558,116,615,150,612,155,555,120,482,81,382,39"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="325,111,135,155,134,149,324,106"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="362,115,298,154,295,150,359,111"/>
+<area shape="rect" id="Node000005" href="$plateau_8c.html" title="Définition des fonctions pour l&#39;affichage du plateau." alt="" coords="394,153,551,178"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="419,113,461,150,458,154,416,117"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="448,107,593,150,591,155,447,112"/>
+</map>

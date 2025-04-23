@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['main_0',['main',['../othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;othelloGraph.c'],['../client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;client.c'],['../serveur_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;serveur.c']]],
+  ['mettreajourdimensions_1',['mettreAJourDimensions',['../plateau_8c.html#ab62e1460c8d820f8968f86dc64e638a9',1,'mettreAJourDimensions(DimensionsJeu *dims, bouton *btnSauvegarde, TTF_Font **font1, TTF_Font **font2):&#160;plateau.c'],['../plateau_8h.html#ab62e1460c8d820f8968f86dc64e638a9',1,'mettreAJourDimensions(DimensionsJeu *dims, bouton *btnSauvegarde, TTF_Font **font1, TTF_Font **font2):&#160;plateau.c']]],
+  ['minmax_2',['minMax',['../fonc__ia_8c.html#a96442e707f8c8a2060f8e11e2003fc46',1,'minMax(t_case jeu[N][N], t_case etatOrig, t_case etatActuel, int profondeur, int max_profondeur, int(*heuristique)(t_case jeu[N][N], t_case joueur)):&#160;fonc_ia.c'],['../fonc__ia_8h.html#a96442e707f8c8a2060f8e11e2003fc46',1,'minMax(t_case jeu[N][N], t_case etatOrig, t_case etatActuel, int profondeur, int max_profondeur, int(*heuristique)(t_case jeu[N][N], t_case joueur)):&#160;fonc_ia.c']]],
+  ['minmaxchoix_3',['minMaxChoix',['../fonc__ia_8c.html#a5a1da4493d2dc3321b35f289211121cb',1,'minMaxChoix(t_case jeu[N][N], t_case joueur, int *x, int *y, t_niveau difficulte):&#160;fonc_ia.c'],['../fonc__ia_8h.html#a5a1da4493d2dc3321b35f289211121cb',1,'minMaxChoix(t_case jeu[N][N], t_case joueur, int *x, int *y, t_niveau difficulte):&#160;fonc_ia.c']]],
+  ['mystrdup_4',['mystrdup',['../fonc__sauv_8c.html#abcd2aa94a7032cd89d411d23ae47b2d7',1,'fonc_sauv.c']]]
+];

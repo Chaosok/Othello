@@ -1,0 +1,5 @@
+<map id="supprimer_sauvegarde" name="supprimer_sauvegarde">
+<area shape="rect" id="Node000001" title="Supprimer une sauvegarde dont le nom est passé en paramètre." alt="" coords="5,5,158,31"/>
+<area shape="rect" id="Node000002" href="$fonc__sauv_8c.html#abcd2aa94a7032cd89d411d23ae47b2d7" title="Redéfition de strdup." alt="" coords="206,5,281,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,16,190,16,190,21,158,21"/>
+</map>

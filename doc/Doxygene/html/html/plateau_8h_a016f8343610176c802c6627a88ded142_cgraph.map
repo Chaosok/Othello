@@ -1,0 +1,7 @@
+<map id="afficherFenetreFinDePartie_bis" name="afficherFenetreFinDePartie_bis">
+<area shape="rect" id="Node000001" title="Affiche la fenêtre de fin de partie pour le jeu en ligne." alt="" coords="5,31,207,56"/>
+<area shape="rect" id="Node000002" href="$plateau_8c.html#a6cef6a7a30c94e53e7bdb4fbd7414cab" title="Affiche un bouton." alt="" coords="255,5,365,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,28,239,24,239,30,208,34"/>
+<area shape="rect" id="Node000003" href="$plateau_8c.html#a07a4d5d108e41f8c3c0f4dbd2d11d013" title="Vérifie si un clic est dans un bouton." alt="" coords="269,55,351,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,53,254,58,253,64,207,58"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="afficherPlateau" name="afficherPlateau">
+<area shape="rect" id="Node000001" title="Affiche le plateau de jeu." alt="" coords="5,5,114,31"/>
+<area shape="rect" id="Node000002" href="$plateau_8c.html#a13ee1aedd4f772c7030c6aa30f2f4d83" title="Dessine un pion sur le plateau." alt="" coords="162,5,258,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,16,146,16,146,21,114,21"/>
+</map>

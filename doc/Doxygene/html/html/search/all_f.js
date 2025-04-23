@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['main_0',['main',['../othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;othelloGraph.c'],['../client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;client.c'],['../serveur_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;serveur.c']]],
+  ['mans_1',['L2 Informatique, Université du Mans',['../index.html#autotoc_md8',1,'']]],
+  ['max_5fip_5flength_2',['MAX_IP_LENGTH',['../menus_8h.html#a57e64762ee93e291f8171a4775906ac7',1,'menus.h']]],
+  ['max_5fnom_5ffichier_3',['MAX_NOM_FICHIER',['../fonc__sauv_8h.html#a60bee6ec1422e3521b7d506a49a325d4',1,'fonc_sauv.h']]],
+  ['max_5fsauvegarde_4',['MAX_SAUVEGARDE',['../fonc__sauv_8h.html#a2e34a0f1bb85706f367fe6d9fbd1df65',1,'fonc_sauv.h']]],
+  ['menu_5fcoul_5fpions_5',['MENU_COUL_PIONS',['../menus_8h.html#aa3041ae4242c0dd57a126d17505443b2a0200206a7ef706a8a14907c6dbf9bc22',1,'menus.h']]],
+  ['menu_5fcreer_5fpartie_5freseau_6',['MENU_CREER_PARTIE_RESEAU',['../menus_8h.html#aa3041ae4242c0dd57a126d17505443b2a02f248a56f01e9e039ab838ba671adc7',1,'menus.h']]],
+  ['menu_5flevel_5fia_7',['MENU_LEVEL_IA',['../menus_8h.html#aa3041ae4242c0dd57a126d17505443b2a514cd6e814e5bd766dbcadb4dbf27d5f',1,'menus.h']]],
+  ['menu_5fmain_8',['MENU_MAIN',['../menus_8h.html#aa3041ae4242c0dd57a126d17505443b2a1ffe14584858fba0fb59c4098ed9d30e',1,'menus.h']]],
+  ['menu_5fplay_9',['MENU_PLAY',['../menus_8h.html#aa3041ae4242c0dd57a126d17505443b2a5a87fc9ed9499695d207d699fbf1450d',1,'menus.h']]],
+  ['menu_5frejoindre_5fpartie_5freseau_10',['MENU_REJOINDRE_PARTIE_RESEAU',['../menus_8h.html#aa3041ae4242c0dd57a126d17505443b2aa0e843c09a1919bcfc9ac3d5d06f6f6f',1,'menus.h']]],
+  ['menu_5freseau_11',['MENU_RESEAU',['../menus_8h.html#aa3041ae4242c0dd57a126d17505443b2acbe7593ff455a62538cf85d180c2a33a',1,'menus.h']]],
+  ['menu_5fsauv_5fparties_12',['MENU_SAUV_PARTIES',['../menus_8h.html#aa3041ae4242c0dd57a126d17505443b2a2f502b2a046f7135745e1e02a35c9b38',1,'menus.h']]],
+  ['menu_5fsettings_13',['MENU_SETTINGS',['../menus_8h.html#aa3041ae4242c0dd57a126d17505443b2a881c719770509dd29b91525f2cd0e8b0',1,'menus.h']]],
+  ['menu_5fsub_14',['MENU_SUB',['../menus_8h.html#aa3041ae4242c0dd57a126d17505443b2ac8c1e3df7442a8c9e488bc52ee8ff975',1,'menus.h']]],
+  ['menumusique_15',['menuMusique',['../menus_8c.html#a1800699e7660b96623c287c4e147e0a5',1,'menuMusique:&#160;menus.c'],['../menus_8h.html#a1800699e7660b96623c287c4e147e0a5',1,'menuMusique:&#160;menus.c']]],
+  ['menus_2ec_16',['menus.c',['../menus_8c.html',1,'']]],
+  ['menus_2eh_17',['menus.h',['../menus_8h.html',1,'']]],
+  ['menustate_18',['MenuState',['../menus_8h.html#aa3041ae4242c0dd57a126d17505443b2',1,'menus.h']]],
+  ['mettreajourdimensions_19',['mettreAJourDimensions',['../plateau_8c.html#ab62e1460c8d820f8968f86dc64e638a9',1,'mettreAJourDimensions(DimensionsJeu *dims, bouton *btnSauvegarde, TTF_Font **font1, TTF_Font **font2):&#160;plateau.c'],['../plateau_8h.html#ab62e1460c8d820f8968f86dc64e638a9',1,'mettreAJourDimensions(DimensionsJeu *dims, bouton *btnSauvegarde, TTF_Font **font1, TTF_Font **font2):&#160;plateau.c']]],
+  ['minmax_20',['minMax',['../fonc__ia_8c.html#a96442e707f8c8a2060f8e11e2003fc46',1,'minMax(t_case jeu[N][N], t_case etatOrig, t_case etatActuel, int profondeur, int max_profondeur, int(*heuristique)(t_case jeu[N][N], t_case joueur)):&#160;fonc_ia.c'],['../fonc__ia_8h.html#a96442e707f8c8a2060f8e11e2003fc46',1,'minMax(t_case jeu[N][N], t_case etatOrig, t_case etatActuel, int profondeur, int max_profondeur, int(*heuristique)(t_case jeu[N][N], t_case joueur)):&#160;fonc_ia.c']]],
+  ['minmaxchoix_21',['minMaxChoix',['../fonc__ia_8c.html#a5a1da4493d2dc3321b35f289211121cb',1,'minMaxChoix(t_case jeu[N][N], t_case joueur, int *x, int *y, t_niveau difficulte):&#160;fonc_ia.c'],['../fonc__ia_8h.html#a5a1da4493d2dc3321b35f289211121cb',1,'minMaxChoix(t_case jeu[N][N], t_case joueur, int *x, int *y, t_niveau difficulte):&#160;fonc_ia.c']]],
+  ['moyen_22',['MOYEN',['../fonc__ia_8h.html#a63752acc32796a1add05ef71208565cdaee96574eabbfbe329a44b059e4652351',1,'fonc_ia.h']]],
+  ['mystrdup_23',['mystrdup',['../fonc__sauv_8c.html#abcd2aa94a7032cd89d411d23ae47b2d7',1,'fonc_sauv.c']]]
+];

@@ -1,0 +1,26 @@
+<map id="chargerJeu" name="chargerJeu">
+<area shape="rect" id="Node000001" title=" " alt="" coords="638,21,723,47"/>
+<area shape="rect" id="Node000002" href="$menus_8c.html#a897e5f9550b16b841043e00df2cc2246" title="Gère les événements du menu des parties sauvegardées." alt="" coords="103,20,265,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="622,27,481,11,397,8,313,11,244,22,244,17,313,6,397,3,482,6,623,22"/>
+<area shape="rect" id="Node000004" href="$plateau_8c.html#a6d0ce91a0e8a18a365a92d567d94a4da" title="Lance une partie." alt="" coords="506,71,590,96"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="630,56,586,73,584,68,628,51"/>
+<area shape="rect" id="Node000003" href="$othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,96,55,122"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="132,54,104,67,52,98,49,93,101,62,130,49"/>
+<area shape="rect" id="Node000005" href="$plateau_8c.html#ac7d011b48cc200213d569c4f2a091b1c" title="Mode Joueur vs Joueur (nouvelle partie)" alt="" coords="328,120,443,146"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="493,103,431,122,430,117,491,98"/>
+<area shape="rect" id="Node000007" href="$plateau_8c.html#a9c6fe7cfadaf84f59a0ce99e7167e8cf" title="Mode Joueur vs Joueur (partie sauvegardée)" alt="" coords="313,21,458,47"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="491,69,430,50,431,45,493,64"/>
+<area shape="rect" id="Node000008" href="$plateau_8c.html#acc91cef2053d3dfb7c3dfcdc902195b6" title="Mode Joueur vs Ordinateur (nouvelle partie)" alt="" coords="336,169,436,195"/>
+<area shape="poly" id="edge10_Node000004_Node000008" title=" " alt="" coords="525,110,495,136,460,160,436,171,434,166,457,156,492,132,521,106"/>
+<area shape="rect" id="Node000010" href="$plateau_8c.html#afc138990b2bd39043fc82d3ec13f92e0" title="Mode Joueur vs Ordinateur (partie sauvegardée)" alt="" coords="320,71,451,96"/>
+<area shape="poly" id="edge13_Node000004_Node000010" title=" " alt="" coords="491,86,451,86,451,81,491,81"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="314,119,265,112,147,107,55,110,55,105,147,102,265,106,315,114"/>
+<area shape="rect" id="Node000006" href="$menus_8c.html#a88ee4d40370127728cf9e002de62f531" title="Gère les événements dans le sous&#45;menu." alt="" coords="106,121,262,147"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="312,136,262,136,262,131,312,131"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="90,121,55,115,56,110,91,116"/>
+<area shape="poly" id="edge9_Node000007_Node000002" title=" " alt="" coords="297,36,265,36,265,31,297,31"/>
+<area shape="rect" id="Node000009" href="$menus_8c.html#aafadf462558277d1e6359c88c5b94598" title="Gère les événements du menu de sélection de couleur des pions." alt="" coords="104,171,264,196"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="320,185,264,186,264,180,320,180"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="114,167,101,162,71,143,45,124,48,120,74,139,104,157,116,162"/>
+<area shape="poly" id="edge14_Node000010_Node000002" title=" " alt="" coords="316,69,237,49,239,44,317,64"/>
+</map>

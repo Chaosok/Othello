@@ -1,0 +1,5 @@
+<map id="handleReseauMenuEvents" name="handleReseauMenuEvents">
+<area shape="rect" id="Node000001" title="Gère les événements SDL pour le menu réseau." alt="" coords="5,5,183,31"/>
+<area shape="rect" id="Node000002" href="$reseau_8c.html#a5aeb5815afed75848f267867f2498cd4" title="Installer le serveur, en créeant la socket, en associant à une IP et un port de machine locale et met..." alt="" coords="231,5,347,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,16,215,16,215,21,183,21"/>
+</map>

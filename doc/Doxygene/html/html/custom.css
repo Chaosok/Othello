@@ -1,0 +1,171 @@
+html {
+    /* page base colors */
+    --page-background-color: #eeeae0;
+    --page-foreground-color: black;
+    --page-link-color: #6f6050;
+    --page-visited-link-color: #8c9657;
+    
+    /* index */
+    --index-odd-item-bg-color: #eeeae0;
+    --index-even-item-bg-color: #d6c6c9;
+    --index-header-color: #8c9657;
+    --index-separator-color: #6f6050;
+    
+    /* header */
+    --header-background-color: #eeeae0;
+    --header-separator-color: #6f6050;
+    --header-gradient-image: url('nav_h.png');
+    --group-header-separator-color: #6f6050;
+    --group-header-color: #8c9657; 
+    --inherit-header-color: #6f6050;
+    
+    --footer-foreground-color: #6f6050;
+    --footer-logo-width: 104px;
+    --citation-label-color: #8c9657;
+    --glow-color: #8c9657;
+    
+    --title-background-color: #eeeae0;
+    --title-separator-color: #6f6050;
+    --directory-separator-color: #6f6050;
+    --separator-color: #6f6050;
+    
+    --blockquote-background-color: #eeeae0;
+    --blockquote-border-color: #8c9657;
+    
+    --scrollbar-thumb-color: #8c9657;
+    --scrollbar-background-color: #eeeae0;
+    
+    --icon-background-color: #6f6050;
+    --icon-foreground-color: #eeeae0; 
+    --icon-doc-image: url('doc.svg');
+    --icon-folder-open-image: url('folderopen.svg');
+    --icon-folder-closed-image: url('folderclosed.svg');
+    
+    /* brief member declaration list */
+    --memdecl-background-color: #eeeae0;
+    --memdecl-separator-color: #6f6050;
+    --memdecl-foreground-color: #6f6050;
+    --memdecl-template-color: #8c9657;
+    
+    /* detailed member list */
+    --memdef-border-color: #6f6050; 
+    --memdef-title-background-color: #8c9657; 
+    --memdef-title-gradient-image: url('nav_f.png');
+    --memdef-proto-background-color: #6f6050;
+    --memdef-proto-text-color: #eeeae0;
+    --memdef-proto-text-shadow: 0px 1px 1px #605f5c;
+    --memdef-doc-background-color: #eeeae0;
+    --memdef-param-name-color: #d6c6c9;
+    --memdef-template-color: #8c9657;
+    
+    /* tables */
+    --table-cell-border-color: #6f6050;
+    --table-header-background-color: #8c9657;
+    --table-header-foreground-color: #eeeae0;
+    
+    /* labels */
+    --label-background-color: #8c9657;
+    --label-left-top-border-color: #6f6050;
+    --label-right-bottom-border-color: #d6c6c9;
+    --label-foreground-color: #eeeae0;
+    
+    /** navigation bar/tree/menu */
+    --nav-background-color: #eeeae0;
+    --nav-foreground-color: #6f6050;
+    --nav-gradient-image: url('tab_b.png');
+    --nav-gradient-hover-image: url('tab_h.png');
+    --nav-gradient-active-image: url('tab_a.png');
+    --nav-gradient-active-image-parent: url("../tab_a.png");
+    --nav-separator-image: url('tab_s.png');
+    --nav-breadcrumb-image: url('bc_s.png');
+    --nav-breadcrumb-border-color: #6f6050;
+    --nav-splitbar-image: url('splitbar.png');
+    --nav-font-size-level1: 13px;
+    --nav-font-size-level2: 10px;
+    --nav-font-size-level3: 9px;
+    --nav-text-normal-color: #6f6050;
+    --nav-text-hover-color: #8c9657;
+    --nav-text-active-color: #eeeae0;
+    --nav-text-normal-shadow: 0px 1px 1px rgba(255, 255, 255, 0.9);
+    --nav-text-hover-shadow: 0px 1px 1px rgba(0, 0, 0, 1.0);
+    --nav-text-active-shadow: 0px 1px 1px rgba(0, 0, 0, 1.0);
+    --nav-menu-button-color: #6f6050;
+    --nav-menu-background-color: #eeeae0;
+    --nav-menu-foreground-color: #6f6050;
+    --nav-menu-toggle-color: rgba(111, 96, 80, 0.5);
+    --nav-arrow-color: #6f6050;
+    --nav-arrow-selected-color: #8c9657;
+    
+    /* table of contents */
+    --toc-background-color: #eeeae0;
+    --toc-border-color: #6f6050;
+    --toc-header-color: #8c9657;
+    --toc-down-arrow-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10px' width='5px' fill='grey'><text x='0' y='5' font-size='10'>&%238595;</text></svg>");
+    
+    /** search field */
+    --search-background-color: #eeeae0;
+    --search-foreground-color: #6f6050;
+    --search-magnification-image: url('mag.svg');
+    --search-magnification-select-image: url('mag_sel.svg');
+    --search-active-color: #8c9657;
+    --search-filter-background-color: #eeeae0;
+    --search-filter-foreground-color: #6f6050;
+    --search-filter-border-color: #8c9657;
+    --search-filter-highlight-text-color: #eeeae0;
+    --search-filter-highlight-bg-color: #8c9657;
+    --search-results-foreground-color: #6f6050;
+    --search-results-background-color: #eeeae0;
+    --search-results-border-color: #6f6050;
+    --search-box-shadow: inset 0.5px 0.5px 3px 0px #6f6050;
+}
+    
+@media (prefers-color-scheme: dark) {
+    html:not(.dark-mode) {
+      color-scheme: dark;
+  
+      --page-background-color: #2a2d23;
+      --page-foreground-color: #cbcbcb;
+      --page-link-color: #a8b89c; 
+      --page-visited-link-color: #8a9a7e;
+  
+      --index-odd-item-bg-color: #2a2d23;
+      --index-even-item-bg-color: #33362b;
+      --index-header-color: #615f5f; 
+      --index-separator-color: #4c6242; 
+  
+      --header-background-color: #2a2d23;
+      --header-separator-color: #404040; 
+      --group-header-separator-color: #404040;
+      --group-header-color: #cbcbcb;
+  
+      --title-background-color: #2a2d23;
+      --title-separator-color: #404040;
+      --separator-color: #404040;
+      --blockquote-background-color: #33362b;
+      --blockquote-border-color: #404040;
+  
+      --scrollbar-thumb-color: #404040;
+      --scrollbar-background-color: #2a2d23;
+      --icon-background-color: #404040;
+      --icon-foreground-color: #cbcbcb;
+  
+      --table-cell-border-color: #404040;
+      --table-header-background-color: #404040;
+      --table-header-foreground-color: #cbcbcb;
+  
+      --nav-background-color: #2a2d23;
+      --nav-foreground-color: #cbcbcb;
+      --nav-text-normal-color: #cbcbcb;
+      --nav-text-hover-color: #ffffff;
+      --nav-text-active-color: #4c6242; 
+  
+      --fragment-background-color: #2a2d23;
+      --fragment-foreground-color: #cbcbcb;
+      --code-comment-color: #8a9a7e; 
+      --code-string-literal-color: #cbcbcb;
+
+    }
+  }
+    
+    
+    

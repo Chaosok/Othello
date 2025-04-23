@@ -1,0 +1,37 @@
+<map id="src/graphique/menus.h" name="src/graphique/menus.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="254,5,407,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,101,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="284,34,115,77,114,72,283,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="125,79,240,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="306,34,223,74,220,69,304,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="264,79,397,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="333,31,333,63,328,63,328,31"/>
+<area shape="rect" id="Node000005" href="$fonc__sauv_8h.html" title="Fonctions pour la sauvegarde d&#39;une partie othello." alt="" coords="421,79,544,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="357,29,444,70,441,74,355,34"/>
+<area shape="rect" id="Node000008" href="$reseau_8h.html" title="Fonctions et structures de données nécessaires à la partie du reséau." alt="" coords="934,79,1038,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="408,25,919,81,918,86,407,31"/>
+<area shape="rect" id="Node000006" href="$fonc__jeu_8h.html" title="Fonctions et structures de données nécessaires à la logique de jeu." alt="" coords="326,153,407,178"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="464,107,400,147,397,142,461,103"/>
+<area shape="rect" id="Node000007" href="$fonc__ia_8h.html" title="Fonctions et structures de données pour l&#39;I.A." alt="" coords="431,153,534,178"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="485,105,485,137,480,137,480,105"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="558,153,618,178"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="934,103,802,123,634,155,633,149,801,118,934,97"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="641,153,705,178"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="934,107,720,155,719,149,933,102"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="729,153,801,178"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="950,108,816,151,815,145,948,103"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="824,153,914,178"/>
+<area shape="poly" id="edge11_Node000008_Node000012" title=" " alt="" coords="968,107,903,147,900,142,965,103"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="938,153,1034,178"/>
+<area shape="poly" id="edge12_Node000008_Node000013" title=" " alt="" coords="989,105,989,137,984,137,984,105"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1058,153,1144,178"/>
+<area shape="poly" id="edge13_Node000008_Node000014" title=" " alt="" coords="1007,103,1070,142,1067,146,1004,107"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1168,153,1250,178"/>
+<area shape="poly" id="edge14_Node000008_Node000015" title=" " alt="" coords="1025,103,1158,145,1156,150,1023,108"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1274,153,1338,178"/>
+<area shape="poly" id="edge15_Node000008_Node000016" title=" " alt="" coords="1039,101,1260,149,1259,155,1038,106"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1362,153,1429,178"/>
+<area shape="poly" id="edge16_Node000008_Node000017" title=" " alt="" coords="1039,98,1175,118,1348,150,1347,155,1174,123,1039,103"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1453,153,1520,178"/>
+<area shape="poly" id="edge17_Node000008_Node000018" title=" " alt="" coords="1039,95,1213,115,1438,150,1437,155,1212,120,1039,101"/>
+</map>

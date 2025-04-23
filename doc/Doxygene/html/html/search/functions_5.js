@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['gererclics_0',['gererClics',['../plateau_8c.html#a2fc31f24af4aafce38886c450c464227',1,'gererClics(SDL_Event *e, t_case jeu[N][N], t_case *joueurActuel, int tailleCase, int positionPlateauX, int positionPlateauY, int *temps_noir, int *temps_blanc, time_t *dernier_tour):&#160;plateau.c'],['../plateau_8h.html#a2fc31f24af4aafce38886c450c464227',1,'gererClics(SDL_Event *e, t_case jeu[N][N], t_case *joueurActuel, int tailleCase, int positionPlateauX, int positionPlateauY, int *temps_noir, int *temps_blanc, time_t *dernier_tour):&#160;plateau.c']]],
+  ['gererclics_5freseau_1',['gererClics_reseau',['../reseau_8c.html#aaf86c3801dd294506d3fbc1983c7c643',1,'gererClics_reseau(SDL_Event *e, t_case jeu[N][N], t_case *joueurActuel, int tailleCase, int positionPlateauX, int positionPlateauY, int *temps_noir, int *temps_blanc, time_t *dernier_tour):&#160;reseau.c'],['../reseau_8h.html#aaf86c3801dd294506d3fbc1983c7c643',1,'gererClics_reseau(SDL_Event *e, t_case jeu[N][N], t_case *joueurActuel, int tailleCase, int positionPlateauX, int positionPlateauY, int *temps_noir, int *temps_blanc, time_t *dernier_tour):&#160;reseau.c']]]
+];

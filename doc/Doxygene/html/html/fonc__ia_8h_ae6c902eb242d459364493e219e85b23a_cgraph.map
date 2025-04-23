@@ -1,0 +1,28 @@
+<map id="heuristique_avancee" name="heuristique_avancee">
+<area shape="rect" id="Node000001" title="Version &quot;avancée&quot; de l&#39;I.A.: appelle des fonctions calculant le score, la mobilité,..." alt="" coords="5,128,146,154"/>
+<area shape="rect" id="Node000002" href="$fonc__ia_8c.html#a725fd81748f081b3f47f6e870b1eb09b" title=" " alt="" coords="201,79,284,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,125,185,106,186,111,122,130"/>
+<area shape="rect" id="Node000004" href="$fonc__ia_8c.html#aa4aa600e7cda0257b8873e018def1bab" title=" " alt="" coords="194,29,291,55"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="95,125,192,64,199,60,202,65,195,68,98,130"/>
+<area shape="rect" id="Node000009" href="$fonc__ia_8c.html#aad80c1b64b2f75c6cd2f219a0ee84b21" title=" " alt="" coords="200,177,284,203"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="122,152,186,171,184,176,121,157"/>
+<area shape="rect" id="Node000010" href="$fonc__ia_8c.html#a13863afbe6ebdb99ca2b6ae8cf91c9b2" title=" " alt="" coords="200,128,284,154"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="146,138,184,138,184,144,146,144"/>
+<area shape="rect" id="Node000011" href="$fonc__ia_8c.html#a19518b8c868e790a646f3bd71b6c4168" title=" " alt="" coords="200,227,284,252"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="98,152,195,213,202,217,199,222,192,218,95,156"/>
+<area shape="rect" id="Node000003" href="$fonc__jeu_8c.html#a370fa4eaab11df407965d087315862bf" title="Alterne entre le joueur blanc et le joueur noir." alt="" coords="339,79,445,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,89,323,89,323,94,285,94"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="285,53,337,71,336,76,283,58"/>
+<area shape="rect" id="Node000005" href="$fonc__jeu_8c.html#a0565378c0f9d2d5f88cbfc5be230c8a8" title="Vérifie si un coup est valide à une position donnée (x, y) pour une couleur donnée." alt="" coords="347,29,437,55"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="291,40,332,40,332,45,291,45"/>
+<area shape="rect" id="Node000008" href="$fonc__jeu_8c.html#afdf8b1fed70777eda6a73d1426337cbb" title="Calcule le score du joueur actuel." alt="" coords="366,128,419,154"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="276,53,293,64,307,78,317,90,326,102,341,115,353,122,350,127,337,119,322,106,313,93,303,81,289,68,273,58"/>
+<area shape="rect" id="Node000006" href="$fonc__jeu_8c.html#a59ca37ed9c411eeefca103541c1ca42f" title="Copie du plateau pour la simulation virtuelle." alt="" coords="500,5,597,31"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="438,33,484,25,485,31,438,38"/>
+<area shape="rect" id="Node000007" href="$fonc__jeu_8c.html#a43a33e0e164278eef35f1122bd779ac0" title="Retourne les pions adverses autour de la case (x, y) après un coup valide." alt="" coords="493,55,604,80"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="438,47,478,53,477,59,438,52"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="273,174,289,164,303,151,313,139,322,127,337,113,342,110,345,114,341,118,326,130,317,142,307,155,293,168,276,179"/>
+<area shape="poly" id="edge11_Node000009_Node000008" title=" " alt="" coords="283,174,350,152,352,157,285,179"/>
+<area shape="poly" id="edge13_Node000010_Node000003" title=" " alt="" coords="283,125,336,107,337,112,285,130"/>
+<area shape="poly" id="edge14_Node000010_Node000008" title=" " alt="" coords="285,138,350,138,350,144,285,144"/>
+</map>

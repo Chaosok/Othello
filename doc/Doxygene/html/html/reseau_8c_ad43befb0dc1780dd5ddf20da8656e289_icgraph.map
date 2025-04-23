@@ -1,0 +1,7 @@
+<map id="serveur_joue_jeu" name="serveur_joue_jeu">
+<area shape="rect" id="Node000001" title="Le joueur du côté serveur joue la partie en suivant la logique du jeu." alt="" coords="317,5,436,31"/>
+<area shape="rect" id="Node000002" href="$menus_8c.html#a5cc4d94bfe627e003efca105a8816a23" title=" " alt="" coords="103,5,269,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="302,21,269,21,269,16,302,16"/>
+<area shape="rect" id="Node000003" href="$othello_graph_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale du programme." alt="" coords="5,5,55,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

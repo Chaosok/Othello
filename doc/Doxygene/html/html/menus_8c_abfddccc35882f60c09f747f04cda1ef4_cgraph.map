@@ -1,0 +1,23 @@
+<map id="handleSettingsMenuEvents" name="handleSettingsMenuEvents">
+<area shape="rect" id="Node000001" title="Gère les événements dans le menu des paramètres." alt="" coords="5,131,186,156"/>
+<area shape="rect" id="Node000002" href="$menus_8c.html#a4a6420c6d5acd83ef863a7c875b926be" title="Initialise le menu de sélection de couleur des pions (noir ou blanc)" alt="" coords="421,5,518,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,128,166,95,233,62,322,37,405,22,406,28,323,42,235,67,168,100,117,132"/>
+<area shape="rect" id="Node000003" href="$menus_8c.html#a22b05dad58f6642bd4c9b3c7959a3409" title="Initialise le menu de sélection de la difficulté de l’IA." alt="" coords="419,56,520,82"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,128,175,108,233,90,322,75,404,68,404,74,323,81,234,95,177,113,127,133"/>
+<area shape="rect" id="Node000004" href="$menus_8c.html#aac8187fc5df3e49938e48f0964287217" title="Initialise le menu principal du jeu." alt="" coords="420,156,519,182"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,147,405,162,405,167,186,152"/>
+<area shape="rect" id="Node000005" href="$menus_8c.html#a174924cdcf0b8c7facbf04e0a1d99661" title="Initialise le sous&#45;menu de choix du mode de jeu." alt="" coords="423,207,516,232"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="163,154,408,205,407,210,162,160"/>
+<area shape="rect" id="Node000006" href="$menus_8c.html#a2a0acc65bc51d7769541d2c3c23f1b0f" title="Recharge tous les menus du jeu." alt="" coords="247,105,358,131"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="185,130,232,124,232,129,186,135"/>
+<area shape="rect" id="Node000008" href="$menus_8c.html#a5af0b3135a7f2731ba72bdc658bb7486" title="Affiche le menu des paramètres (volume, thèmes, retour)." alt="" coords="234,257,371,283"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="116,155,168,193,235,236,258,248,255,253,232,240,165,197,112,159"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="321,103,418,41,426,36,429,41,420,46,324,107"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="348,102,408,84,409,89,349,107"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="348,129,411,148,410,154,347,134"/>
+<area shape="poly" id="edge10_Node000006_Node000005" title=" " alt="" coords="324,129,420,192,429,197,426,201,418,196,321,134"/>
+<area shape="rect" id="Node000007" href="$menus_8c.html#a8e7f515798860ab87f2a643b32fa4462" title="Initialise le menu des parties sauvegardées." alt="" coords="420,105,520,131"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="358,116,404,116,404,121,358,121"/>
+<area shape="rect" id="Node000009" href="$menus_8c.html#a6c08dd41aacbd6202769d15920da6d94" title="Affiche un texte à l&#39;écran à une position donnée." alt="" coords="425,257,514,283"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="372,268,410,268,410,273,372,273"/>
+</map>

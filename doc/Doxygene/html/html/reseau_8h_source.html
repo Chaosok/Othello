@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello:  Fichier source de src/jeu/reseau.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="othelloLogo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Othello
+   </div>
+   <div id="projectbrief">Version numérique du jeu Othello, un jeu de plateau conçu pour être joué à deux</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e7a19e970db27507ea7fd9f14268b402.html">jeu</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">reseau.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="reseau_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef RESEAU_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define RESEAU_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;strings.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;netinet/in.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;arpa/inet.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;netdb.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;signal.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="reseau_8h.html#a752f5b785b69372034ac87e1a1598ce3">   16</a></span><span class="preprocessor">#define PORT_SERVEUR 30000</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="reseau_8h.html#afa7b7638d0ac972327d9fadc93db9802">   17</a></span><span class="preprocessor">#define TAILLE_BUFFER 512</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="reseau_8h.html#a7cb924f3da4013624784dbc36644083f">   18</a></span><span class="preprocessor">#define ARRET &quot;quit&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structcontexte__reseau__t.html">   25</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structcontexte__reseau__t.html#a7a1266dc1ca80d757319b187db817ae3">   27</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structcontexte__reseau__t.html#a7a1266dc1ca80d757319b187db817ae3">server_socket</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structcontexte__reseau__t.html#af05b1afa33e4be266a9d093b1335ef19">   28</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structcontexte__reseau__t.html#af05b1afa33e4be266a9d093b1335ef19">client_socket</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structcontexte__reseau__t.html#a9d3efbef47ed7ca660f89ee47f7837ed">   29</a></span>    <span class="keyword">struct </span>sockaddr_in <a class="code hl_variable" href="structcontexte__reseau__t.html#a9d3efbef47ed7ca660f89ee47f7837ed">server_addr</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structcontexte__reseau__t.html#a4d41663dbf396debdfaad5608134449c">   30</a></span>    <span class="keyword">struct </span>sockaddr_in <a class="code hl_variable" href="structcontexte__reseau__t.html#a4d41663dbf396debdfaad5608134449c">client_addr</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structcontexte__reseau__t.html#a87815d6cf6f31a9bb619524579968147">   31</a></span>    <span class="keyword">struct </span>hostent *<a class="code hl_variable" href="structcontexte__reseau__t.html#a87815d6cf6f31a9bb619524579968147">serveur_info</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}<a class="code hl_struct" href="structcontexte__reseau__t.html">contexte_reseau_t</a> ;</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">//paquet de données à envoyer</span></div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structpaquet__jeu.html">   34</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structpaquet__jeu.html#a4584ab48655d2930ac0383fc868cfd80">   35</a></span>    <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="structpaquet__jeu.html#a4584ab48655d2930ac0383fc868cfd80">grille</a>[<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>];</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structpaquet__jeu.html#a1cfce7ee99e07b575e4c357656177538">   36</a></span>    <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="structpaquet__jeu.html#a1cfce7ee99e07b575e4c357656177538">joueur_actif</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>} <a class="code hl_struct" href="structpaquet__jeu.html">paquet_jeu</a>;</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">/* Déclarations de fonctions */</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="reseau_8h.html#a2296463919585136453f88a241af608f">fermer_serveur_socket</a>(<a class="code hl_struct" href="structcontexte__reseau__t.html">contexte_reseau_t</a>* <a class="code hl_variable" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">int</span> <a class="code hl_function" href="reseau_8h.html#aaf86c3801dd294506d3fbc1983c7c643">gererClics_reseau</a>(SDL_Event *e, <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> <a class="code hl_variable" href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a>[<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code hl_define" href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <a class="code hl_enumeration" href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a> *joueurActuel, <span class="keywordtype">int</span> tailleCase, <span class="keywordtype">int</span> positionPlateauX, <span class="keywordtype">int</span> positionPlateauY, <span class="keywordtype">int</span> *<a class="code hl_variable" href="reseau_8c.html#a1a7237dd3e4702f7866da49efc69b8a9">temps_noir</a>, <span class="keywordtype">int</span> *<a class="code hl_variable" href="reseau_8c.html#adb6fb5cb909122d28cacba2d1c369dd8">temps_blanc</a>, time_t *dernier_tour);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="reseau_8h.html#a842184aa59f837ba7bf1e29eaf831605">fermer_client_socket</a>(<a class="code hl_struct" href="structcontexte__reseau__t.html">contexte_reseau_t</a>* <a class="code hl_variable" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">int</span> <a class="code hl_function" href="reseau_8h.html#a5aeb5815afed75848f267867f2498cd4">installer_serveur</a>(<a class="code hl_struct" href="structcontexte__reseau__t.html">contexte_reseau_t</a>* <a class="code hl_variable" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">int</span> <a class="code hl_function" href="reseau_8h.html#a8b37192f8c4558b96ca670a8cc63217c">accepter_client</a>(<a class="code hl_struct" href="structcontexte__reseau__t.html">contexte_reseau_t</a>* <a class="code hl_variable" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="reseau_8h.html#ad43befb0dc1780dd5ddf20da8656e289">serveur_joue_jeu</a>(<a class="code hl_struct" href="structcontexte__reseau__t.html">contexte_reseau_t</a>* <a class="code hl_variable" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>, SDL_Window* <a class="code hl_variable" href="plateau_8c.html#aaa8e409e04dcf575ef63fd5fb3db06f9">window</a>, SDL_Renderer* renderer, TTF_Font* font1, TTF_Font* font2);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">int</span> <a class="code hl_function" href="reseau_8h.html#a573b27608ca3c5d97ae602939079bd82">connecter_server</a>(<a class="code hl_struct" href="structcontexte__reseau__t.html">contexte_reseau_t</a>* <a class="code hl_variable" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="reseau_8h.html#a1a5b1c44bf12c58ef834793ab907a473">client_joue_jeu</a>(<a class="code hl_struct" href="structcontexte__reseau__t.html">contexte_reseau_t</a>* <a class="code hl_variable" href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a>, SDL_Window* <a class="code hl_variable" href="plateau_8c.html#aaa8e409e04dcf575ef63fd5fb3db06f9">window</a>, SDL_Renderer* renderer, TTF_Font* font1, TTF_Font* font2);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="afonc__jeu_8h_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="fonc__jeu_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdoc">Taille du plateau.</div><div class="ttdef"><b>Definition</b> fonc_jeu.h:3</div></div>
+<div class="ttc" id="afonc__jeu_8h_html_ab21a60e1517c8d253cc83c12f6e027f3"><div class="ttname"><a href="fonc__jeu_8h.html#ab21a60e1517c8d253cc83c12f6e027f3">t_case</a></div><div class="ttdeci">t_case</div><div class="ttdef"><b>Definition</b> fonc_jeu.h:12</div></div>
+<div class="ttc" id="amenus_8c_html_a7f7909f8865e37df29984dc9a63c3e06"><div class="ttname"><a href="menus_8c.html#a7f7909f8865e37df29984dc9a63c3e06">ctx</a></div><div class="ttdeci">contexte_reseau_t ctx</div><div class="ttdef"><b>Definition</b> menus.c:29</div></div>
+<div class="ttc" id="aplateau_8c_html_aaa8e409e04dcf575ef63fd5fb3db06f9"><div class="ttname"><a href="plateau_8c.html#aaa8e409e04dcf575ef63fd5fb3db06f9">window</a></div><div class="ttdeci">SDL_Window * window</div><div class="ttdef"><b>Definition</b> plateau.c:21</div></div>
+<div class="ttc" id="areseau_8c_html_a1a7237dd3e4702f7866da49efc69b8a9"><div class="ttname"><a href="reseau_8c.html#a1a7237dd3e4702f7866da49efc69b8a9">temps_noir</a></div><div class="ttdeci">int temps_noir</div><div class="ttdef"><b>Definition</b> reseau.c:41</div></div>
+<div class="ttc" id="areseau_8c_html_adb6fb5cb909122d28cacba2d1c369dd8"><div class="ttname"><a href="reseau_8c.html#adb6fb5cb909122d28cacba2d1c369dd8">temps_blanc</a></div><div class="ttdeci">int temps_blanc</div><div class="ttdef"><b>Definition</b> reseau.c:41</div></div>
+<div class="ttc" id="areseau_8c_html_af8c78786122306a4ca4cee1a4e768535"><div class="ttname"><a href="reseau_8c.html#af8c78786122306a4ca4cee1a4e768535">jeu</a></div><div class="ttdeci">t_case jeu[N][N]</div><div class="ttdef"><b>Definition</b> reseau.c:38</div></div>
+<div class="ttc" id="areseau_8h_html_a1a5b1c44bf12c58ef834793ab907a473"><div class="ttname"><a href="reseau_8h.html#a1a5b1c44bf12c58ef834793ab907a473">client_joue_jeu</a></div><div class="ttdeci">void client_joue_jeu(contexte_reseau_t *ctx, SDL_Window *window, SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2)</div><div class="ttdoc">Le joueur du côté client joue la partie en suivant la logique du jeu.</div><div class="ttdef"><b>Definition</b> reseau.c:415</div></div>
+<div class="ttc" id="areseau_8h_html_a2296463919585136453f88a241af608f"><div class="ttname"><a href="reseau_8h.html#a2296463919585136453f88a241af608f">fermer_serveur_socket</a></div><div class="ttdeci">void fermer_serveur_socket(contexte_reseau_t *ctx)</div><div class="ttdoc">Fermer la socket du côté de serveur.</div><div class="ttdef"><b>Definition</b> reseau.c:51</div></div>
+<div class="ttc" id="areseau_8h_html_a573b27608ca3c5d97ae602939079bd82"><div class="ttname"><a href="reseau_8h.html#a573b27608ca3c5d97ae602939079bd82">connecter_server</a></div><div class="ttdeci">int connecter_server(contexte_reseau_t *ctx)</div><div class="ttdoc">Connecter la socket de client à celle de serveur.</div><div class="ttdef"><b>Definition</b> reseau.c:199</div></div>
+<div class="ttc" id="areseau_8h_html_a5aeb5815afed75848f267867f2498cd4"><div class="ttname"><a href="reseau_8h.html#a5aeb5815afed75848f267867f2498cd4">installer_serveur</a></div><div class="ttdeci">int installer_serveur(contexte_reseau_t *ctx)</div><div class="ttdoc">Installer le serveur, en créeant la socket, en associant à une IP et un port de machine locale et met...</div><div class="ttdef"><b>Definition</b> reseau.c:120</div></div>
+<div class="ttc" id="areseau_8h_html_a842184aa59f837ba7bf1e29eaf831605"><div class="ttname"><a href="reseau_8h.html#a842184aa59f837ba7bf1e29eaf831605">fermer_client_socket</a></div><div class="ttdeci">void fermer_client_socket(contexte_reseau_t *ctx)</div><div class="ttdoc">Fermer la socket du côté de client.</div><div class="ttdef"><b>Definition</b> reseau.c:106</div></div>
+<div class="ttc" id="areseau_8h_html_a8b37192f8c4558b96ca670a8cc63217c"><div class="ttname"><a href="reseau_8h.html#a8b37192f8c4558b96ca670a8cc63217c">accepter_client</a></div><div class="ttdeci">int accepter_client(contexte_reseau_t *ctx)</div><div class="ttdoc">Accepter la demande de connexion de la socket du client.</div><div class="ttdef"><b>Definition</b> reseau.c:165</div></div>
+<div class="ttc" id="areseau_8h_html_aaf86c3801dd294506d3fbc1983c7c643"><div class="ttname"><a href="reseau_8h.html#aaf86c3801dd294506d3fbc1983c7c643">gererClics_reseau</a></div><div class="ttdeci">int gererClics_reseau(SDL_Event *e, t_case jeu[N][N], t_case *joueurActuel, int tailleCase, int positionPlateauX, int positionPlateauY, int *temps_noir, int *temps_blanc, time_t *dernier_tour)</div><div class="ttdoc">Gère les clics sur le plateau.</div><div class="ttdef"><b>Definition</b> reseau.c:70</div></div>
+<div class="ttc" id="areseau_8h_html_ad43befb0dc1780dd5ddf20da8656e289"><div class="ttname"><a href="reseau_8h.html#ad43befb0dc1780dd5ddf20da8656e289">serveur_joue_jeu</a></div><div class="ttdeci">void serveur_joue_jeu(contexte_reseau_t *ctx, SDL_Window *window, SDL_Renderer *renderer, TTF_Font *font1, TTF_Font *font2)</div><div class="ttdoc">Le joueur du côté serveur joue la partie en suivant la logique du jeu.</div><div class="ttdef"><b>Definition</b> reseau.c:294</div></div>
+<div class="ttc" id="astructcontexte__reseau__t_html"><div class="ttname"><a href="structcontexte__reseau__t.html">contexte_reseau_t</a></div><div class="ttdef"><b>Definition</b> reseau.h:26</div></div>
+<div class="ttc" id="astructcontexte__reseau__t_html_a4d41663dbf396debdfaad5608134449c"><div class="ttname"><a href="structcontexte__reseau__t.html#a4d41663dbf396debdfaad5608134449c">contexte_reseau_t::client_addr</a></div><div class="ttdeci">struct sockaddr_in client_addr</div><div class="ttdef"><b>Definition</b> reseau.h:30</div></div>
+<div class="ttc" id="astructcontexte__reseau__t_html_a7a1266dc1ca80d757319b187db817ae3"><div class="ttname"><a href="structcontexte__reseau__t.html#a7a1266dc1ca80d757319b187db817ae3">contexte_reseau_t::server_socket</a></div><div class="ttdeci">int server_socket</div><div class="ttdef"><b>Definition</b> reseau.h:27</div></div>
+<div class="ttc" id="astructcontexte__reseau__t_html_a87815d6cf6f31a9bb619524579968147"><div class="ttname"><a href="structcontexte__reseau__t.html#a87815d6cf6f31a9bb619524579968147">contexte_reseau_t::serveur_info</a></div><div class="ttdeci">struct hostent * serveur_info</div><div class="ttdef"><b>Definition</b> reseau.h:31</div></div>
+<div class="ttc" id="astructcontexte__reseau__t_html_a9d3efbef47ed7ca660f89ee47f7837ed"><div class="ttname"><a href="structcontexte__reseau__t.html#a9d3efbef47ed7ca660f89ee47f7837ed">contexte_reseau_t::server_addr</a></div><div class="ttdeci">struct sockaddr_in server_addr</div><div class="ttdef"><b>Definition</b> reseau.h:29</div></div>
+<div class="ttc" id="astructcontexte__reseau__t_html_af05b1afa33e4be266a9d093b1335ef19"><div class="ttname"><a href="structcontexte__reseau__t.html#af05b1afa33e4be266a9d093b1335ef19">contexte_reseau_t::client_socket</a></div><div class="ttdeci">int client_socket</div><div class="ttdef"><b>Definition</b> reseau.h:28</div></div>
+<div class="ttc" id="astructpaquet__jeu_html"><div class="ttname"><a href="structpaquet__jeu.html">paquet_jeu</a></div><div class="ttdef"><b>Definition</b> reseau.h:34</div></div>
+<div class="ttc" id="astructpaquet__jeu_html_a1cfce7ee99e07b575e4c357656177538"><div class="ttname"><a href="structpaquet__jeu.html#a1cfce7ee99e07b575e4c357656177538">paquet_jeu::joueur_actif</a></div><div class="ttdeci">t_case joueur_actif</div><div class="ttdef"><b>Definition</b> reseau.h:36</div></div>
+<div class="ttc" id="astructpaquet__jeu_html_a4584ab48655d2930ac0383fc868cfd80"><div class="ttname"><a href="structpaquet__jeu.html#a4584ab48655d2930ac0383fc868cfd80">paquet_jeu::grille</a></div><div class="ttdeci">t_case grille[N][N]</div><div class="ttdef"><b>Definition</b> reseau.h:35</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

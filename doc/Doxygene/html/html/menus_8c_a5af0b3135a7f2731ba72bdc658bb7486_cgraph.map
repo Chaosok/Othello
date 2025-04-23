@@ -1,0 +1,5 @@
+<map id="renderSettingsMenu" name="renderSettingsMenu">
+<area shape="rect" id="Node000001" title="Affiche le menu des paramètres (volume, thèmes, retour)." alt="" coords="5,5,143,31"/>
+<area shape="rect" id="Node000002" href="$menus_8c.html#a6c08dd41aacbd6202769d15920da6d94" title="Affiche un texte à l&#39;écran à une position donnée." alt="" coords="191,5,280,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,16,175,16,175,21,143,21"/>
+</map>
